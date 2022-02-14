@@ -32,7 +32,7 @@
 void CALCULATE_LIFT_COEFFICIENTS(double AR, double Re, double kappa, double py, double pz, int index, double *CL)
 {
   double inputs[5];
-  double neuron_input_sum, sign;
+  double neuron_input_sum;
   int i, k;
 
   /*  ===== NEURAL NETWORK CONSTANTS ===== */
@@ -180,13 +180,8 @@ void CALCULATE_LIFT_COEFFICIENTS(double AR, double Re, double kappa, double py, 
     neuron_input_sum += weights_layer_3[(index-1) + (k << 1)] * outputs_layer_2[k];
   }
 
-  sign = 1;
-  if ((index == 1 && py < 0) || (index == 2 && pz < 0)) {
-  	sign = -1;
-  }
-
   /* Output De-normalization */
-  *CL = sign * (((-1.3400483104042133 * (double)(index-1) + -2.9103877624314474) + neuron_input_sum) + 1.0)
+  *CL = (((-1.3400483104042133 * (double)(index-1) + -2.9103877624314474) + neuron_input_sum) + 1.0)
     / 2.0 / (0.093013622399621965 * (double)(index-1) + 0.99451030312674) +
     (0.085999999999999965 * (double)(index-1) + -0.7776);
 }
@@ -300,6 +295,10 @@ void CALCULATE_CHANNEL_PARAMETERS(double particle_diameter, double mu, double rh
 
 DEFINE_DPM_BODY_FORCE(inertial_lift, p, i)
 {
+  if (i == 0) {
+    return 0; // do not calculate lift force in the X direction
+  }
+
 	// DECLARATION OF VARIABLES
 	double CL, FL, particle_diameter, H, W, Re, kappa, mu, rho, Umax;
 	cell_t c = P_CELL(p); // the cell in which the particle is present
@@ -317,6 +316,7 @@ DEFINE_DPM_BODY_FORCE(inertial_lift, p, i)
 
 	// Maximum velocity for each cell should be precalculated prior to starting DPM calculation
 	Umax = C_UDMI(c, t, 2);
+
 	// Calculate the lift force based on Su et al 2021 Equation 7
 	FL = CL * rho * pow(Umax, 2) * pow(particle_diameter, 4) / pow(H, 2);
 
@@ -361,7 +361,7 @@ DEFINE_ON_DEMAND(on_demand_max_velocity_calculation)
 {
 	// DECLARATION OF VARIABLES
 	double cell_centroid_position[ND_ND]; /* this will hold the position vector */
-	double dPdx, W, H, x, y, z, mu, Q, Umax, particle_diameter, rho, Re, kappa;
+	double dPdx, W, H, x, y, z, mu, Q, Umax, particle_diameter, rho, Re, kappa, CL;
 	Domain *domain;
 	face_t f;
 	cell_t c;
@@ -370,6 +370,9 @@ DEFINE_ON_DEMAND(on_demand_max_velocity_calculation)
 	Q = Get_Input_Parameter("volumetric_flow_rate_ul_per_min"); // uL/min
 	Message("Volumetric Flow Rate (User Parameter): %.2f [uL/min]\n", Q);
 	Q = Q * 1e-9 / 60; // convert Q to m^3/s
+
+  particle_diameter = Get_Input_Parameter("particle_diameter");
+  Message("Particle Diameter (User Parameter): %.2f [um]\n", particle_diameter * 1e6);
 
 	domain=Get_Domain(1);
 
@@ -382,6 +385,12 @@ DEFINE_ON_DEMAND(on_demand_max_velocity_calculation)
 			rho = C_R(c,t); 	// Cell density
 
 			CALCULATE_CHANNEL_PARAMETERS(particle_diameter, mu, rho, &H, &W, &Re, &kappa, cell_centroid_position);
+
+      // calculate the coefficient of lift for a particle at the cell center
+      CALCULATE_LIFT_COEFFICIENTS(W/H, Re, kappa, cell_centroid_position[1], cell_centroid_position[2], 1, &CL);
+      C_UDMI(c, t, 0) = CL;
+      CALCULATE_LIFT_COEFFICIENTS(W/H, Re, kappa, cell_centroid_position[1], cell_centroid_position[2], 2, &CL);
+      C_UDMI(c, t, 1) = CL;
 
 			// from the height and width of the channel, determine what the pressure graident and maximum velocity are
 			dPdx = CALCULATE_PRESSURE_GRADIENT(H, W, mu, Q);

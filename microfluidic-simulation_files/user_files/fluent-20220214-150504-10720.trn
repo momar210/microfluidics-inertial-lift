@@ -1376,3 +1376,10 @@ Done.
 Writing to DESKTOP-R5L45J1:"C:/Users/rylab/Desktop/microfluidics-inertial-lift/microfluidic-simulation_files/user_files/microfluidic-simulation.dat.h5" in NODE0 mode and compression level 1 ...
   Writing results.
 Done.
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Scene|initial-particle-tracks-scene"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*List_Tree1" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-initial-particle-tracks-scene*Display")
+
+
+DPM Iteration ....
+Interrupting client...
