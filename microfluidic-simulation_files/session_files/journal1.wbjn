@@ -1,0 +1,47 @@
+# encoding: utf-8
+# 2021 R2
+SetScriptVersion(Version="21.2.209")
+template1 = GetTemplate(TemplateName="Geometry")
+system1 = template1.CreateSystem()
+template2 = GetTemplate(TemplateName="Mesh")
+system2 = template2.CreateSystem(
+    Position="Right",
+    RelativeTo=system1)
+system1.Delete()
+geometry1 = system2.GetContainer(ComponentName="Geometry")
+geometry1.Edit()
+Save(Overwrite=True)
+Save(Overwrite=True)
+Save(Overwrite=True)
+meshComponent1 = system2.GetComponent(Name="Mesh")
+meshComponent1.Update(AllDependencies=True)
+mesh1 = system2.GetContainer(ComponentName="Mesh")
+mesh1.Edit()
+mesh1.Exit()
+meshComponent1.Clean()
+mesh1.Edit()
+Save(Overwrite=True)
+Save(Overwrite=True)
+designPoint1 = Parameters.GetDesignPoint(Name="0")
+parameter1 = Parameters.GetParameter(Name="P8")
+designPoint1.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="1.75 [um]")
+meshComponent1.Update(AllDependencies=True)
+parameter2 = Parameters.GetParameter(Name="P1")
+parameter2.DisplayText = "channel_width"
+designPoint1.SetParameterExpression(
+    Parameter=parameter2,
+    Expression="80 [um]")
+geometryComponent1 = system2.GetComponent(Name="Geometry")
+geometryComponent1.Update(AllDependencies=True)
+meshComponent1.Update(AllDependencies=True)
+Save(Overwrite=True)
+Save(Overwrite=True)
+Save(Overwrite=True)
+designPoint1.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="2.75 [um]")
+Save(Overwrite=True)
+Save(Overwrite=True)
+Save(Overwrite=True)
