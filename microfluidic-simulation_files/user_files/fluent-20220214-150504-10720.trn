@@ -1,0 +1,1378 @@
+
+              Welcome to ANSYS Fluent 2021 R2
+
+              Copyright 1987-2021 ANSYS, Inc. All Rights Reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: May 28 2021 13:53:52 EDT  Build Id: 10201  
+ 
+
+*********************************************
+Info: Your license enables 4-way parallel execution.
+For faster simulations, please start the application with the appropriate parallel options.
+*********************************************
+
+
+     --------------------------------------------------------------
+     This is a student version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "DESKTOP-R5L45J1" (win64).
+
+----------------------------------------------------------------------------------
+ID    Hostname         Core  O.S.         PID    Vendor                          
+----------------------------------------------------------------------------------
+n0    DESKTOP-R5L45J1  1/12  Windows-x64  27876  Intel(R) Xeon(R) E5-1650 v3     
+host  DESKTOP-R5L45J1        Windows-x64  15296  Intel(R) Xeon(R) E5-1650 v3     
+
+MPI Option Selected: intel
+----------------------------------------------------------------------------------
+
+Cleanup script file is C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\cleanup-fluent-DESKTOP-R5L45J1-15296.bat
+
+Reading journal file C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files\_read_fluent_case_.jou...
+
+> ;Journal file automatically created by Fluent!
+/file read-case C:/Users/rylab/Desktop/microfluidics-inertial-lift/microfluidic-simulation_files/user_files/microfluidic-simulation.cas.h5
+Fast-loading "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent\fluent21.2.0\\addons\afd\lib\hdfio.bin"
+Done.
+
+Reading from DESKTOP-R5L45J1:"C:/Users/rylab/Desktop/microfluidics-inertial-lift/microfluidic-simulation_files/user_files/microfluidic-simulation.cas.h5" in NODE0 mode ...
+  Reading mesh ...
+      421180 cells,     1 cell zone  ...
+         421180 mixed cells,  zone id: 18
+      943824 faces,     4 face zones ...
+         907286 mixed interior faces,  zone id: 15
+           1630 mixed velocity-inlet faces,  zone id: 20
+           1630 mixed outflow faces,  zone id: 21
+          33278 triangular wall faces,  zone id: 7
+      135239 nodes,     1 node zone  ...
+  Done.
+
+  Reading data for "outlet" profile.
+
+Checking the existence of compiled "libudf" UDF library for current platform.
+If needed will attempt auto-compilation...
+
+ 	 Make sure that UDF source files are in the directory 
+ 	 that contains your case and data files. If you have 
+ 	 an existing libudf directory, please remove this 
+ 	 directory to ensure that latest files are used. 
+  
+
+Will now auto-compile UDF library "libudf".
+Copied C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files/C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files\inertial-lift-udfs.c to libudf\\src
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\sconstruct.udf "libudf\\win64\3ddp_host\SConstruct" ")
+        1 file(s) copied.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\scons_default.bat "libudf\\win64\3ddp_host\scons_test.bat" ")
+        1 file(s) copied.
+Files udf_names.c and user_nt.udf in 3ddp_host are up-to-date.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\makefile_nt.udf "libudf\\win64\3ddp_host\makefile" ")
+        1 file(s) copied.
+(chdir "libudf")(chdir "win64\\3ddp_host")
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  Copyright 1987-2021 ANSYS, Inc. All Rights Reserved. 
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+
+Microsoft (R) Program Maintenance Utility Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+# Generating ud_io1.h
+	resolve.exe -udf ..\\..\\src\\inertial-lift-udfs.c -head_file ud_io1.h
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224  -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_host  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  ..\\..\\src\\inertial-lift-udfs.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+inertial-lift-udfs.c
+c:\\users\\rylab\\desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\src\\inertial-lift-udfs.c(314) : warning C4700: uninitialized local variable 'kappa' used
+c:\\users\\rylab\\desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\src\\inertial-lift-udfs.c(384) : warning C4700: uninitialized local variable 'kappa' used
+c:\\users\\rylab\\desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\src\\inertial-lift-udfs.c(314) : warning C4700: uninitialized local variable 'Re' used
+c:\\users\\rylab\\desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\src\\inertial-lift-udfs.c(314) : warning C4700: uninitialized local variable 'W' used
+c:\\users\\rylab\\desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\src\\inertial-lift-udfs.c(384) : warning C4700: uninitialized local variable 'Re' used
+c:\\users\\rylab\\desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\src\\inertial-lift-udfs.c(314) : warning C4700: uninitialized local variable 'H' used
+c:\\users\\rylab\\desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\src\\inertial-lift-udfs.c(384) : warning C4700: uninitialized local variable 'W' used
+c:\\users\\rylab\\desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\src\\inertial-lift-udfs.c(316) : warning C4700: uninitialized local variable 'CL' used
+c:\\users\\rylab\\desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\src\\inertial-lift-udfs.c(384) : warning C4700: uninitialized local variable 'H' used
+c:\\users\\rylab\\desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\src\\inertial-lift-udfs.c(384) : warning C4700: uninitialized local variable 'particle_diameter' used
+# Generating udf_names.c because of inertial-lift-udfs.obj
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224 -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_host  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  udf_names.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+udf_names.c
+# Linking libudf.dll because of udf_names.obj inertial-lift-udfs.obj
+	link  /Libpath:"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_host  /Libpath:"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\win64\\net\\shared /dll /debug /assemblydebug /out:libudf.dll  udf_names.obj inertial-lift-udfs.obj   mport.lib fl2120.lib 
+Microsoft (R) Incremental Linker Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\sconstruct.udf "libudf\\win64\3ddp_node\SConstruct" ")
+        1 file(s) copied.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\scons_default.bat "libudf\\win64\3ddp_node\scons_test.bat" ")
+        1 file(s) copied.
+Files udf_names.c and user_nt.udf in 3ddp_node are up-to-date.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\makefile_nt.udf "libudf\\win64\3ddp_node\makefile" ")
+        1 file(s) copied.
+(chdir "libudf")(chdir "win64\\3ddp_node")
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  Copyright 1987-2021 ANSYS, Inc. All Rights Reserved. 
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+
+Microsoft (R) Program Maintenance Utility Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+# Generating ud_io1.h
+	resolve.exe -udf ..\\..\\src\\inertial-lift-udfs.c -head_file ud_io1.h
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224  -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_node  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  ..\\..\\src\\inertial-lift-udfs.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+inertial-lift-udfs.c
+c:\\users\\rylab\\desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\src\\inertial-lift-udfs.c(314) : warning C4700: uninitialized local variable 'kappa' used
+c:\\users\\rylab\\desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\src\\inertial-lift-udfs.c(314) : warning C4700: uninitialized local variable 'Re' used
+c:\\users\\rylab\\desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\src\\inertial-lift-udfs.c(314) : warning C4700: uninitialized local variable 'W' used
+c:\\users\\rylab\\desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\src\\inertial-lift-udfs.c(314) : warning C4700: uninitialized local variable 'H' used
+c:\\users\\rylab\\desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\src\\inertial-lift-udfs.c(316) : warning C4700: uninitialized local variable 'CL' used
+c:\\users\\rylab\\desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\src\\inertial-lift-udfs.c(384) : warning C4700: uninitialized local variable 'kappa' used
+c:\\users\\rylab\\desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\src\\inertial-lift-udfs.c(384) : warning C4700: uninitialized local variable 'Re' used
+c:\\users\\rylab\\desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\src\\inertial-lift-udfs.c(384) : warning C4700: uninitialized local variable 'W' used
+c:\\users\\rylab\\desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\src\\inertial-lift-udfs.c(384) : warning C4700: uninitialized local variable 'H' used
+c:\\users\\rylab\\desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\src\\inertial-lift-udfs.c(384) : warning C4700: uninitialized local variable 'particle_diameter' used
+# Generating udf_names.c because of inertial-lift-udfs.obj
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224 -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_node  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  udf_names.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+udf_names.c
+# Linking libudf.dll because of udf_names.obj inertial-lift-udfs.obj
+	link  /Libpath:"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_node  /Libpath:"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\win64\\mpi\\shared /dll /debug /assemblydebug /out:libudf.dll  udf_names.obj inertial-lift-udfs.obj   mport.lib fl_mpi2120.lib 
+Microsoft (R) Incremental Linker Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Done.
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...Done.
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...
+	inertial_lift
+	inlet_x_velocity
+	on_demand_max_velocity_calculation
+Done.
+
+Building...
+     mesh
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	wall
+	interior-solid
+	inlet
+	outlet
+	fluid
+     parallel,
+Done.
+
+Preparing mesh for display...
+Done.
+
+> /file read-data C:/Users/rylab/Desktop/microfluidics-inertial-lift/microfluidic-simulation_files/user_files/microfluidic-simulation.dat.h5
+
+Reading from DESKTOP-R5L45J1:"C:/Users/rylab/Desktop/microfluidics-inertial-lift/microfluidic-simulation_files/user_files/microfluidic-simulation.dat.h5" in NODE0 mode ...
+
+
+  Reading results.
+Parallel variables...
+Done.
+
+> 
+adjoint/                mesh/                   report/
+define/                 parallel/               server/
+display/                plot/                   solve/
+exit                    preferences/            surface/
+file/                   print-license-usage     views/
+
+> 
+> (cx-gui-do cx-activate-item "Ribbon*Frame1*Frame4(User-Defined)*Table1*Table3(User Defined)*PushButton1(Functions)")
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuFunctions*Compiled...")
+(cx-gui-do cx-activate-item "Compiled UDFs*Table1*Frame1*Frame2*PushButton1( Add)")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "inertial-lift-udfs.c") "Source Files (*.c *.cpp )")
+(cx-gui-do cx-activate-item "Compiled UDFs*Frame8*PushButton2(Build)")
+(cx-gui-do cx-activate-item "Question*OK")
+Copied C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files/C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files\inertial-lift-udfs.c to libudf\\src
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\sconstruct.udf "libudf\\win64\3ddp_host\SConstruct" ")
+        1 file(s) copied.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\scons_default.bat "libudf\\win64\3ddp_host\scons_test.bat" ")
+        1 file(s) copied.
+Files udf_names.c and user_nt.udf in 3ddp_host are up-to-date.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\makefile_nt.udf "libudf\\win64\3ddp_host\makefile" ")
+        1 file(s) copied.
+(chdir "libudf")(chdir "win64\\3ddp_host")
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  Copyright 1987-2021 ANSYS, Inc. All Rights Reserved. 
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+
+Microsoft (R) Program Maintenance Utility Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+# Generating ud_io1.h
+	resolve.exe -udf ..\\..\\src\\inertial-lift-udfs.c -head_file ud_io1.h
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224  -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_host  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  ..\\..\\src\\inertial-lift-udfs.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+inertial-lift-udfs.c
+..\\..\\src\\inertial-lift-udfs.c(278): error C2440: '=': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(279): error C2440: '=': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(284): error C2440: '=': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(285): error C2440: '=': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(289): error C2297: '/': illegal, right operand has type 'double *'
+..\\..\\src\\inertial-lift-udfs.c(290): error C2297: '/': illegal, right operand has type 'double *'
+..\\..\\src\\inertial-lift-udfs.c(292): error C2296: '*': illegal, left operand has type 'double *'
+..\\..\\src\\inertial-lift-udfs.c(292): error C2297: '*': illegal, right operand has type 'double *'
+..\\..\\src\\inertial-lift-udfs.c(293): error C2297: '*': illegal, right operand has type 'double *'
+..\\..\\src\\inertial-lift-udfs.c(296): error C2440: '=': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(297): error C2297: '/': illegal, right operand has type 'double *'
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4047: 'function': 'double *' differs in levels of indirection from 'double **'
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 8
+..\\..\\src\\inertial-lift-udfs.c(316): error C2440: 'function': cannot convert from 'double *' to 'double'
+..\\..\\src\\inertial-lift-udfs.c(316): warning C4024: 'CALCULATE_LIFT_COEFFICIENTS': different types for formal and actual parameter 7
+..\\..\\src\\inertial-lift-udfs.c(384): error C2440: 'function': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 4
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 5
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 6
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 7
+NMAKE : fatal error U1077: '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x64\\cl.EXE"' : return code '0x2'
+Stop.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\sconstruct.udf "libudf\\win64\3ddp_node\SConstruct" ")
+        1 file(s) copied.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\scons_default.bat "libudf\\win64\3ddp_node\scons_test.bat" ")
+        1 file(s) copied.
+Files udf_names.c and user_nt.udf in 3ddp_node are up-to-date.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\makefile_nt.udf "libudf\\win64\3ddp_node\makefile" ")
+        1 file(s) copied.
+(chdir "libudf")(chdir "win64\\3ddp_node")
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  Copyright 1987-2021 ANSYS, Inc. All Rights Reserved. 
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+
+Microsoft (R) Program Maintenance Utility Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+# Generating ud_io1.h
+	resolve.exe -udf ..\\..\\src\\inertial-lift-udfs.c -head_file ud_io1.h
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224  -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_node  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  ..\\..\\src\\inertial-lift-udfs.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+inertial-lift-udfs.c
+..\\..\\src\\inertial-lift-udfs.c(278): error C2440: '=': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(279): error C2440: '=': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(284): error C2440: '=': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(285): error C2440: '=': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(289): error C2297: '/': illegal, right operand has type 'double *'
+..\\..\\src\\inertial-lift-udfs.c(290): error C2297: '/': illegal, right operand has type 'double *'
+..\\..\\src\\inertial-lift-udfs.c(292): error C2296: '*': illegal, left operand has type 'double *'
+..\\..\\src\\inertial-lift-udfs.c(292): error C2297: '*': illegal, right operand has type 'double *'
+..\\..\\src\\inertial-lift-udfs.c(293): error C2297: '*': illegal, right operand has type 'double *'
+..\\..\\src\\inertial-lift-udfs.c(296): error C2440: '=': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(297): error C2297: '/': illegal, right operand has type 'double *'
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4047: 'function': 'double *' differs in levels of indirection from 'double **'
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 8
+..\\..\\src\\inertial-lift-udfs.c(316): error C2440: 'function': cannot convert from 'double *' to 'double'
+..\\..\\src\\inertial-lift-udfs.c(316): warning C4024: 'CALCULATE_LIFT_COEFFICIENTS': different types for formal and actual parameter 7
+..\\..\\src\\inertial-lift-udfs.c(384): error C2440: 'function': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 4
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 5
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 6
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 7
+NMAKE : fatal error U1077: '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x64\\cl.EXE"' : return code '0x2'
+Stop.
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...Done.
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...
+	inertial_lift
+	inlet_x_velocity
+	on_demand_max_velocity_calculation
+Done.
+
+Done.
+(cx-gui-do cx-activate-item "Compiled UDFs*Frame8*PushButton2(Build)")
+(cx-gui-do cx-activate-item "Question*OK")
+Copied C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files/C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files\inertial-lift-udfs.c to libudf\\src
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\sconstruct.udf "libudf\\win64\3ddp_host\SConstruct" ")
+        1 file(s) copied.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\scons_default.bat "libudf\\win64\3ddp_host\scons_test.bat" ")
+        1 file(s) copied.
+Files udf_names.c and user_nt.udf in 3ddp_host are up-to-date.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\makefile_nt.udf "libudf\\win64\3ddp_host\makefile" ")
+        1 file(s) copied.
+(chdir "libudf")(chdir "win64\\3ddp_host")
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  Copyright 1987-2021 ANSYS, Inc. All Rights Reserved. 
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+
+Microsoft (R) Program Maintenance Utility Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+# Generating ud_io1.h
+	resolve.exe -udf ..\\..\\src\\inertial-lift-udfs.c -head_file ud_io1.h
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224  -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_host  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  ..\\..\\src\\inertial-lift-udfs.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+inertial-lift-udfs.c
+..\\..\\src\\inertial-lift-udfs.c(289): error C2297: '/': illegal, right operand has type 'double *'
+..\\..\\src\\inertial-lift-udfs.c(290): error C2297: '/': illegal, right operand has type 'double *'
+..\\..\\src\\inertial-lift-udfs.c(292): error C2296: '*': illegal, left operand has type 'double *'
+..\\..\\src\\inertial-lift-udfs.c(292): error C2297: '*': illegal, right operand has type 'double *'
+..\\..\\src\\inertial-lift-udfs.c(293): error C2297: '*': illegal, right operand has type 'double *'
+..\\..\\src\\inertial-lift-udfs.c(297): error C2297: '/': illegal, right operand has type 'double *'
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4047: 'function': 'double *' differs in levels of indirection from 'double **'
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 8
+..\\..\\src\\inertial-lift-udfs.c(316): error C2440: 'function': cannot convert from 'double *' to 'double'
+..\\..\\src\\inertial-lift-udfs.c(316): warning C4024: 'CALCULATE_LIFT_COEFFICIENTS': different types for formal and actual parameter 7
+..\\..\\src\\inertial-lift-udfs.c(384): error C2440: 'function': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 4
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 5
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 6
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 7
+NMAKE : fatal error U1077: '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x64\\cl.EXE"' : return code '0x2'
+Stop.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\sconstruct.udf "libudf\\win64\3ddp_node\SConstruct" ")
+        1 file(s) copied.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\scons_default.bat "libudf\\win64\3ddp_node\scons_test.bat" ")
+        1 file(s) copied.
+Files udf_names.c and user_nt.udf in 3ddp_node are up-to-date.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\makefile_nt.udf "libudf\\win64\3ddp_node\makefile" ")
+        1 file(s) copied.
+(chdir "libudf")(chdir "win64\\3ddp_node")
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  Copyright 1987-2021 ANSYS, Inc. All Rights Reserved. 
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+
+Microsoft (R) Program Maintenance Utility Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+# Generating ud_io1.h
+	resolve.exe -udf ..\\..\\src\\inertial-lift-udfs.c -head_file ud_io1.h
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224  -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_node  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  ..\\..\\src\\inertial-lift-udfs.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+inertial-lift-udfs.c
+..\\..\\src\\inertial-lift-udfs.c(289): error C2297: '/': illegal, right operand has type 'double *'
+..\\..\\src\\inertial-lift-udfs.c(290): error C2297: '/': illegal, right operand has type 'double *'
+..\\..\\src\\inertial-lift-udfs.c(292): error C2296: '*': illegal, left operand has type 'double *'
+..\\..\\src\\inertial-lift-udfs.c(292): error C2297: '*': illegal, right operand has type 'double *'
+..\\..\\src\\inertial-lift-udfs.c(293): error C2297: '*': illegal, right operand has type 'double *'
+..\\..\\src\\inertial-lift-udfs.c(297): error C2297: '/': illegal, right operand has type 'double *'
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4047: 'function': 'double *' differs in levels of indirection from 'double **'
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 8
+..\\..\\src\\inertial-lift-udfs.c(316): error C2440: 'function': cannot convert from 'double *' to 'double'
+..\\..\\src\\inertial-lift-udfs.c(316): warning C4024: 'CALCULATE_LIFT_COEFFICIENTS': different types for formal and actual parameter 7
+..\\..\\src\\inertial-lift-udfs.c(384): error C2440: 'function': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 4
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 5
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 6
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 7
+NMAKE : fatal error U1077: '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x64\\cl.EXE"' : return code '0x2'
+Stop.
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...Done.
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...
+	inertial_lift
+	inlet_x_velocity
+	on_demand_max_velocity_calculation
+Done.
+
+Done.
+(cx-gui-do cx-activate-item "Compiled UDFs*Frame8*PushButton2(Build)")
+(cx-gui-do cx-activate-item "Question*OK")
+Copied C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files/C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files\inertial-lift-udfs.c to libudf\\src
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\sconstruct.udf "libudf\\win64\3ddp_host\SConstruct" ")
+        1 file(s) copied.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\scons_default.bat "libudf\\win64\3ddp_host\scons_test.bat" ")
+        1 file(s) copied.
+Files udf_names.c and user_nt.udf in 3ddp_host are up-to-date.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\makefile_nt.udf "libudf\\win64\3ddp_host\makefile" ")
+        1 file(s) copied.
+(chdir "libudf")(chdir "win64\\3ddp_host")
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  Copyright 1987-2021 ANSYS, Inc. All Rights Reserved. 
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+
+Microsoft (R) Program Maintenance Utility Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+# Generating ud_io1.h
+	resolve.exe -udf ..\\..\\src\\inertial-lift-udfs.c -head_file ud_io1.h
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224  -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_host  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  ..\\..\\src\\inertial-lift-udfs.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+inertial-lift-udfs.c
+..\\..\\src\\inertial-lift-udfs.c(289): error C2100: illegal indirection
+..\\..\\src\\inertial-lift-udfs.c(290): error C2100: illegal indirection
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4047: 'function': 'double *' differs in levels of indirection from 'double **'
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 8
+..\\..\\src\\inertial-lift-udfs.c(316): error C2440: 'function': cannot convert from 'double *' to 'double'
+..\\..\\src\\inertial-lift-udfs.c(316): warning C4024: 'CALCULATE_LIFT_COEFFICIENTS': different types for formal and actual parameter 7
+..\\..\\src\\inertial-lift-udfs.c(384): error C2440: 'function': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 4
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 5
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 6
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 7
+NMAKE : fatal error U1077: '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x64\\cl.EXE"' : return code '0x2'
+Stop.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\sconstruct.udf "libudf\\win64\3ddp_node\SConstruct" ")
+        1 file(s) copied.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\scons_default.bat "libudf\\win64\3ddp_node\scons_test.bat" ")
+        1 file(s) copied.
+Files udf_names.c and user_nt.udf in 3ddp_node are up-to-date.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\makefile_nt.udf "libudf\\win64\3ddp_node\makefile" ")
+        1 file(s) copied.
+(chdir "libudf")(chdir "win64\\3ddp_node")
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  Copyright 1987-2021 ANSYS, Inc. All Rights Reserved. 
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+
+Microsoft (R) Program Maintenance Utility Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+# Generating ud_io1.h
+	resolve.exe -udf ..\\..\\src\\inertial-lift-udfs.c -head_file ud_io1.h
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224  -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_node  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  ..\\..\\src\\inertial-lift-udfs.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+inertial-lift-udfs.c
+..\\..\\src\\inertial-lift-udfs.c(289): error C2100: illegal indirection
+..\\..\\src\\inertial-lift-udfs.c(290): error C2100: illegal indirection
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4047: 'function': 'double *' differs in levels of indirection from 'double **'
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 8
+..\\..\\src\\inertial-lift-udfs.c(316): error C2440: 'function': cannot convert from 'double *' to 'double'
+..\\..\\src\\inertial-lift-udfs.c(316): warning C4024: 'CALCULATE_LIFT_COEFFICIENTS': different types for formal and actual parameter 7
+..\\..\\src\\inertial-lift-udfs.c(384): error C2440: 'function': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 4
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 5
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 6
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 7
+NMAKE : fatal error U1077: '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x64\\cl.EXE"' : return code '0x2'
+Stop.
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...Done.
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...
+	inertial_lift
+	inlet_x_velocity
+	on_demand_max_velocity_calculation
+Done.
+
+Done.
+(cx-gui-do cx-activate-item "Compiled UDFs*Frame8*PushButton2(Build)")
+(cx-gui-do cx-activate-item "Question*OK")
+Copied C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files/C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files\inertial-lift-udfs.c to libudf\\src
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\sconstruct.udf "libudf\\win64\3ddp_host\SConstruct" ")
+        1 file(s) copied.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\scons_default.bat "libudf\\win64\3ddp_host\scons_test.bat" ")
+        1 file(s) copied.
+Files udf_names.c and user_nt.udf in 3ddp_host are up-to-date.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\makefile_nt.udf "libudf\\win64\3ddp_host\makefile" ")
+        1 file(s) copied.
+(chdir "libudf")(chdir "win64\\3ddp_host")
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  Copyright 1987-2021 ANSYS, Inc. All Rights Reserved. 
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+
+Microsoft (R) Program Maintenance Utility Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+# Generating ud_io1.h
+	resolve.exe -udf ..\\..\\src\\inertial-lift-udfs.c -head_file ud_io1.h
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224  -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_host  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  ..\\..\\src\\inertial-lift-udfs.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+inertial-lift-udfs.c
+..\\..\\src\\inertial-lift-udfs.c(289): error C2100: illegal indirection
+..\\..\\src\\inertial-lift-udfs.c(290): error C2100: illegal indirection
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4047: 'function': 'double *' differs in levels of indirection from 'double **'
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 8
+..\\..\\src\\inertial-lift-udfs.c(316): error C2440: 'function': cannot convert from 'double *' to 'double'
+..\\..\\src\\inertial-lift-udfs.c(316): warning C4024: 'CALCULATE_LIFT_COEFFICIENTS': different types for formal and actual parameter 7
+..\\..\\src\\inertial-lift-udfs.c(384): error C2440: 'function': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 4
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 5
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 6
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 7
+NMAKE : fatal error U1077: '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x64\\cl.EXE"' : return code '0x2'
+Stop.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\sconstruct.udf "libudf\\win64\3ddp_node\SConstruct" ")
+        1 file(s) copied.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\scons_default.bat "libudf\\win64\3ddp_node\scons_test.bat" ")
+        1 file(s) copied.
+Files udf_names.c and user_nt.udf in 3ddp_node are up-to-date.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\makefile_nt.udf "libudf\\win64\3ddp_node\makefile" ")
+        1 file(s) copied.
+(chdir "libudf")(chdir "win64\\3ddp_node")
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  Copyright 1987-2021 ANSYS, Inc. All Rights Reserved. 
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+
+Microsoft (R) Program Maintenance Utility Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+# Generating ud_io1.h
+	resolve.exe -udf ..\\..\\src\\inertial-lift-udfs.c -head_file ud_io1.h
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224  -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_node  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  ..\\..\\src\\inertial-lift-udfs.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+inertial-lift-udfs.c
+..\\..\\src\\inertial-lift-udfs.c(289): error C2100: illegal indirection
+..\\..\\src\\inertial-lift-udfs.c(290): error C2100: illegal indirection
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4047: 'function': 'double *' differs in levels of indirection from 'double **'
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 8
+..\\..\\src\\inertial-lift-udfs.c(316): error C2440: 'function': cannot convert from 'double *' to 'double'
+..\\..\\src\\inertial-lift-udfs.c(316): warning C4024: 'CALCULATE_LIFT_COEFFICIENTS': different types for formal and actual parameter 7
+..\\..\\src\\inertial-lift-udfs.c(384): error C2440: 'function': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 4
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 5
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 6
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 7
+NMAKE : fatal error U1077: '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x64\\cl.EXE"' : return code '0x2'
+Stop.
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...Done.
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...
+	inertial_lift
+	inlet_x_velocity
+	on_demand_max_velocity_calculation
+Done.
+
+Done.
+(cx-gui-do cx-activate-item "Compiled UDFs*Frame8*PushButton2(Build)")
+(cx-gui-do cx-activate-item "Question*OK")
+Copied C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files/C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files\inertial-lift-udfs.c to libudf\\src
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\sconstruct.udf "libudf\\win64\3ddp_host\SConstruct" ")
+        1 file(s) copied.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\scons_default.bat "libudf\\win64\3ddp_host\scons_test.bat" ")
+        1 file(s) copied.
+Files udf_names.c and user_nt.udf in 3ddp_host are up-to-date.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\makefile_nt.udf "libudf\\win64\3ddp_host\makefile" ")
+        1 file(s) copied.
+(chdir "libudf")(chdir "win64\\3ddp_host")
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  Copyright 1987-2021 ANSYS, Inc. All Rights Reserved. 
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+
+Microsoft (R) Program Maintenance Utility Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+# Generating ud_io1.h
+	resolve.exe -udf ..\\..\\src\\inertial-lift-udfs.c -head_file ud_io1.h
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224  -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_host  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  ..\\..\\src\\inertial-lift-udfs.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+inertial-lift-udfs.c
+..\\..\\src\\inertial-lift-udfs.c(289): error C2100: illegal indirection
+..\\..\\src\\inertial-lift-udfs.c(290): error C2100: illegal indirection
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4047: 'function': 'double *' differs in levels of indirection from 'double **'
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 8
+..\\..\\src\\inertial-lift-udfs.c(316): error C2440: 'function': cannot convert from 'double *' to 'double'
+..\\..\\src\\inertial-lift-udfs.c(316): warning C4024: 'CALCULATE_LIFT_COEFFICIENTS': different types for formal and actual parameter 7
+..\\..\\src\\inertial-lift-udfs.c(384): error C2440: 'function': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 4
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 5
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 6
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 7
+NMAKE : fatal error U1077: '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x64\\cl.EXE"' : return code '0x2'
+Stop.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\sconstruct.udf "libudf\\win64\3ddp_node\SConstruct" ")
+        1 file(s) copied.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\scons_default.bat "libudf\\win64\3ddp_node\scons_test.bat" ")
+        1 file(s) copied.
+Files udf_names.c and user_nt.udf in 3ddp_node are up-to-date.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\makefile_nt.udf "libudf\\win64\3ddp_node\makefile" ")
+        1 file(s) copied.
+(chdir "libudf")(chdir "win64\\3ddp_node")
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  Copyright 1987-2021 ANSYS, Inc. All Rights Reserved. 
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+
+Microsoft (R) Program Maintenance Utility Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+# Generating ud_io1.h
+	resolve.exe -udf ..\\..\\src\\inertial-lift-udfs.c -head_file ud_io1.h
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224  -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_node  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  ..\\..\\src\\inertial-lift-udfs.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+inertial-lift-udfs.c
+..\\..\\src\\inertial-lift-udfs.c(289): error C2100: illegal indirection
+..\\..\\src\\inertial-lift-udfs.c(290): error C2100: illegal indirection
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4047: 'function': 'double *' differs in levels of indirection from 'double **'
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 8
+..\\..\\src\\inertial-lift-udfs.c(316): error C2440: 'function': cannot convert from 'double *' to 'double'
+..\\..\\src\\inertial-lift-udfs.c(316): warning C4024: 'CALCULATE_LIFT_COEFFICIENTS': different types for formal and actual parameter 7
+..\\..\\src\\inertial-lift-udfs.c(384): error C2440: 'function': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 4
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 5
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 6
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 7
+NMAKE : fatal error U1077: '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x64\\cl.EXE"' : return code '0x2'
+Stop.
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...Done.
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...
+	inertial_lift
+	inlet_x_velocity
+	on_demand_max_velocity_calculation
+Done.
+
+Done.
+(cx-gui-do cx-activate-item "Compiled UDFs*Frame8*PushButton2(Build)")
+(cx-gui-do cx-activate-item "Question*OK")
+Copied C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files/C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files\inertial-lift-udfs.c to libudf\\src
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\sconstruct.udf "libudf\\win64\3ddp_host\SConstruct" ")
+        1 file(s) copied.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\scons_default.bat "libudf\\win64\3ddp_host\scons_test.bat" ")
+        1 file(s) copied.
+Files udf_names.c and user_nt.udf in 3ddp_host are up-to-date.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\makefile_nt.udf "libudf\\win64\3ddp_host\makefile" ")
+        1 file(s) copied.
+(chdir "libudf")(chdir "win64\\3ddp_host")
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  Copyright 1987-2021 ANSYS, Inc. All Rights Reserved. 
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+
+Microsoft (R) Program Maintenance Utility Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+# Generating ud_io1.h
+	resolve.exe -udf ..\\..\\src\\inertial-lift-udfs.c -head_file ud_io1.h
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224  -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_host  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  ..\\..\\src\\inertial-lift-udfs.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+inertial-lift-udfs.c
+..\\..\\src\\inertial-lift-udfs.c(289): error C2109: subscript requires array or pointer type
+..\\..\\src\\inertial-lift-udfs.c(290): error C2109: subscript requires array or pointer type
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4047: 'function': 'double *' differs in levels of indirection from 'double **'
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 8
+..\\..\\src\\inertial-lift-udfs.c(316): error C2440: 'function': cannot convert from 'double *' to 'double'
+..\\..\\src\\inertial-lift-udfs.c(316): warning C4024: 'CALCULATE_LIFT_COEFFICIENTS': different types for formal and actual parameter 7
+..\\..\\src\\inertial-lift-udfs.c(384): error C2440: 'function': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 4
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 5
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 6
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 7
+NMAKE : fatal error U1077: '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x64\\cl.EXE"' : return code '0x2'
+Stop.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\sconstruct.udf "libudf\\win64\3ddp_node\SConstruct" ")
+        1 file(s) copied.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\scons_default.bat "libudf\\win64\3ddp_node\scons_test.bat" ")
+        1 file(s) copied.
+Files udf_names.c and user_nt.udf in 3ddp_node are up-to-date.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\makefile_nt.udf "libudf\\win64\3ddp_node\makefile" ")
+        1 file(s) copied.
+(chdir "libudf")(chdir "win64\\3ddp_node")
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  Copyright 1987-2021 ANSYS, Inc. All Rights Reserved. 
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+
+Microsoft (R) Program Maintenance Utility Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+# Generating ud_io1.h
+	resolve.exe -udf ..\\..\\src\\inertial-lift-udfs.c -head_file ud_io1.h
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224  -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_node  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  ..\\..\\src\\inertial-lift-udfs.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+inertial-lift-udfs.c
+..\\..\\src\\inertial-lift-udfs.c(289): error C2109: subscript requires array or pointer type
+..\\..\\src\\inertial-lift-udfs.c(290): error C2109: subscript requires array or pointer type
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4047: 'function': 'double *' differs in levels of indirection from 'double **'
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 8
+..\\..\\src\\inertial-lift-udfs.c(316): error C2440: 'function': cannot convert from 'double *' to 'double'
+..\\..\\src\\inertial-lift-udfs.c(316): warning C4024: 'CALCULATE_LIFT_COEFFICIENTS': different types for formal and actual parameter 7
+..\\..\\src\\inertial-lift-udfs.c(384): error C2440: 'function': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 4
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 5
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 6
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 7
+NMAKE : fatal error U1077: '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x64\\cl.EXE"' : return code '0x2'
+Stop.
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...Done.
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...
+	inertial_lift
+	inlet_x_velocity
+	on_demand_max_velocity_calculation
+Done.
+
+Done.
+(cx-gui-do cx-activate-item "Compiled UDFs*Frame8*PushButton2(Build)")
+(cx-gui-do cx-activate-item "Question*OK")
+Copied C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files/C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files\inertial-lift-udfs.c to libudf\\src
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\sconstruct.udf "libudf\\win64\3ddp_host\SConstruct" ")
+        1 file(s) copied.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\scons_default.bat "libudf\\win64\3ddp_host\scons_test.bat" ")
+        1 file(s) copied.
+Files udf_names.c and user_nt.udf in 3ddp_host are up-to-date.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\makefile_nt.udf "libudf\\win64\3ddp_host\makefile" ")
+        1 file(s) copied.
+(chdir "libudf")(chdir "win64\\3ddp_host")
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  Copyright 1987-2021 ANSYS, Inc. All Rights Reserved. 
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+
+Microsoft (R) Program Maintenance Utility Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+# Generating ud_io1.h
+	resolve.exe -udf ..\\..\\src\\inertial-lift-udfs.c -head_file ud_io1.h
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224  -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_host  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  ..\\..\\src\\inertial-lift-udfs.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+inertial-lift-udfs.c
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4047: 'function': 'double *' differs in levels of indirection from 'double **'
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 8
+..\\..\\src\\inertial-lift-udfs.c(316): error C2440: 'function': cannot convert from 'double *' to 'double'
+..\\..\\src\\inertial-lift-udfs.c(316): warning C4024: 'CALCULATE_LIFT_COEFFICIENTS': different types for formal and actual parameter 7
+..\\..\\src\\inertial-lift-udfs.c(384): error C2440: 'function': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 4
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 5
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 6
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 7
+NMAKE : fatal error U1077: '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x64\\cl.EXE"' : return code '0x2'
+Stop.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\sconstruct.udf "libudf\\win64\3ddp_node\SConstruct" ")
+        1 file(s) copied.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\scons_default.bat "libudf\\win64\3ddp_node\scons_test.bat" ")
+        1 file(s) copied.
+Files udf_names.c and user_nt.udf in 3ddp_node are up-to-date.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\makefile_nt.udf "libudf\\win64\3ddp_node\makefile" ")
+        1 file(s) copied.
+(chdir "libudf")(chdir "win64\\3ddp_node")
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  Copyright 1987-2021 ANSYS, Inc. All Rights Reserved. 
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+
+Microsoft (R) Program Maintenance Utility Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+# Generating ud_io1.h
+	resolve.exe -udf ..\\..\\src\\inertial-lift-udfs.c -head_file ud_io1.h
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224  -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_node  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  ..\\..\\src\\inertial-lift-udfs.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+inertial-lift-udfs.c
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4047: 'function': 'double *' differs in levels of indirection from 'double **'
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 8
+..\\..\\src\\inertial-lift-udfs.c(316): error C2440: 'function': cannot convert from 'double *' to 'double'
+..\\..\\src\\inertial-lift-udfs.c(316): warning C4024: 'CALCULATE_LIFT_COEFFICIENTS': different types for formal and actual parameter 7
+..\\..\\src\\inertial-lift-udfs.c(384): error C2440: 'function': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 4
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 5
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 6
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 7
+NMAKE : fatal error U1077: '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x64\\cl.EXE"' : return code '0x2'
+Stop.
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...Done.
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...
+	inertial_lift
+	inlet_x_velocity
+	on_demand_max_velocity_calculation
+Done.
+
+Done.
+(cx-gui-do cx-activate-item "Compiled UDFs*Frame8*PushButton2(Build)")
+(cx-gui-do cx-activate-item "Question*OK")
+Copied C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files/C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files\inertial-lift-udfs.c to libudf\\src
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\sconstruct.udf "libudf\\win64\3ddp_host\SConstruct" ")
+        1 file(s) copied.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\scons_default.bat "libudf\\win64\3ddp_host\scons_test.bat" ")
+        1 file(s) copied.
+Files udf_names.c and user_nt.udf in 3ddp_host are up-to-date.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\makefile_nt.udf "libudf\\win64\3ddp_host\makefile" ")
+        1 file(s) copied.
+(chdir "libudf")(chdir "win64\\3ddp_host")
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  Copyright 1987-2021 ANSYS, Inc. All Rights Reserved. 
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+
+Microsoft (R) Program Maintenance Utility Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+# Generating ud_io1.h
+	resolve.exe -udf ..\\..\\src\\inertial-lift-udfs.c -head_file ud_io1.h
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224  -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_host  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  ..\\..\\src\\inertial-lift-udfs.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+inertial-lift-udfs.c
+..\\..\\src\\inertial-lift-udfs.c(289): error C2112: '-': pointer subtraction requires integral or pointer operand
+..\\..\\src\\inertial-lift-udfs.c(290): error C2112: '-': pointer subtraction requires integral or pointer operand
+..\\..\\src\\inertial-lift-udfs.c(263): error C2440: 'initializing': cannot convert from 'double *' to 'double'
+..\\..\\src\\inertial-lift-udfs.c(316): error C2440: 'function': cannot convert from 'double *' to 'double'
+..\\..\\src\\inertial-lift-udfs.c(316): warning C4024: 'CALCULATE_LIFT_COEFFICIENTS': different types for formal and actual parameter 7
+..\\..\\src\\inertial-lift-udfs.c(384): error C2440: 'function': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 4
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 5
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 6
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 7
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4047: 'function': 'double **' differs in levels of indirection from 'double [3]'
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 8
+NMAKE : fatal error U1077: '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x64\\cl.EXE"' : return code '0x2'
+Stop.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\sconstruct.udf "libudf\\win64\3ddp_node\SConstruct" ")
+        1 file(s) copied.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\scons_default.bat "libudf\\win64\3ddp_node\scons_test.bat" ")
+        1 file(s) copied.
+Files udf_names.c and user_nt.udf in 3ddp_node are up-to-date.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\makefile_nt.udf "libudf\\win64\3ddp_node\makefile" ")
+        1 file(s) copied.
+(chdir "libudf")(chdir "win64\\3ddp_node")
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  Copyright 1987-2021 ANSYS, Inc. All Rights Reserved. 
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+
+Microsoft (R) Program Maintenance Utility Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+# Generating ud_io1.h
+	resolve.exe -udf ..\\..\\src\\inertial-lift-udfs.c -head_file ud_io1.h
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224  -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_node  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  ..\\..\\src\\inertial-lift-udfs.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+inertial-lift-udfs.c
+..\\..\\src\\inertial-lift-udfs.c(289): error C2112: '-': pointer subtraction requires integral or pointer operand
+..\\..\\src\\inertial-lift-udfs.c(290): error C2112: '-': pointer subtraction requires integral or pointer operand
+..\\..\\src\\inertial-lift-udfs.c(263): error C2440: 'initializing': cannot convert from 'double *' to 'double'
+..\\..\\src\\inertial-lift-udfs.c(316): error C2440: 'function': cannot convert from 'double *' to 'double'
+..\\..\\src\\inertial-lift-udfs.c(316): warning C4024: 'CALCULATE_LIFT_COEFFICIENTS': different types for formal and actual parameter 7
+..\\..\\src\\inertial-lift-udfs.c(384): error C2440: 'function': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 4
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 5
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 6
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 7
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4047: 'function': 'double **' differs in levels of indirection from 'double [3]'
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 8
+NMAKE : fatal error U1077: '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x64\\cl.EXE"' : return code '0x2'
+Stop.
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...Done.
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...
+	inertial_lift
+	inlet_x_velocity
+	on_demand_max_velocity_calculation
+Done.
+
+Done.
+(cx-gui-do cx-activate-item "Compiled UDFs*Frame8*PushButton2(Build)")
+(cx-gui-do cx-activate-item "Question*OK")
+Copied C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files/C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files\inertial-lift-udfs.c to libudf\\src
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\sconstruct.udf "libudf\\win64\3ddp_host\SConstruct" ")
+        1 file(s) copied.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\scons_default.bat "libudf\\win64\3ddp_host\scons_test.bat" ")
+        1 file(s) copied.
+Files udf_names.c and user_nt.udf in 3ddp_host are up-to-date.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\makefile_nt.udf "libudf\\win64\3ddp_host\makefile" ")
+        1 file(s) copied.
+(chdir "libudf")(chdir "win64\\3ddp_host")
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  Copyright 1987-2021 ANSYS, Inc. All Rights Reserved. 
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+
+Microsoft (R) Program Maintenance Utility Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+# Generating ud_io1.h
+	resolve.exe -udf ..\\..\\src\\inertial-lift-udfs.c -head_file ud_io1.h
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224  -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_host  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  ..\\..\\src\\inertial-lift-udfs.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+inertial-lift-udfs.c
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4047: 'function': 'double *' differs in levels of indirection from 'double **'
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 8
+..\\..\\src\\inertial-lift-udfs.c(316): error C2440: 'function': cannot convert from 'double *' to 'double'
+..\\..\\src\\inertial-lift-udfs.c(316): warning C4024: 'CALCULATE_LIFT_COEFFICIENTS': different types for formal and actual parameter 7
+..\\..\\src\\inertial-lift-udfs.c(384): error C2440: 'function': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 4
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 5
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 6
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 7
+NMAKE : fatal error U1077: '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x64\\cl.EXE"' : return code '0x2'
+Stop.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\sconstruct.udf "libudf\\win64\3ddp_node\SConstruct" ")
+        1 file(s) copied.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\scons_default.bat "libudf\\win64\3ddp_node\scons_test.bat" ")
+        1 file(s) copied.
+Files udf_names.c and user_nt.udf in 3ddp_node are up-to-date.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\makefile_nt.udf "libudf\\win64\3ddp_node\makefile" ")
+        1 file(s) copied.
+(chdir "libudf")(chdir "win64\\3ddp_node")
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  Copyright 1987-2021 ANSYS, Inc. All Rights Reserved. 
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+
+Microsoft (R) Program Maintenance Utility Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+# Generating ud_io1.h
+	resolve.exe -udf ..\\..\\src\\inertial-lift-udfs.c -head_file ud_io1.h
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224  -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_node  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  ..\\..\\src\\inertial-lift-udfs.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+inertial-lift-udfs.c
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4047: 'function': 'double *' differs in levels of indirection from 'double **'
+..\\..\\src\\inertial-lift-udfs.c(314): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 8
+..\\..\\src\\inertial-lift-udfs.c(316): error C2440: 'function': cannot convert from 'double *' to 'double'
+..\\..\\src\\inertial-lift-udfs.c(316): warning C4024: 'CALCULATE_LIFT_COEFFICIENTS': different types for formal and actual parameter 7
+..\\..\\src\\inertial-lift-udfs.c(384): error C2440: 'function': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 4
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 5
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 6
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 7
+NMAKE : fatal error U1077: '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x64\\cl.EXE"' : return code '0x2'
+Stop.
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...Done.
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...
+	inertial_lift
+	inlet_x_velocity
+	on_demand_max_velocity_calculation
+Done.
+
+Done.
+(cx-gui-do cx-activate-item "Compiled UDFs*Frame8*PushButton2(Build)")
+(cx-gui-do cx-activate-item "Question*OK")
+Copied C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files/C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files\inertial-lift-udfs.c to libudf\\src
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\sconstruct.udf "libudf\\win64\3ddp_host\SConstruct" ")
+        1 file(s) copied.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\scons_default.bat "libudf\\win64\3ddp_host\scons_test.bat" ")
+        1 file(s) copied.
+Files udf_names.c and user_nt.udf in 3ddp_host are up-to-date.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\makefile_nt.udf "libudf\\win64\3ddp_host\makefile" ")
+        1 file(s) copied.
+(chdir "libudf")(chdir "win64\\3ddp_host")
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  Copyright 1987-2021 ANSYS, Inc. All Rights Reserved. 
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+
+Microsoft (R) Program Maintenance Utility Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+# Generating ud_io1.h
+	resolve.exe -udf ..\\..\\src\\inertial-lift-udfs.c -head_file ud_io1.h
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224  -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_host  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  ..\\..\\src\\inertial-lift-udfs.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+inertial-lift-udfs.c
+..\\..\\src\\inertial-lift-udfs.c(316): error C2440: 'function': cannot convert from 'double *' to 'double'
+..\\..\\src\\inertial-lift-udfs.c(316): warning C4024: 'CALCULATE_LIFT_COEFFICIENTS': different types for formal and actual parameter 7
+..\\..\\src\\inertial-lift-udfs.c(384): error C2440: 'function': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 4
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 5
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 6
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 7
+NMAKE : fatal error U1077: '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x64\\cl.EXE"' : return code '0x2'
+Stop.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\sconstruct.udf "libudf\\win64\3ddp_node\SConstruct" ")
+        1 file(s) copied.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\scons_default.bat "libudf\\win64\3ddp_node\scons_test.bat" ")
+        1 file(s) copied.
+Files udf_names.c and user_nt.udf in 3ddp_node are up-to-date.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\makefile_nt.udf "libudf\\win64\3ddp_node\makefile" ")
+        1 file(s) copied.
+(chdir "libudf")(chdir "win64\\3ddp_node")
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  Copyright 1987-2021 ANSYS, Inc. All Rights Reserved. 
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+
+Microsoft (R) Program Maintenance Utility Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+# Generating ud_io1.h
+	resolve.exe -udf ..\\..\\src\\inertial-lift-udfs.c -head_file ud_io1.h
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224  -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_node  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  ..\\..\\src\\inertial-lift-udfs.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+inertial-lift-udfs.c
+..\\..\\src\\inertial-lift-udfs.c(316): error C2440: 'function': cannot convert from 'double *' to 'double'
+..\\..\\src\\inertial-lift-udfs.c(316): warning C4024: 'CALCULATE_LIFT_COEFFICIENTS': different types for formal and actual parameter 7
+..\\..\\src\\inertial-lift-udfs.c(384): error C2440: 'function': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 4
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 5
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 6
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 7
+NMAKE : fatal error U1077: '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x64\\cl.EXE"' : return code '0x2'
+Stop.
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...Done.
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...
+	inertial_lift
+	inlet_x_velocity
+	on_demand_max_velocity_calculation
+Done.
+
+Done.
+(cx-gui-do cx-activate-item "Compiled UDFs*Frame8*PushButton2(Build)")
+(cx-gui-do cx-activate-item "Question*OK")
+Copied C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files/C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files\inertial-lift-udfs.c to libudf\\src
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\sconstruct.udf "libudf\\win64\3ddp_host\SConstruct" ")
+        1 file(s) copied.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\scons_default.bat "libudf\\win64\3ddp_host\scons_test.bat" ")
+        1 file(s) copied.
+Files udf_names.c and user_nt.udf in 3ddp_host are up-to-date.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\makefile_nt.udf "libudf\\win64\3ddp_host\makefile" ")
+        1 file(s) copied.
+(chdir "libudf")(chdir "win64\\3ddp_host")
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  Copyright 1987-2021 ANSYS, Inc. All Rights Reserved. 
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+
+Microsoft (R) Program Maintenance Utility Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+# Generating ud_io1.h
+	resolve.exe -udf ..\\..\\src\\inertial-lift-udfs.c -head_file ud_io1.h
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224  -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_host  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  ..\\..\\src\\inertial-lift-udfs.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+inertial-lift-udfs.c
+..\\..\\src\\inertial-lift-udfs.c(384): error C2440: 'function': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 4
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 5
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 6
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 7
+NMAKE : fatal error U1077: '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x64\\cl.EXE"' : return code '0x2'
+Stop.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\sconstruct.udf "libudf\\win64\3ddp_node\SConstruct" ")
+        1 file(s) copied.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\scons_default.bat "libudf\\win64\3ddp_node\scons_test.bat" ")
+        1 file(s) copied.
+Files udf_names.c and user_nt.udf in 3ddp_node are up-to-date.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\makefile_nt.udf "libudf\\win64\3ddp_node\makefile" ")
+        1 file(s) copied.
+(chdir "libudf")(chdir "win64\\3ddp_node")
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  Copyright 1987-2021 ANSYS, Inc. All Rights Reserved. 
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+
+Microsoft (R) Program Maintenance Utility Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+# Generating ud_io1.h
+	resolve.exe -udf ..\\..\\src\\inertial-lift-udfs.c -head_file ud_io1.h
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224  -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_node  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  ..\\..\\src\\inertial-lift-udfs.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+inertial-lift-udfs.c
+..\\..\\src\\inertial-lift-udfs.c(384): error C2440: 'function': cannot convert from 'double' to 'double *'
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 4
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 5
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 6
+..\\..\\src\\inertial-lift-udfs.c(384): warning C4024: 'CALCULATE_CHANNEL_PARAMETERS': different types for formal and actual parameter 7
+NMAKE : fatal error U1077: '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Tools\\MSVC\\14.16.27023\\bin\\HostX86\\x64\\cl.EXE"' : return code '0x2'
+Stop.
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...Done.
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...
+	inertial_lift
+	inlet_x_velocity
+	on_demand_max_velocity_calculation
+Done.
+
+Done.
+(cx-gui-do cx-activate-item "Compiled UDFs*Frame8*PushButton2(Build)")
+(cx-gui-do cx-activate-item "Question*OK")
+Copied C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files/C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files\inertial-lift-udfs.c to libudf\\src
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\sconstruct.udf "libudf\\win64\3ddp_host\SConstruct" ")
+        1 file(s) copied.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\scons_default.bat "libudf\\win64\3ddp_host\scons_test.bat" ")
+        1 file(s) copied.
+Files udf_names.c and user_nt.udf in 3ddp_host are up-to-date.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\makefile_nt.udf "libudf\\win64\3ddp_host\makefile" ")
+        1 file(s) copied.
+(chdir "libudf")(chdir "win64\\3ddp_host")
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  Copyright 1987-2021 ANSYS, Inc. All Rights Reserved. 
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_host>rem  
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+
+Microsoft (R) Program Maintenance Utility Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+# Generating ud_io1.h
+	resolve.exe -udf ..\\..\\src\\inertial-lift-udfs.c -head_file ud_io1.h
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224  -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_host  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  ..\\..\\src\\inertial-lift-udfs.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+inertial-lift-udfs.c
+c:\\users\\rylab\\desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\src\\inertial-lift-udfs.c(384) : warning C4700: uninitialized local variable 'particle_diameter' used
+# Generating udf_names.c because of inertial-lift-udfs.obj
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224 -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_host  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  udf_names.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+udf_names.c
+# Linking libudf.dll because of udf_names.obj inertial-lift-udfs.obj
+	link  /Libpath:"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_host  /Libpath:"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\win64\\net\\shared /dll /debug /assemblydebug /out:libudf.dll  udf_names.obj inertial-lift-udfs.obj   mport.lib fl2120.lib 
+Microsoft (R) Incremental Linker Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\sconstruct.udf "libudf\\win64\3ddp_node\SConstruct" ")
+        1 file(s) copied.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\scons_default.bat "libudf\\win64\3ddp_node\scons_test.bat" ")
+        1 file(s) copied.
+Files udf_names.c and user_nt.udf in 3ddp_node are up-to-date.
+(system "copy "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent"\fluent21.2.0\src\udf\makefile_nt.udf "libudf\\win64\3ddp_node\makefile" ")
+        1 file(s) copied.
+(chdir "libudf")(chdir "win64\\3ddp_node")
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  Copyright 1987-2021 ANSYS, Inc. All Rights Reserved. 
+
+C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\win64\\3ddp_node>rem  
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+
+Microsoft (R) Program Maintenance Utility Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+# Generating ud_io1.h
+	resolve.exe -udf ..\\..\\src\\inertial-lift-udfs.c -head_file ud_io1.h
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224  -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_node  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  ..\\..\\src\\inertial-lift-udfs.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+inertial-lift-udfs.c
+c:\\users\\rylab\\desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf\\src\\inertial-lift-udfs.c(384) : warning C4700: uninitialized local variable 'particle_diameter' used
+# Generating udf_names.c because of inertial-lift-udfs.obj
+	cl /c /Za /Zi /DUDF_EXPORTING /DUDF_NT /DWIN64 /EHa /wd4224 -I.  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_node  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\main  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\addon-wrapper  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\io  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\species  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\pbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\numerics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\sphysics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\storage  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mphase  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\bc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\models  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\material  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\amg  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\util  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\mesh  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\udf  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ht  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dx  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\turbulence  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\acoustics  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\parallel  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\etc  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\ue  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dpm  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\src\\dbns  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\cortex\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\client\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\tgrid\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\mpi_wrapper\\src  -I"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\include  udf_names.c
+Microsoft (R) C/C++ Optimizing Compiler Version 19.16.27045 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+udf_names.c
+# Linking libudf.dll because of udf_names.obj inertial-lift-udfs.obj
+	link  /Libpath:"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\win64\\3ddp_node  /Libpath:"C:\\PROGRA~1\\ANSYSI~1\\ANSYSS~1\\v212\\fluent"\\fluent21.2.0\\multiport\\win64\\mpi\\shared /dll /debug /assemblydebug /out:libudf.dll  udf_names.obj inertial-lift-udfs.obj   mport.lib fl_mpi2120.lib 
+Microsoft (R) Incremental Linker Version 14.16.27045.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...Done.
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...
+	inertial_lift
+	inlet_x_velocity
+	on_demand_max_velocity_calculation
+Done.
+
+Done.
+(cx-gui-do cx-activate-item "Compiled UDFs*PanelButtons*PushButton1(OK)")
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...Done.
+
+DESKTOP-R5L45J1: Opening library "C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\libudf"...
+	inertial_lift
+	inlet_x_velocity
+	on_demand_max_velocity_calculation
+Done.
+(cx-gui-do cx-activate-item "MenuBar*WriteSubMenu*Case & Data...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "microfluidic-simulation.cas.h5") "CFF Case/Data Files (*.cas.h5 *.dat.h5 )")
+(cx-gui-do cx-activate-item "Question*OK")
+
+Writing to DESKTOP-R5L45J1:"C:/Users/rylab/Desktop/microfluidics-inertial-lift/microfluidic-simulation_files/user_files/microfluidic-simulation.cas.h5" in NODE0 mode and compression level 1 ...
+  Writing mesh ...
+      421180 cells,     1 zone  ...
+      943824 faces,     4 zones ...
+      135239 nodes,     1 zone  ...
+  Done.
+  Writing data for "outlet" profile.
+Done.
+
+Writing to DESKTOP-R5L45J1:"C:/Users/rylab/Desktop/microfluidics-inertial-lift/microfluidic-simulation_files/user_files/microfluidic-simulation.dat.h5" in NODE0 mode and compression level 1 ...
+  Writing results.
+Done.
