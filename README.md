@@ -19,6 +19,7 @@
 
 ### Future updates:
 - Include DPM Body Force UDF for calculation of inertial lift
+- Include UDF for precomputing inertial lift at each cell centroid for inspection of inertial force field
 - System for generative design of channel cross sections
 - System for description of channel cross sections with functions
 - System for optimization of channel geometry given a desired particle distribution
