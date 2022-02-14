@@ -16,3 +16,9 @@
 7. Initialize and Calculate
 8. Simulate particle release and flow through repeated segments by Reading Scheme, `".\microfluidic-simulation_files\user_files\particle-tracking-repeated-steps-with-bootstrap.scm"`
 9. Display results
+
+### Future updates:
+- Include DPM Body Force UDF for calculation of inertial lift
+- System for generative design of channel cross sections
+- System for description of channel cross sections with functions
+- System for optimization of channel geometry given a desired particle distribution
