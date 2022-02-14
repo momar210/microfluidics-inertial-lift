@@ -14,7 +14,7 @@
 5. Import mesh
 6. Set flow rates and channel parameters
 7. Initialize and Calculate
-8. Simulate particle release and flow through repeated segments by Reading Scheme, `".\microfluidic-simulation_files\user_files\particle-tracking-repeated-steps-with-bootstrap.scm"`
+8. Simulate particle release and flow through repeated segments by Reading Scheme (File > Read > Scheme), `".\microfluidic-simulation_files\user_files\particle-tracking-repeated-steps-with-bootstrap.scm"`
 9. Display results
 
 ### Future updates:
