@@ -1,6 +1,11 @@
 # microfluidics-inertial-lift
  Tools for simulating particle migration, focusing, and separation in inertial microfluidic devices with ANSYS Fluent
 
+### General Strategy for Inertial Microfluidic Simulation
+Inertial microfluidic devices often have several repeated segments to modify fluid flow and particle positions within a channel. Meshing and simulating the entire device would be computationally expensive and applying periodic boundary conditions assumes the device is infinitely long.
+
+To simulate particle flow in an inertial microfluidic device with finite repeated steps, we first release particles at the inlet from an initial injection DPM definition. Particles are then sampled at the outlet plane and re-injected in subsequent steps.
+
 ### Currently running with:
 - Windows 10 Enterprise (OS Build 19041.1415)
 - ANSYS Academic Student 2021 R2
