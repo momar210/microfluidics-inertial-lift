@@ -9,7 +9,7 @@ To simulate particle flow in an inertial microfluidic device with finite repeate
 ### Currently running with:
 - Windows 10 Enterprise (OS Build 19041.1415)
 - ANSYS Academic Student 2021 R2
-- Visual Studio 2017
+- Microsoft Visual Studio 2017
 
 ### Current workflow:
 1. Generate geometry of one repeated segment of a periodically repeating inertial microfluidic device
