@@ -1,0 +1,1292 @@
+
+              Welcome to ANSYS Fluent 2021 R2
+
+              Copyright 1987-2021 ANSYS, Inc. All Rights Reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: May 28 2021 13:53:52 EDT  Build Id: 10201  
+ 
+
+     --------------------------------------------------------------
+     This is a student version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "DESKTOP-R5L45J1" (win64).
+
+----------------------------------------------------------------------------------
+ID    Hostname         Core  O.S.         PID    Vendor                          
+----------------------------------------------------------------------------------
+n3    DESKTOP-R5L45J1  4/12  Windows-x64  13640  Intel(R) Xeon(R) E5-1650 v3     
+n2    DESKTOP-R5L45J1  3/12  Windows-x64  14376  Intel(R) Xeon(R) E5-1650 v3     
+n1    DESKTOP-R5L45J1  2/12  Windows-x64  3660   Intel(R) Xeon(R) E5-1650 v3     
+n0*   DESKTOP-R5L45J1  1/12  Windows-x64  12624  Intel(R) Xeon(R) E5-1650 v3     
+host  DESKTOP-R5L45J1        Windows-x64  18240  Intel(R) Xeon(R) E5-1650 v3     
+
+MPI Option Selected: intel
+Selected system interconnect: default
+----------------------------------------------------------------------------------
+
+Cleanup script file is C:\\Users\\rylab\\Desktop\\microfluidics-inertial-lift\\microfluidic-simulation_files\\user_files\\cleanup-fluent-DESKTOP-R5L45J1-18240.bat
+
+Reading journal file C:\Users\rylab\Desktop\microfluidics-inertial-lift\microfluidic-simulation_files\user_files\_read_fluent_case_.jou...
+
+> ;Journal file automatically created by Fluent!
+/file read-case C:/Users/rylab/Desktop/microfluidics-inertial-lift/microfluidic-simulation_files/user_files/microfluidic-simulation.cas.h5
+Fast-loading "C:\PROGRA~1\ANSYSI~1\ANSYSS~1\v212\fluent\fluent21.2.0\\addons\afd\lib\hdfio.bin"
+Done.
+
+Reading from DESKTOP-R5L45J1:"C:/Users/rylab/Desktop/microfluidics-inertial-lift/microfluidic-simulation_files/user_files/microfluidic-simulation.cas.h5" in NODE0 mode ...
+  Reading mesh ...
+      421180 cells,     1 cell zone  ...
+         421180 mixed cells,  zone id: 18
+      943824 faces,     4 face zones ...
+         907286 mixed interior faces,  zone id: 15
+           1630 mixed velocity-inlet faces,  zone id: 20
+           1630 mixed outflow faces,  zone id: 21
+          33278 triangular wall faces,  zone id: 7
+      135239 nodes,     1 node zone  ...
+  Done.
+
+  Reading data for "outlet" profile.
+
+Building...
+     mesh
+	distributing mesh
+		parts....,
+		faces....,
+		nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 74014/2090 = 35.4134
+     materials,
+     interface,
+     domains,
+	mixture
+     zones,
+	wall
+	interior-solid
+	inlet
+	outlet
+	fluid
+     parallel,
+Done.
+
+Preparing mesh for display...
+Done.
+
+> /file read-data C:/Users/rylab/Desktop/microfluidics-inertial-lift/microfluidic-simulation_files/user_files/microfluidic-simulation.dat.h5
+
+Reading from DESKTOP-R5L45J1:"C:/Users/rylab/Desktop/microfluidics-inertial-lift/microfluidic-simulation_files/user_files/microfluidic-simulation.dat.h5" in NODE0 mode ...
+
+
+  Reading results.
+Parallel variables...
+Done.
+
+> 
+adjoint/                mesh/                   report/
+define/                 parallel/               server/
+display/                plot/                   solve/
+exit                    preferences/            surface/
+file/                   print-license-usage     views/
+
+> 
+> (cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Graphics|Mesh|outline"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*List_Tree1" )
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Graphics|Mesh|outline"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Graphics|Mesh|outline"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*List_Tree1" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-outline*Display")
+(cx-gui-do cx-activate-item "ToolBar*Graphics Effects*gridplane")
+(cx-gui-do cx-activate-item "ToolBar*Graphics Effects*reflection")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Graphics|Particle Tracks|particle-tracks-1"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*List_Tree1" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-particle-tracks-1*Edit...")
+(cx-gui-do cx-set-text-entry "Particle Tracks*TextEntry1(Particle Tracks Name)" "initial-particle-tracks")
+(cx-gui-do cx-activate-item "Particle Tracks*PanelButtons*PushButton1(OK)")
+
+
+DPM Iteration ....
+number tracked = 1023, escaped = 1023
+(cx-gui-do cx-activate-item "Particle Tracks*PanelButtons*PushButton1(OK)")
+
+DPM Iteration ....
+number tracked = 1023, escaped = 1023
+(cx-gui-do cx-activate-item "Particle Tracks*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Graphics|Particle Tracks|initial-particle-tracks"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Graphics|Particle Tracks"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*List_Tree1" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-Particle Tracks*New...")
+(cx-gui-do cx-set-text-entry "Particle Tracks*TextEntry1(Particle Tracks Name)" "file-particle-tracks")
+(cx-gui-do cx-set-list-selections "Particle Tracks*Frame3*Table1*DropDownList1(Color by)" '( 3))
+(cx-gui-do cx-activate-item "Particle Tracks*Frame3*Table1*DropDownList1(Color by)")
+(cx-gui-do cx-set-list-selections "Particle Tracks*Frame3*List5(Release from Injections)" '( 0))
+(cx-gui-do cx-activate-item "Particle Tracks*Frame3*List5(Release from Injections)")
+(cx-gui-do cx-activate-item "Particle Tracks*PanelButtons*PushButton1(OK)")
+
+DPM Iteration ....
+number tracked = 1023, escaped = 1023
+(cx-gui-do cx-activate-item "Particle Tracks*PanelButtons*PushButton2(Cancel)")
+(cx-use-window-id 51)
+(cx-set-camera-relative '(-0.000853021 0.000210603 0.000343443) '(0 0 0) '(-0.0724394 -0.186472 -0.133445) 0 0)
+(cx-use-window-id 51)
+(cx-set-camera-relative '(0.00101604 -0.000281316 -0.000109107) '(0 0 0) '(0.182515 0.279421 0.177512) 0 0)
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Scene"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*List_Tree1" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-Scene*New...")
+(cx-gui-do cx-set-text-entry "Scene*TextEntry1(Name:)" "file-particle-tracks-scene")
+(cx-gui-do cx-set-text-entry "Scene*TextEntry2(Title:)" "File Particle Tracks")
+(cx-gui-do cx-set-toggle-button2 "Scene*Table3*Table1*CheckButton15" #t)
+(cx-gui-do cx-activate-item "Scene*Table3*Table1*CheckButton15")
+(cx-gui-do cx-set-toggle-button2 "Scene*Table3*Table1*CheckButton6" #t)
+(cx-gui-do cx-activate-item "Scene*Table3*Table1*CheckButton6")
+(cx-gui-do cx-activate-item "Scene*Table3*Table2(Display State)*PushButton2(Use Active)")
+(cx-gui-do cx-activate-item "Scene*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Scene*PanelButtons*PushButton4(Save && Display)")
+
+DPM Iteration ....
+number tracked = 1023, escaped = 1023
+(cx-gui-do cx-activate-item "Scene*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Graphics|Pathlines|pathlines-1"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Graphics|Pathlines|pathlines-1"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*List_Tree1" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-pathlines-1*Edit...")
+(cx-gui-do cx-set-text-entry "Pathlines*TextEntry1(Pathline Name)" "fluid-pathlines")
+(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton1(OK)")
+
+number tracked = 1023, escaped = 245, incomplete = 778
+(cx-gui-do cx-set-integer-entry "Pathlines*Frame3*Frame2*IntegerEntry3(Steps)" 5000)
+(cx-gui-do cx-activate-item "Pathlines*Frame3*Frame2*IntegerEntry3(Steps)")
+(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton1(OK)")
+
+number tracked = 1023, escaped = 1023
+(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Graphics|Pathlines|fluid-pathlines"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*List_Tree1" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-fluid-pathlines*Edit...")
+(cx-gui-do cx-activate-item "Pathlines*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Scene"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*List_Tree1" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-Scene*New...")
+(cx-gui-do cx-set-text-entry "Scene*TextEntry1(Name:)" "initial-particle-tracks-scene")
+(cx-gui-do cx-set-text-entry "Scene*TextEntry2(Title:)" "Initial Particle Tracks")
+(cx-gui-do cx-set-toggle-button2 "Scene*Table3*Table1*CheckButton12" #t)
+(cx-gui-do cx-activate-item "Scene*Table3*Table1*CheckButton12")
+(cx-gui-do cx-set-toggle-button2 "Scene*Table3*Table1*CheckButton6" #t)
+(cx-gui-do cx-activate-item "Scene*Table3*Table1*CheckButton6")
+(cx-gui-do cx-activate-item "Scene*Table3*Table2(Display State)*PushButton2(Use Active)")
+(cx-gui-do cx-activate-item "Scene*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Scene*PanelButtons*PushButton4(Save && Display)")
+
+
+DPM Iteration ....
+number tracked = 1023, escaped = 1023
+(cx-gui-do cx-activate-item "Scene*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "MenuBar*WriteSubMenu*Case & Data...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "microfluidic-simulation.cas.h5") "CFF Case/Data Files (*.cas.h5 *.dat.h5 )")
+(cx-gui-do cx-activate-item "Question*OK")
+
+Writing to DESKTOP-R5L45J1:"C:/Users/rylab/Desktop/microfluidics-inertial-lift/microfluidic-simulation_files/user_files/microfluidic-simulation.cas.h5" in NODE0 mode and compression level 1 ...
+  Writing mesh ...
+      421180 cells,     1 zone  ...
+      943824 faces,     4 zones ...
+      135239 nodes,     1 zone  ...
+  Done.
+  Writing data for "outlet" profile.
+Done.
+
+Writing to DESKTOP-R5L45J1:"C:/Users/rylab/Desktop/microfluidics-inertial-lift/microfluidic-simulation_files/user_files/microfluidic-simulation.dat.h5" in NODE0 mode and compression level 1 ...
+  Writing results.
+Done.
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Plots|XY Plot|inlet-outlet-velocity-comparison"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Plots|XY Plot|inlet-outlet-velocity-comparison"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*List_Tree1" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-inlet-outlet-velocity-comparison*Plot")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Surfaces"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*List_Tree1" )
+(cx-gui-do cx-activate-item "MenuBar*NewSubMenu*Line/Rake...")
+(cx-gui-do cx-set-text-entry "Line/Rake Surface*Table1*TextEntry1(New Surface Name)" "x-axis-midline")
+(cx-gui-do cx-set-real-entry-list "Line/Rake Surface*Table1*Frame5(End Points)*Table1*RealEntry4(x1)" '( 0.0005))
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Line/Rake Surface*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Plots|XY Plot"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*List_Tree1" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-XY Plot*New...")
+(cx-gui-do cx-set-text-entry "Solution XY Plot*Table1*TextEntry4(XY Plot Name)" "x-axis-midline-velocity-plot")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Table1*DropDownList1(Y Axis Function)" '( 2))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Table1*DropDownList1(Y Axis Function)")
+(cx-gui-do cx-set-list-selections "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)" '( 7))
+(cx-gui-do cx-activate-item "Solution XY Plot*Table1*Table3*Frame3*List1(Surfaces)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton1(OK)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Plots|XY Plot|inlet-outlet-velocity-comparison"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Plots|XY Plot|inlet-outlet-velocity-comparison"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*List_Tree1" )
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Plots|XY Plot|x-axis-midline-velocity-plot"))
+(cx-gui-do cx-set-list-tree-selections "NavigationPane*List_Tree1" (list "Results|Plots|XY Plot|x-axis-midline-velocity-plot"))
+(cx-gui-do cx-list-tree-right-click "NavigationPane*List_Tree1" )
+(cx-gui-do cx-activate-item "MenuBar*PopupMenuTree-x-axis-midline-velocity-plot*Edit...")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton4(Curves)")
+(cx-gui-do cx-activate-item "Curves - Solution XY Plot*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton5(Axes)")
+(cx-gui-do cx-activate-item "Axes - Solution XY Plot*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "Solution XY Plot*PanelButtons*PushButton2(Cancel)")
+(cx-gui-do cx-activate-item "MenuBar*WriteSubMenu*Case & Data...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "microfluidic-simulation.cas.h5") "CFF Case/Data Files (*.cas.h5 *.dat.h5 )")
+(cx-gui-do cx-activate-item "Question*OK")
+
+Writing to DESKTOP-R5L45J1:"C:/Users/rylab/Desktop/microfluidics-inertial-lift/microfluidic-simulation_files/user_files/microfluidic-simulation.cas.h5" in NODE0 mode and compression level 1 ...
+  Writing mesh ...
+      421180 cells,     1 zone  ...
+      943824 faces,     4 zones ...
+      135239 nodes,     1 zone  ...
+  Done.
+  Writing data for "outlet" profile.
+Done.
+
+Writing to DESKTOP-R5L45J1:"C:/Users/rylab/Desktop/microfluidics-inertial-lift/microfluidic-simulation_files/user_files/microfluidic-simulation.dat.h5" in NODE0 mode and compression level 1 ...
+  Writing results.
+Done.
+(cx-gui-do cx-activate-item "MenuBar*ReadSubMenu*Scheme...")
+(cx-gui-do cx-set-file-dialog-entries "Select File" '( "particle-tracking-repeated-steps-with-bootstrap.scm") "Scheme Files (*.scm)")
+(load "C:/Users/rylab/Desktop/microfluidics-inertial-lift/microfluidic-simulation_files/user_files/particle-tracking-repeated-steps-with-bootstrap.scm" )Loading "C:/Users/rylab/Desktop/microfluidics-inertial-lift/microfluidic-simulation_files/user_files/particle-tracking-repeated-steps-with-bootstrap.scm"
+\n\n--------------------\nINITIAL INJECTION\n--------------------\n\n/report/dpm-sample initial-injection () outlet () () no
+
+DPM Iteration ....
+number tracked = 1023, escaped = 1023
+/define/injections/list-particles file-injection
+Particle streams from file-injection:
+STREAM ...........................INITIAL VALUES...........................
+NO TYP    (X)       (Y)       (Z)       (U)      (V)      (W)        (T)     (DIAM)    (MFLOW)
+ 0 IN  0.00e+00  2.96e-06 -1.75e-05  2.65e+00  2.04e-03 -5.30e-03  3.00e+02  1.00e-05  9.78e-24
+ 1 IN  0.00e+00  6.26e-06  1.02e-05  2.66e+00 -2.52e-02  2.16e-02  3.00e+02  1.00e-05  9.78e-24
+ 2 IN  0.00e+00 -1.27e-05  1.31e-05  1.84e+00 -3.13e-02  3.14e-02  3.00e+02  1.00e-05  9.78e-24
+ 3 IN  0.00e+00 -1.12e-05 -2.70e-05  1.44e+00  9.72e-03 -8.76e-03  3.00e+02  1.00e-05  9.78e-24
+ 4 IN  0.00e+00 -3.74e-06 -6.29e-06  2.91e+00 -1.35e-02  1.40e-02  3.00e+02  1.00e-05  9.78e-24
+ 5 IN  0.00e+00 -1.28e-05  8.06e-06  1.87e+00 -2.61e-02  4.63e-02  3.00e+02  1.00e-05  9.78e-24
+ 6 IN  0.00e+00 -3.13e-06  1.95e-05  2.60e+00 -3.58e-02  2.33e-02  3.00e+02  1.00e-05  9.78e-24
+ 7 IN  0.00e+00 -8.67e-06 -2.10e-05  2.05e+00 -1.29e-03  5.82e-03  3.00e+02  1.00e-05  9.78e-24
+ 8 IN  0.00e+00 -1.62e-06 -2.81e-05  1.98e+00  1.71e-02 -2.27e-02  3.00e+02  1.00e-05  9.78e-24
+ 9 IN  0.00e+00 -7.77e-06  4.25e-07  2.62e+00 -2.13e-02  2.65e-02  3.00e+02  1.00e-05  9.78e-24
+10 IN  0.00e+00 -1.52e-05  1.11e-05  1.40e+00 -1.92e-02  4.49e-02  3.00e+02  1.00e-05  9.78e-24
+11 IN  0.00e+00 -1.44e-05  1.15e-05  1.56e+00 -2.53e-02  4.05e-02  3.00e+02  1.00e-05  9.78e-24
+12 IN  0.00e+00 -2.60e-07 -3.16e-05  1.60e+00  1.99e-02 -2.63e-02  3.00e+02  1.00e-05  9.78e-24
+13 IN  0.00e+00  3.24e-07 -3.29e-05  1.44e+00  2.05e-02 -2.66e-02  3.00e+02  1.00e-05  9.78e-24
+14 IN  0.00e+00 -1.90e-06 -2.09e-05  2.50e+00  5.46e-03 -4.74e-03  3.00e+02  1.00e-05  9.78e-24
+15 IN  0.00e+00 -4.96e-06 -1.94e-05  2.44e+00  1.13e-03  3.63e-03  3.00e+02  1.00e-05  9.78e-24
+16 IN  0.00e+00 -8.87e-06 -1.47e-05  2.27e+00 -7.05e-03  1.66e-02  3.00e+02  1.00e-05  9.78e-24
+17 IN  0.00e+00 -1.55e-05 -1.08e-05  1.22e+00 -1.18e-03  3.00e-02  3.00e+02  1.00e-05  9.78e-24
+18 IN  0.00e+00 -1.55e-05 -1.04e-05  1.24e+00 -2.14e-03  3.00e-02  3.00e+02  1.00e-05  9.78e-24
+19 IN  0.00e+00 -9.91e-06 -3.28e-05  1.08e+00  4.34e-02 -2.05e-02  3.00e+02  1.00e-05  9.78e-24
+20 IN  0.00e+00 -7.37e-06  1.07e-05  2.60e+00 -3.17e-02  2.81e-02  3.00e+02  1.00e-05  9.78e-24
+21 IN  0.00e+00 -4.06e-06 -2.66e-06  2.92e+00 -1.65e-02  1.77e-02  3.00e+02  1.00e-05  9.78e-24
+22 IN  0.00e+00 -3.83e-07  1.26e-05  2.90e+00 -3.18e-02  2.24e-02  3.00e+02  1.00e-05  9.78e-24
+23 IN  0.00e+00 -1.77e-05 -2.87e-05  4.85e-01  9.89e-03 -6.74e-03  3.00e+02  1.00e-05  9.78e-24
+24 IN  0.00e+00 -1.55e-05 -2.31e-05  9.91e-01  8.35e-04  1.63e-02  3.00e+02  1.00e-05  9.78e-24
+25 IN  0.00e+00 -2.22e-06 -1.46e-05  2.78e+00 -4.16e-03  4.72e-03  3.00e+02  1.00e-05  9.78e-24
+26 IN  0.00e+00 -1.57e-06 -1.17e-05  2.88e+00 -7.17e-03  5.61e-03  3.00e+02  1.00e-05  9.78e-24
+27 IN  0.00e+00 -8.50e-07  5.91e-06  3.02e+00 -2.67e-02  1.95e-02  3.00e+02  1.00e-05  9.78e-24
+28 IN  0.00e+00 -1.24e-05  4.55e-06  1.94e+00 -2.22e-02  3.94e-02  3.00e+02  1.00e-05  9.78e-24
+29 IN  0.00e+00 -1.73e-05 -2.85e-05  5.84e-01  1.19e-02 -5.85e-03  3.00e+02  1.00e-05  9.78e-24
+30 IN  0.00e+00 -1.73e-05 -2.97e-05  5.31e-01  1.46e-02 -9.87e-03  3.00e+02  1.00e-05  9.78e-24
+31 IN  0.00e+00 -1.11e-05 -1.31e-05  2.01e+00 -9.30e-03  2.03e-02  3.00e+02  1.00e-05  9.78e-24
+32 IN  0.00e+00 -6.07e-06 -3.20e-05  1.40e+00  3.53e-02 -2.44e-02  3.00e+02  1.00e-05  9.78e-24
+33 IN  0.00e+00 -5.62e-06  2.98e-05  1.76e+00 -4.82e-02  1.89e-02  3.00e+02  1.00e-05  9.78e-24
+34 IN  0.00e+00 -1.16e-05  2.05e-05  1.86e+00 -3.74e-02  2.65e-02  3.00e+02  1.00e-05  9.78e-24
+35 IN  0.00e+00 -1.10e-05 -2.88e-05  1.34e+00  1.92e-02 -1.47e-02  3.00e+02  1.00e-05  9.78e-24
+36 IN  0.00e+00  4.68e-06  1.78e-06  2.88e+00 -2.25e-02  1.20e-02  3.00e+02  1.00e-05  9.78e-24
+37 IN  0.00e+00 -1.06e-05  1.53e-05  2.12e+00 -3.39e-02  2.61e-02  3.00e+02  1.00e-05  9.78e-24
+38 IN  0.00e+00 -6.39e-06 -2.97e-05  1.63e+00  2.59e-02 -2.33e-02  3.00e+02  1.00e-05  9.78e-24
+39 IN  0.00e+00  5.90e-06 -1.14e-05  2.67e+00 -4.41e-03 -5.97e-03  3.00e+02  1.00e-05  9.78e-24
+40 IN  0.00e+00  6.43e-06 -1.29e-05  2.59e+00 -2.49e-03 -6.90e-03  3.00e+02  1.00e-05  9.78e-24
+41 IN  0.00e+00 -9.59e-06 -2.99e-05  1.39e+00  2.66e-02 -1.97e-02  3.00e+02  1.00e-05  9.78e-24
+42 IN  0.00e+00 -6.63e-06 -2.80e-05  1.77e+00  1.97e-02 -1.88e-02  3.00e+02  1.00e-05  9.78e-24
+43 IN  0.00e+00 -1.44e-05 -2.59e-05  1.07e+00  3.71e-03  2.19e-03  3.00e+02  1.00e-05  9.78e-24
+44 IN  0.00e+00 -3.78e-06  5.52e-07  2.94e+00 -1.95e-02  1.94e-02  3.00e+02  1.00e-05  9.78e-24
+45 IN  0.00e+00 -1.25e-05  1.77e-05  1.79e+00 -3.20e-02  2.87e-02  3.00e+02  1.00e-05  9.78e-24
+46 IN  0.00e+00 -1.40e-05 -2.86e-05  1.01e+00  1.39e-02 -8.49e-03  3.00e+02  1.00e-05  9.78e-24
+47 IN  0.00e+00  2.06e-06 -1.08e-05  2.89e+00 -6.82e-03  7.50e-04  3.00e+02  1.00e-05  9.78e-24
+48 IN  0.00e+00 -1.44e-05  2.29e-05  1.36e+00 -3.72e-02  2.47e-02  3.00e+02  1.00e-05  9.78e-24
+49 IN  0.00e+00 -1.76e-06 -5.37e-06  2.99e+00 -1.40e-02  1.15e-02  3.00e+02  1.00e-05  9.78e-24
+50 IN  0.00e+00 -8.18e-07  1.88e-05  2.68e+00 -3.54e-02  2.51e-02  3.00e+02  1.00e-05  9.78e-24
+51 IN  0.00e+00 -1.45e-05 -8.85e-06  1.46e+00 -7.85e-03  2.97e-02  3.00e+02  1.00e-05  9.78e-24
+52 IN  0.00e+00 -1.35e-05 -3.02e-05  9.67e-01  2.29e-02 -1.17e-02  3.00e+02  1.00e-05  9.78e-24
+53 IN  0.00e+00 -1.56e-05 -2.15e-05  1.02e+00 -2.87e-03  2.54e-02  3.00e+02  1.00e-05  9.78e-24
+54 IN  0.00e+00 -1.40e-05  3.30e-05  8.94e-01 -5.34e-02 -2.20e-03  3.00e+02  1.00e-05  9.78e-24
+55 IN  0.00e+00 -1.63e-05 -2.70e-05  7.54e-01  1.08e-02  2.14e-03  3.00e+02  1.00e-05  9.78e-24
+56 IN  0.00e+00 -1.26e-05 -1.62e-05  1.70e+00 -1.16e-02  1.90e-02  3.00e+02  1.00e-05  9.78e-24
+57 IN  0.00e+00 -7.74e-06 -5.25e-06  2.59e+00 -1.35e-02  2.39e-02  3.00e+02  1.00e-05  9.78e-24
+58 IN  0.00e+00  1.06e-06 -1.60e-05  2.75e+00 -7.83e-04 -1.00e-03  3.00e+02  1.00e-05  9.78e-24
+59 IN  0.00e+00 -3.00e-06  1.79e-05  2.67e+00 -3.55e-02  2.43e-02  3.00e+02  1.00e-05  9.78e-24
+60 IN  0.00e+00 -7.65e-06  2.85e-05  1.79e+00 -4.77e-02  1.74e-02  3.00e+02  1.00e-05  9.78e-24
+61 IN  0.00e+00 -1.07e-05  8.83e-08  2.24e+00 -2.10e-02  3.25e-02  3.00e+02  1.00e-05  9.78e-24
+62 IN  0.00e+00 -1.51e-06  1.56e-05  2.80e+00 -3.37e-02  2.38e-02  3.00e+02  1.00e-05  9.78e-24
+63 IN  0.00e+00 -9.38e-06 -5.67e-06  2.38e+00 -1.27e-02  2.80e-02  3.00e+02  1.00e-05  9.78e-24
+64 IN  0.00e+00 -8.25e-06 -6.02e-06  2.52e+00 -1.23e-02  2.47e-02  3.00e+02  1.00e-05  9.78e-24
+65 IN  0.00e+00  1.76e-07 -9.08e-06  2.96e+00 -9.88e-03  4.62e-03  3.00e+02  1.00e-05  9.78e-24
+66 IN  0.00e+00 -1.44e-05 -2.75e-05  9.96e-01  8.82e-03 -4.42e-03  3.00e+02  1.00e-05  9.78e-24
+67 IN  0.00e+00  8.09e-07  1.41e-05  2.85e+00 -3.21e-02  2.37e-02  3.00e+02  1.00e-05  9.78e-24
+68 IN  0.00e+00 -2.02e-06 -3.11e-06  3.01e+00 -1.64e-02  1.44e-02  3.00e+02  1.00e-05  9.78e-24
+69 IN  0.00e+00 -1.31e-05  2.92e-05  1.26e+00 -5.35e-02  6.12e-03  3.00e+02  1.00e-05  9.78e-24
+70 IN  0.00e+00  3.59e-07  1.21e-05  2.91e+00 -3.13e-02  2.24e-02  3.00e+02  1.00e-05  9.78e-24
+71 IN  0.00e+00 -6.75e-06  1.41e-05  2.59e+00 -3.60e-02  2.59e-02  3.00e+02  1.00e-05  9.78e-24
+72 IN  0.00e+00  1.58e-06  4.11e-06  3.02e+00 -2.52e-02  1.63e-02  3.00e+02  1.00e-05  9.78e-24
+73 IN  0.00e+00 -4.84e-06 -2.26e-05  2.27e+00  7.61e-03 -5.30e-03  3.00e+02  1.00e-05  9.78e-24
+74 IN  0.00e+00 -1.17e-05 -1.11e-05  1.94e+00 -9.91e-03  2.36e-02  3.00e+02  1.00e-05  9.78e-24
+75 IN  0.00e+00 -1.55e-05  6.94e-06  1.32e+00 -1.17e-02  5.31e-02  3.00e+02  1.00e-05  9.78e-24
+76 IN  0.00e+00 -1.52e-05  7.67e-06  1.39e+00 -1.51e-02  5.43e-02  3.00e+02  1.00e-05  9.78e-24
+77 IN  0.00e+00 -6.73e-06  1.67e-05  2.51e+00 -3.64e-02  2.35e-02  3.00e+02  1.00e-05  9.78e-24
+78 IN  0.00e+00 -1.54e-05  3.43e-06  1.35e+00 -1.46e-02  4.08e-02  3.00e+02  1.00e-05  9.78e-24
+79 IN  0.00e+00  2.14e-06 -3.59e-06  3.00e+00 -1.67e-02  8.02e-03  3.00e+02  1.00e-05  9.78e-24
+80 IN  0.00e+00  6.36e-06  1.18e-05  2.62e+00 -2.66e-02  2.31e-02  3.00e+02  1.00e-05  9.78e-24
+81 IN  0.00e+00  5.09e-06  8.19e-06  2.79e+00 -2.55e-02  1.95e-02  3.00e+02  1.00e-05  9.78e-24
+82 IN  0.00e+00 -1.27e-05  2.23e-05  1.65e+00 -3.92e-02  2.40e-02  3.00e+02  1.00e-05  9.78e-24
+83 IN  0.00e+00 -1.35e-05  1.47e-05  1.67e+00 -2.95e-02  2.21e-02  3.00e+02  1.00e-05  9.78e-24
+84 IN  0.00e+00 -7.67e-06  5.16e-06  2.62e+00 -2.39e-02  2.87e-02  3.00e+02  1.00e-05  9.78e-24
+85 IN  0.00e+00 -1.54e-05 -1.48e-05  1.20e+00 -1.79e-03  1.34e-02  3.00e+02  1.00e-05  9.78e-24
+86 IN  0.00e+00 -8.03e-06  3.61e-05  8.47e-01 -4.19e-02 -2.91e-03  3.00e+02  1.00e-05  9.78e-24
+87 IN  0.00e+00 -9.66e-06 -1.64e-05  2.13e+00 -6.87e-03  1.61e-02  3.00e+02  1.00e-05  9.78e-24
+88 IN  0.00e+00 -1.10e-05 -2.48e-05  1.60e+00  1.85e-03  4.85e-04  3.00e+02  1.00e-05  9.78e-24
+89 IN  0.00e+00 -1.63e-05  3.03e-05  8.42e-01 -3.42e-02 -1.02e-02  3.00e+02  1.00e-05  9.78e-24
+90 IN  0.00e+00 -3.96e-06  2.76e-05  2.03e+00 -4.54e-02  2.14e-02  3.00e+02  1.00e-05  9.78e-24
+91 IN  0.00e+00 -1.25e-05 -3.02e-05  1.08e+00  2.50e-02 -1.38e-02  3.00e+02  1.00e-05  9.78e-24
+92 IN  0.00e+00 -1.74e-05  2.21e-05  8.82e-01 -1.77e-02  3.31e-02  3.00e+02  1.00e-05  9.78e-24
+93 IN  0.00e+00 -1.56e-05 -2.98e-05  7.17e-01  1.72e-02 -1.10e-02  3.00e+02  1.00e-05  9.78e-24
+94 IN  0.00e+00 -1.54e-06  6.14e-06  3.01e+00 -2.68e-02  2.02e-02  3.00e+02  1.00e-05  9.78e-24
+95 IN  0.00e+00 -5.99e-06  3.26e-05  1.41e+00 -5.10e-02  1.52e-02  3.00e+02  1.00e-05  9.78e-24
+96 IN  0.00e+00  5.80e-06 -4.28e-06  2.78e+00 -1.40e-02  5.91e-04  3.00e+02  1.00e-05  9.78e-24
+97 IN  0.00e+00 -2.10e-06  2.42e-05  2.35e+00 -3.96e-02  2.03e-02  3.00e+02  1.00e-05  9.78e-24
+98 IN  0.00e+00 -5.66e-06 -2.40e-05  2.13e+00  1.08e-02 -7.52e-03  3.00e+02  1.00e-05  9.78e-24
+99 IN  0.00e+00  4.91e-06  2.35e-05  2.26e+00 -3.65e-02  2.58e-02  3.00e+02  1.00e-05  9.78e-24
+100 IN  0.00e+00  5.83e-06  2.01e-05  2.39e+00 -3.52e-02  2.83e-02  3.00e+02  1.00e-05  9.78e-24
+101 IN  0.00e+00  3.34e-07 -1.07e-05  2.92e+00 -7.85e-03  3.56e-03  3.00e+02  1.00e-05  9.78e-24
+102 IN  0.00e+00  1.04e-06 -2.82e-05  1.99e+00  1.30e-02 -2.30e-02  3.00e+02  1.00e-05  9.78e-24
+103 IN  0.00e+00 -2.78e-06  1.36e-05  2.83e+00 -3.34e-02  2.29e-02  3.00e+02  1.00e-05  9.78e-24
+104 IN  0.00e+00 -6.87e-06  3.41e-05  1.18e+00 -5.24e-02  1.22e-02  3.00e+02  1.00e-05  9.78e-24
+105 IN  0.00e+00 -7.50e-06  3.49e-05  1.03e+00 -4.83e-02  5.47e-03  3.00e+02  1.00e-05  9.78e-24
+106 IN  0.00e+00 -6.92e-06  2.53e-05  2.07e+00 -4.45e-02  1.80e-02  3.00e+02  1.00e-05  9.78e-24
+107 IN  0.00e+00 -1.04e-05  2.89e-06  2.28e+00 -2.36e-02  3.20e-02  3.00e+02  1.00e-05  9.78e-24
+108 IN  0.00e+00 -5.91e-06 -3.47e-05  1.06e+00  5.01e-02 -2.53e-02  3.00e+02  1.00e-05  9.78e-24
+109 IN  0.00e+00 -3.55e-06  1.45e-05  2.77e+00 -3.45e-02  2.35e-02  3.00e+02  1.00e-05  9.78e-24
+110 IN  0.00e+00 -1.40e-05  9.81e-06  1.65e+00 -2.64e-02  4.84e-02  3.00e+02  1.00e-05  9.78e-24
+111 IN  0.00e+00 -1.56e-05  6.11e-06  1.30e+00 -1.27e-02  4.93e-02  3.00e+02  1.00e-05  9.78e-24
+112 IN  0.00e+00  3.16e-06 -1.14e-05  2.84e+00 -5.12e-03 -1.27e-03  3.00e+02  1.00e-05  9.78e-24
+113 IN  0.00e+00 -1.24e-05 -3.31e-05  8.43e-01  3.93e-02 -1.52e-02  3.00e+02  1.00e-05  9.78e-24
+114 IN  0.00e+00 -3.49e-06  5.16e-06  2.95e+00 -2.48e-02  2.23e-02  3.00e+02  1.00e-05  9.78e-24
+115 IN  0.00e+00 -8.35e-06  7.52e-06  2.53e+00 -2.64e-02  3.07e-02  3.00e+02  1.00e-05  9.78e-24
+116 IN  0.00e+00 -2.33e-06 -2.37e-05  2.31e+00  9.10e-03 -1.18e-02  3.00e+02  1.00e-05  9.78e-24
+117 IN  0.00e+00  5.82e-06 -2.25e-05  2.26e+00  5.08e-03 -1.68e-02  3.00e+02  1.00e-05  9.78e-24
+118 IN  0.00e+00 -4.64e-06  1.77e-06  2.89e+00 -2.07e-02  2.20e-02  3.00e+02  1.00e-05  9.78e-24
+119 IN  0.00e+00 -5.74e-07  1.12e-05  2.93e+00 -3.11e-02  2.19e-02  3.00e+02  1.00e-05  9.78e-24
+120 IN  0.00e+00 -9.55e-06 -1.34e-05  2.22e+00 -8.45e-03  1.87e-02  3.00e+02  1.00e-05  9.78e-24
+121 IN  0.00e+00  4.02e-06  2.74e-05  1.99e+00 -4.33e-02  2.58e-02  3.00e+02  1.00e-05  9.78e-24
+122 IN  0.00e+00 -1.37e-05  2.72e-05  1.31e+00 -5.29e-02  1.31e-02  3.00e+02  1.00e-05  9.78e-24
+123 IN  0.00e+00 -6.77e-06 -1.09e-05  2.60e+00 -8.76e-03  1.46e-02  3.00e+02  1.00e-05  9.78e-24
+124 IN  0.00e+00 -4.76e-06  1.39e-05  2.73e+00 -3.47e-02  2.42e-02  3.00e+02  1.00e-05  9.78e-24
+125 IN  0.00e+00  3.35e-06 -1.62e-06  2.96e+00 -1.92e-02  8.85e-03  3.00e+02  1.00e-05  9.78e-24
+126 IN  0.00e+00 -1.49e-05  1.32e-05  1.44e+00 -2.49e-02  2.77e-02  3.00e+02  1.00e-05  9.78e-24
+127 IN  0.00e+00  8.45e-07 -2.17e-05  2.48e+00  6.46e-03 -9.19e-03  3.00e+02  1.00e-05  9.78e-24
+128 IN  0.00e+00  3.77e-07 -5.29e-07  3.05e+00 -1.98e-02  1.37e-02  3.00e+02  1.00e-05  9.78e-24
+129 IN  0.00e+00 -1.03e-05  2.45e-05  1.85e+00 -4.51e-02  1.65e-02  3.00e+02  1.00e-05  9.78e-24
+130 IN  0.00e+00 -6.28e-07 -8.36e-06  2.97e+00 -1.10e-02  6.35e-03  3.00e+02  1.00e-05  9.78e-24
+131 IN  0.00e+00 -1.49e-05  5.68e-06  1.45e+00 -1.49e-02  4.67e-02  3.00e+02  1.00e-05  9.78e-24
+132 IN  0.00e+00 -1.50e-05  5.07e-06  1.43e+00 -1.51e-02  4.38e-02  3.00e+02  1.00e-05  9.78e-24
+133 IN  0.00e+00 -1.26e-05 -9.37e-06  1.82e+00 -1.10e-02  2.71e-02  3.00e+02  1.00e-05  9.78e-24
+134 IN  0.00e+00 -1.10e-05  1.87e-05  1.99e+00 -3.54e-02  2.67e-02  3.00e+02  1.00e-05  9.78e-24
+135 IN  0.00e+00 -7.71e-07 -7.06e-06  2.99e+00 -1.23e-02  7.71e-03  3.00e+02  1.00e-05  9.78e-24
+136 IN  0.00e+00 -1.08e-05  2.78e-05  1.60e+00 -4.69e-02  1.36e-02  3.00e+02  1.00e-05  9.78e-24
+137 IN  0.00e+00  5.91e-06  1.60e-05  2.54e+00 -3.13e-02  2.75e-02  3.00e+02  1.00e-05  9.78e-24
+138 IN  0.00e+00 -1.01e-06 -1.59e-05  2.76e+00 -2.01e-03  2.01e-03  3.00e+02  1.00e-05  9.78e-24
+139 IN  0.00e+00 -9.20e-06  9.17e-06  2.41e+00 -2.91e-02  3.28e-02  3.00e+02  1.00e-05  9.78e-24
+140 IN  0.00e+00 -7.97e-06  3.51e-05  9.95e-01 -4.71e-02  3.03e-03  3.00e+02  1.00e-05  9.78e-24
+141 IN  0.00e+00 -7.72e-06  3.59e-05  8.86e-01 -4.34e-02 -5.45e-04  3.00e+02  1.00e-05  9.78e-24
+142 IN  0.00e+00 -1.53e-05 -6.15e-06  1.29e+00 -8.14e-03  3.85e-02  3.00e+02  1.00e-05  9.78e-24
+143 IN  0.00e+00 -5.78e-06  2.88e-05  1.85e+00 -4.79e-02  2.05e-02  3.00e+02  1.00e-05  9.78e-24
+144 IN  0.00e+00 -1.26e-06  9.56e-06  2.96e+00 -3.00e-02  2.15e-02  3.00e+02  1.00e-05  9.78e-24
+145 IN  0.00e+00 -7.75e-07  8.68e-06  2.98e+00 -2.91e-02  2.09e-02  3.00e+02  1.00e-05  9.78e-24
+146 IN  0.00e+00 -6.70e-06  1.87e-05  2.44e+00 -3.70e-02  2.29e-02  3.00e+02  1.00e-05  9.78e-24
+147 IN  0.00e+00 -8.36e-07  2.57e-05  2.25e+00 -4.19e-02  2.12e-02  3.00e+02  1.00e-05  9.78e-24
+148 IN  0.00e+00 -5.18e-06 -1.25e-05  2.69e+00 -7.10e-03  1.07e-02  3.00e+02  1.00e-05  9.78e-24
+149 IN  0.00e+00 -2.31e-06  2.88e-06  3.01e+00 -2.29e-02  1.97e-02  3.00e+02  1.00e-05  9.78e-24
+150 IN  0.00e+00 -1.44e-05 -1.76e-05  1.36e+00 -1.01e-02  1.88e-02  3.00e+02  1.00e-05  9.78e-24
+151 IN  0.00e+00  3.83e-06 -1.26e-05  2.78e+00 -3.15e-03 -2.59e-03  3.00e+02  1.00e-05  9.78e-24
+152 IN  0.00e+00 -1.15e-05 -2.08e-05  1.72e+00 -6.83e-03  1.14e-02  3.00e+02  1.00e-05  9.78e-24
+153 IN  0.00e+00 -6.58e-06 -5.65e-06  2.71e+00 -1.31e-02  2.06e-02  3.00e+02  1.00e-05  9.78e-24
+154 IN  0.00e+00 -1.66e-05  3.01e-05  8.19e-01 -3.14e-02 -1.03e-02  3.00e+02  1.00e-05  9.78e-24
+155 IN  0.00e+00 -1.24e-05  2.36e-05  1.64e+00 -4.13e-02  1.86e-02  3.00e+02  1.00e-05  9.78e-24
+156 IN  0.00e+00 -1.44e-05  2.63e-05  1.25e+00 -4.83e-02  1.58e-02  3.00e+02  1.00e-05  9.78e-24
+157 IN  0.00e+00 -4.98e-06 -1.47e-05  2.63e+00 -4.60e-03  9.40e-03  3.00e+02  1.00e-05  9.78e-24
+158 IN  0.00e+00 -4.02e-06 -1.48e-05  2.69e+00 -4.55e-03  7.58e-03  3.00e+02  1.00e-05  9.78e-24
+159 IN  0.00e+00 -8.62e-07  9.58e-06  2.97e+00 -2.98e-02  2.13e-02  3.00e+02  1.00e-05  9.78e-24
+160 IN  0.00e+00 -9.53e-06 -2.29e-07  2.40e+00 -2.20e-02  3.07e-02  3.00e+02  1.00e-05  9.78e-24
+161 IN  0.00e+00 -1.11e-06 -2.21e-05  2.44e+00  6.84e-03 -8.67e-03  3.00e+02  1.00e-05  9.78e-24
+162 IN  0.00e+00 -7.08e-06 -2.69e-05  1.83e+00  1.71e-02 -1.55e-02  3.00e+02  1.00e-05  9.78e-24
+163 IN  0.00e+00 -8.70e-06  3.56e-05  8.99e-01 -4.48e-02 -1.69e-03  3.00e+02  1.00e-05  9.78e-24
+164 IN  0.00e+00 -9.00e-06  3.58e-05  8.51e-01 -4.37e-02 -3.42e-03  3.00e+02  1.00e-05  9.78e-24
+165 IN  0.00e+00 -6.14e-06 -6.94e-06  2.73e+00 -1.20e-02  1.86e-02  3.00e+02  1.00e-05  9.78e-24
+166 IN  0.00e+00 -1.55e-06  1.89e-05  2.66e+00 -3.53e-02  2.50e-02  3.00e+02  1.00e-05  9.78e-24
+167 IN  0.00e+00 -1.65e-05  2.14e-05  1.03e+00 -2.44e-02  3.38e-02  3.00e+02  1.00e-05  9.78e-24
+168 IN  0.00e+00 -1.67e-05  2.07e-05  1.02e+00 -2.55e-02  3.58e-02  3.00e+02  1.00e-05  9.78e-24
+169 IN  0.00e+00 -8.19e-06 -2.56e-05  1.84e+00  1.15e-02 -9.01e-03  3.00e+02  1.00e-05  9.78e-24
+170 IN  0.00e+00  3.52e-08 -1.66e-05  2.74e+00 -5.63e-04 -4.33e-04  3.00e+02  1.00e-05  9.78e-24
+171 IN  0.00e+00 -1.11e-05  1.45e-05  2.07e+00 -3.29e-02  2.69e-02  3.00e+02  1.00e-05  9.78e-24
+172 IN  0.00e+00 -1.73e-06  2.71e-05  2.12e+00 -4.40e-02  2.19e-02  3.00e+02  1.00e-05  9.78e-24
+173 IN  0.00e+00 -8.75e-06  3.74e-05  6.31e-01 -3.69e-02 -9.11e-03  3.00e+02  1.00e-05  9.78e-24
+174 IN  0.00e+00 -7.13e-06  3.87e-05  3.08e-01 -1.66e-02 -1.75e-03  3.00e+02  1.00e-05  9.78e-24
+175 IN  0.00e+00 -7.77e-06  3.24e-05  1.37e+00 -5.26e-02  1.39e-02  3.00e+02  1.00e-05  9.78e-24
+176 IN  0.00e+00  2.41e-07  2.01e-05  2.62e+00 -3.62e-02  2.37e-02  3.00e+02  1.00e-05  9.78e-24
+177 IN  0.00e+00 -1.14e-06  3.22e-05  1.56e+00 -4.88e-02  2.37e-02  3.00e+02  1.00e-05  9.78e-24
+178 IN  0.00e+00 -4.85e-06  5.00e-06  2.87e+00 -2.40e-02  2.42e-02  3.00e+02  1.00e-05  9.78e-24
+179 IN  0.00e+00  6.80e-07  8.54e-07  3.04e+00 -2.16e-02  1.46e-02  3.00e+02  1.00e-05  9.78e-24
+180 IN  0.00e+00 -7.32e-06  2.92e-05  1.75e+00 -4.80e-02  1.67e-02  3.00e+02  1.00e-05  9.78e-24
+181 IN  0.00e+00  1.93e-06  2.61e-05  2.19e+00 -4.25e-02  2.28e-02  3.00e+02  1.00e-05  9.78e-24
+182 IN  0.00e+00 -9.50e-06  3.61e-06  2.40e+00 -2.41e-02  3.09e-02  3.00e+02  1.00e-05  9.78e-24
+183 IN  0.00e+00  2.59e-06  2.94e-05  1.86e+00 -4.82e-02  2.87e-02  3.00e+02  1.00e-05  9.78e-24
+184 IN  0.00e+00 -1.33e-05  1.10e-05  1.77e+00 -2.91e-02  4.26e-02  3.00e+02  1.00e-05  9.78e-24
+185 IN  0.00e+00 -4.22e-06  2.20e-05  2.43e+00 -3.78e-02  2.05e-02  3.00e+02  1.00e-05  9.78e-24
+186 IN  0.00e+00 -2.82e-06 -5.08e-06  2.97e+00 -1.42e-02  1.35e-02  3.00e+02  1.00e-05  9.78e-24
+187 IN  0.00e+00 -3.48e-06 -1.21e-05  2.80e+00 -7.01e-03  7.95e-03  3.00e+02  1.00e-05  9.78e-24
+188 IN  0.00e+00 -2.62e-06  8.78e-06  2.94e+00 -2.91e-02  2.20e-02  3.00e+02  1.00e-05  9.78e-24
+189 IN  0.00e+00 -1.25e-05  3.23e-05  1.09e+00 -5.13e-02  4.96e-04  3.00e+02  1.00e-05  9.78e-24
+190 IN  0.00e+00  2.48e-06 -1.44e-05  2.79e+00 -1.70e-03 -1.71e-03  3.00e+02  1.00e-05  9.78e-24
+191 IN  0.00e+00 -7.50e-06  3.11e-05  1.53e+00 -5.10e-02  1.49e-02  3.00e+02  1.00e-05  9.78e-24
+192 IN  0.00e+00 -1.46e-05  1.61e-05  1.44e+00 -2.77e-02  2.28e-02  3.00e+02  1.00e-05  9.78e-24
+193 IN  0.00e+00 -1.53e-05  1.55e-05  1.32e+00 -2.57e-02  1.98e-02  3.00e+02  1.00e-05  9.78e-24
+194 IN  0.00e+00  8.18e-07  1.64e-05  2.77e+00 -3.34e-02  2.53e-02  3.00e+02  1.00e-05  9.78e-24
+195 IN  0.00e+00 -3.19e-06 -1.34e-05  2.78e+00 -5.73e-03  6.85e-03  3.00e+02  1.00e-05  9.78e-24
+196 IN  0.00e+00 -1.04e-05  8.91e-06  2.25e+00 -2.89e-02  3.71e-02  3.00e+02  1.00e-05  9.78e-24
+197 IN  0.00e+00 -4.68e-06 -2.11e-05  2.37e+00  4.35e-03 -7.83e-04  3.00e+02  1.00e-05  9.78e-24
+198 IN  0.00e+00  1.17e-06  1.91e-05  2.66e+00 -3.52e-02  2.48e-02  3.00e+02  1.00e-05  9.78e-24
+199 IN  0.00e+00  1.70e-06  1.85e-05  2.67e+00 -3.47e-02  2.55e-02  3.00e+02  1.00e-05  9.78e-24
+200 IN  0.00e+00 -8.81e-06 -3.57e-05  7.88e-01  6.18e-02 -2.10e-02  3.00e+02  1.00e-05  9.78e-24
+201 IN  0.00e+00 -1.46e-05 -3.50e-06  1.49e+00 -1.20e-02  4.81e-02  3.00e+02  1.00e-05  9.78e-24
+202 IN  0.00e+00 -1.51e-05 -3.68e-06  1.38e+00 -1.09e-02  4.85e-02  3.00e+02  1.00e-05  9.78e-24
+203 IN  0.00e+00 -9.98e-06 -3.65e-05  6.36e-01  5.65e-02 -1.78e-02  3.00e+02  1.00e-05  9.78e-24
+204 IN  0.00e+00 -1.17e-05  3.17e-05  1.22e+00 -4.90e-02  4.69e-03  3.00e+02  1.00e-05  9.78e-24
+205 IN  0.00e+00 -9.14e-06 -1.40e-06  2.44e+00 -1.98e-02  3.03e-02  3.00e+02  1.00e-05  9.78e-24
+206 IN  0.00e+00 -7.79e-06 -1.65e-06  2.61e+00 -1.82e-02  2.59e-02  3.00e+02  1.00e-05  9.78e-24
+207 IN  0.00e+00  5.40e-06 -1.04e-05  2.73e+00 -5.95e-03 -4.82e-03  3.00e+02  1.00e-05  9.78e-24
+208 IN  0.00e+00  4.95e-06  4.64e-06  2.84e+00 -2.38e-02  1.55e-02  3.00e+02  1.00e-05  9.78e-24
+209 IN  0.00e+00  4.99e-06  6.54e-06  2.82e+00 -2.48e-02  1.78e-02  3.00e+02  1.00e-05  9.78e-24
+210 IN  0.00e+00 -3.94e-06  3.13e-05  1.65e+00 -4.68e-02  2.03e-02  3.00e+02  1.00e-05  9.78e-24
+211 IN  0.00e+00 -8.45e-06  3.12e-06  2.55e+00 -2.43e-02  2.89e-02  3.00e+02  1.00e-05  9.78e-24
+212 IN  0.00e+00 -5.18e-06 -3.84e-05  3.97e-01  4.30e-02  2.58e-03  3.00e+02  1.00e-05  9.78e-24
+213 IN  0.00e+00 -4.90e-06 -3.86e-05  3.55e-01  3.78e-02  2.64e-03  3.00e+02  1.00e-05  9.78e-24
+214 IN  0.00e+00 -8.10e-06 -3.73e-05  6.25e-01  6.90e-02 -1.32e-02  3.00e+02  1.00e-05  9.78e-24
+215 IN  0.00e+00 -7.38e-06 -3.76e-05  6.27e-01  6.86e-02 -1.22e-02  3.00e+02  1.00e-05  9.78e-24
+216 IN  0.00e+00 -1.25e-05  5.64e-06  1.92e+00 -2.28e-02  4.22e-02  3.00e+02  1.00e-05  9.78e-24
+217 IN  0.00e+00 -1.63e-05  2.01e-05  1.08e+00 -2.68e-02  3.62e-02  3.00e+02  1.00e-05  9.78e-24
+218 IN  0.00e+00 -1.91e-06 -1.44e-05  2.79e+00 -4.26e-03  4.58e-03  3.00e+02  1.00e-05  9.78e-24
+219 IN  0.00e+00  3.16e-06  1.45e-05  2.77e+00 -3.17e-02  2.49e-02  3.00e+02  1.00e-05  9.78e-24
+220 IN  0.00e+00 -1.23e-05  1.42e-05  1.88e+00 -3.26e-02  2.68e-02  3.00e+02  1.00e-05  9.78e-24
+221 IN  0.00e+00 -8.72e-06  3.03e-05  1.56e+00 -5.02e-02  1.52e-02  3.00e+02  1.00e-05  9.78e-24
+222 IN  0.00e+00 -2.86e-06 -3.34e-05  1.32e+00  3.23e-02 -2.65e-02  3.00e+02  1.00e-05  9.78e-24
+223 IN  0.00e+00 -3.34e-06 -3.29e-05  1.38e+00  3.23e-02 -2.57e-02  3.00e+02  1.00e-05  9.78e-24
+224 IN  0.00e+00 -7.35e-06 -3.53e-05  9.23e-01  6.06e-02 -2.26e-02  3.00e+02  1.00e-05  9.78e-24
+225 IN  0.00e+00  1.27e-06  3.15e-06  3.03e+00 -2.43e-02  1.58e-02  3.00e+02  1.00e-05  9.78e-24
+226 IN  0.00e+00 -1.14e-05  6.00e-06  2.11e+00 -2.41e-02  3.91e-02  3.00e+02  1.00e-05  9.78e-24
+227 IN  0.00e+00 -2.10e-06  3.15e-05  1.64e+00 -4.73e-02  2.29e-02  3.00e+02  1.00e-05  9.78e-24
+228 IN  0.00e+00 -5.59e-06 -1.35e-05  2.63e+00 -6.40e-03  1.11e-02  3.00e+02  1.00e-05  9.78e-24
+229 IN  0.00e+00 -1.57e-05  3.10e-05  8.77e-01 -4.04e-02 -1.09e-02  3.00e+02  1.00e-05  9.78e-24
+230 IN  0.00e+00 -1.58e-05  2.20e-05  1.14e+00 -2.83e-02  3.18e-02  3.00e+02  1.00e-05  9.78e-24
+231 IN  0.00e+00  6.38e-06  2.98e-06  2.73e+00 -2.03e-02  1.33e-02  3.00e+02  1.00e-05  9.78e-24
+232 IN  0.00e+00 -1.53e-05  2.62e-06  1.35e+00 -1.39e-02  4.02e-02  3.00e+02  1.00e-05  9.78e-24
+233 IN  0.00e+00 -1.52e-05  8.50e-06  1.39e+00 -1.59e-02  5.53e-02  3.00e+02  1.00e-05  9.78e-24
+234 IN  0.00e+00  2.62e-06  2.92e-05  1.88e+00 -4.79e-02  2.83e-02  3.00e+02  1.00e-05  9.78e-24
+235 IN  0.00e+00  2.16e-06  3.05e-05  1.74e+00 -5.02e-02  2.97e-02  3.00e+02  1.00e-05  9.78e-24
+236 IN  0.00e+00  3.60e-06  2.27e-05  2.38e+00 -3.78e-02  2.42e-02  3.00e+02  1.00e-05  9.78e-24
+237 IN  0.00e+00 -1.45e-05  1.78e-05  1.44e+00 -2.97e-02  3.06e-02  3.00e+02  1.00e-05  9.78e-24
+238 IN  0.00e+00 -1.50e-05  1.72e-05  1.34e+00 -2.84e-02  2.81e-02  3.00e+02  1.00e-05  9.78e-24
+239 IN  0.00e+00 -9.78e-06 -1.53e-05  2.14e+00 -7.15e-03  1.71e-02  3.00e+02  1.00e-05  9.78e-24
+240 IN  0.00e+00 -1.54e-05  3.92e-06  1.35e+00 -1.45e-02  4.14e-02  3.00e+02  1.00e-05  9.78e-24
+241 IN  0.00e+00 -1.46e-05  4.20e-06  1.51e+00 -1.66e-02  4.18e-02  3.00e+02  1.00e-05  9.78e-24
+242 IN  0.00e+00 -1.52e-05  9.25e-06  1.39e+00 -1.71e-02  5.49e-02  3.00e+02  1.00e-05  9.78e-24
+243 IN  0.00e+00 -1.52e-05  9.83e-06  1.40e+00 -1.71e-02  5.28e-02  3.00e+02  1.00e-05  9.78e-24
+244 IN  0.00e+00 -1.49e-05  2.18e-05  1.29e+00 -3.38e-02  3.02e-02  3.00e+02  1.00e-05  9.78e-24
+245 IN  0.00e+00 -1.46e-05  2.41e-05  1.29e+00 -3.94e-02  2.20e-02  3.00e+02  1.00e-05  9.78e-24
+246 IN  0.00e+00 -1.54e-05  1.83e-05  1.26e+00 -2.86e-02  3.27e-02  3.00e+02  1.00e-05  9.78e-24
+247 IN  0.00e+00 -1.80e-05  2.98e-05  5.66e-01 -9.95e-03 -1.12e-02  3.00e+02  1.00e-05  9.78e-24
+248 IN  0.00e+00 -1.88e-06  1.81e-05  2.69e+00 -3.51e-02  2.49e-02  3.00e+02  1.00e-05  9.78e-24
+249 IN  0.00e+00 -1.44e-05  3.22e-05  9.21e-01 -5.29e-02 -5.12e-03  3.00e+02  1.00e-05  9.78e-24
+250 IN  0.00e+00 -1.80e-05  2.98e-05  5.73e-01 -1.06e-02 -1.12e-02  3.00e+02  1.00e-05  9.78e-24
+251 IN  0.00e+00 -1.78e-05  3.00e-05  6.61e-01 -1.70e-02 -1.12e-02  3.00e+02  1.00e-05  9.78e-24
+252 IN  0.00e+00 -1.75e-05  2.92e-05  7.36e-01 -2.03e-02 -6.01e-03  3.00e+02  1.00e-05  9.78e-24
+253 IN  0.00e+00  3.70e-06 -2.69e-05  2.05e+00  1.01e-02 -2.22e-02  3.00e+02  1.00e-05  9.78e-24
+254 IN  0.00e+00  3.77e-06 -2.49e-05  2.21e+00  1.05e-02 -2.01e-02  3.00e+02  1.00e-05  9.78e-24
+255 IN  0.00e+00 -1.42e-05  2.72e-05  1.24e+00 -4.99e-02  1.29e-02  3.00e+02  1.00e-05  9.78e-24
+256 IN  0.00e+00  5.04e-06 -6.24e-06  2.82e+00 -1.15e-02 -1.15e-03  3.00e+02  1.00e-05  9.78e-24
+257 IN  0.00e+00  4.96e-06 -6.46e-06  2.82e+00 -1.17e-02 -9.46e-04  3.00e+02  1.00e-05  9.78e-24
+258 IN  0.00e+00 -1.35e-05  3.41e-05  8.40e-01 -5.17e-02  1.44e-03  3.00e+02  1.00e-05  9.78e-24
+259 IN  0.00e+00  6.24e-06 -1.70e-05  2.49e+00 -5.65e-04 -8.17e-03  3.00e+02  1.00e-05  9.78e-24
+260 IN  0.00e+00  6.46e-06 -1.86e-05  2.40e+00  9.06e-04 -1.08e-02  3.00e+02  1.00e-05  9.78e-24
+261 IN  0.00e+00  5.37e-06  2.28e-05  2.28e+00 -3.55e-02  2.69e-02  3.00e+02  1.00e-05  9.78e-24
+262 IN  0.00e+00  5.90e-06 -1.67e-05  2.53e+00 -4.02e-04 -7.38e-03  3.00e+02  1.00e-05  9.78e-24
+263 IN  0.00e+00 -1.53e-05  1.06e-05  1.38e+00 -1.78e-02  4.85e-02  3.00e+02  1.00e-05  9.78e-24
+264 IN  0.00e+00 -9.19e-06  1.52e-06  2.46e+00 -2.36e-02  2.96e-02  3.00e+02  1.00e-05  9.78e-24
+265 IN  0.00e+00 -1.54e-05  3.10e-05  9.14e-01 -4.26e-02 -9.92e-03  3.00e+02  1.00e-05  9.78e-24
+266 IN  0.00e+00 -1.55e-05  3.12e-05  8.86e-01 -4.24e-02 -1.07e-02  3.00e+02  1.00e-05  9.78e-24
+267 IN  0.00e+00 -1.02e-05  1.80e-05  2.12e+00 -3.58e-02  2.56e-02  3.00e+02  1.00e-05  9.78e-24
+268 IN  0.00e+00 -1.29e-05  7.49e-07  1.85e+00 -1.71e-02  3.67e-02  3.00e+02  1.00e-05  9.78e-24
+269 IN  0.00e+00 -1.28e-05  2.62e-05  1.48e+00 -4.96e-02  1.40e-02  3.00e+02  1.00e-05  9.78e-24
+270 IN  0.00e+00 -1.50e-05  2.97e-05  1.03e+00 -4.96e-02 -2.60e-03  3.00e+02  1.00e-05  9.78e-24
+271 IN  0.00e+00 -7.47e-06  3.84e-05  3.59e-01 -2.06e-02 -2.05e-03  3.00e+02  1.00e-05  9.78e-24
+272 IN  0.00e+00 -1.47e-05  3.16e-05  9.43e-01 -5.00e-02 -7.51e-03  3.00e+02  1.00e-05  9.78e-24
+273 IN  0.00e+00 -1.44e-05  3.10e-05  1.03e+00 -5.36e-02 -5.14e-03  3.00e+02  1.00e-05  9.78e-24
+274 IN  0.00e+00 -1.39e-05  2.96e-05  1.16e+00 -5.57e-02  1.46e-03  3.00e+02  1.00e-05  9.78e-24
+275 IN  0.00e+00 -1.06e-05  3.60e-05  7.78e-01 -4.48e-02 -5.02e-03  3.00e+02  1.00e-05  9.78e-24
+276 IN  0.00e+00 -9.55e-06  3.67e-05  6.99e-01 -4.15e-02 -6.43e-03  3.00e+02  1.00e-05  9.78e-24
+277 IN  0.00e+00 -1.08e-05 -1.08e-05  2.09e+00 -1.02e-02  2.21e-02  3.00e+02  1.00e-05  9.78e-24
+278 IN  0.00e+00  4.24e-06  1.29e-05  2.76e+00 -2.99e-02  2.39e-02  3.00e+02  1.00e-05  9.78e-24
+279 IN  0.00e+00  9.82e-07 -3.07e-05  1.72e+00  1.59e-02 -2.54e-02  3.00e+02  1.00e-05  9.78e-24
+280 IN  0.00e+00 -1.41e-05  2.83e-05  1.21e+00 -5.25e-02  7.24e-03  3.00e+02  1.00e-05  9.78e-24
+281 IN  0.00e+00 -1.12e-06 -1.92e-05  2.61e+00  2.72e-03 -2.47e-03  3.00e+02  1.00e-05  9.78e-24
+282 IN  0.00e+00 -1.25e-05  3.55e-05  7.54e-01 -4.68e-02 -5.88e-03  3.00e+02  1.00e-05  9.78e-24
+283 IN  0.00e+00 -4.85e-06 -3.42e-05  1.16e+00  4.30e-02 -2.66e-02  3.00e+02  1.00e-05  9.78e-24
+284 IN  0.00e+00 -1.16e-05 -9.52e-06  1.99e+00 -1.07e-02  2.53e-02  3.00e+02  1.00e-05  9.78e-24
+285 IN  0.00e+00 -1.24e-05 -2.24e-05  1.52e+00 -5.01e-03  1.17e-02  3.00e+02  1.00e-05  9.78e-24
+286 IN  0.00e+00 -1.26e-05 -2.16e-05  1.53e+00 -6.96e-03  1.33e-02  3.00e+02  1.00e-05  9.78e-24
+287 IN  0.00e+00 -1.13e-05 -3.27e-05  9.74e-01  4.11e-02 -1.79e-02  3.00e+02  1.00e-05  9.78e-24
+288 IN  0.00e+00 -6.73e-07 -2.45e-05  2.29e+00  1.05e-02 -1.62e-02  3.00e+02  1.00e-05  9.78e-24
+289 IN  0.00e+00  1.75e-05  1.70e-05  6.91e-01 -1.12e-02  3.03e-02  3.00e+02  1.00e-05  9.78e-24
+290 IN  0.00e+00 -7.26e-06  3.93e-05  1.58e-01 -9.33e-03 -7.69e-04  3.00e+02  1.00e-05  9.78e-24
+291 IN  0.00e+00 -1.13e-05  7.87e-06  2.12e+00 -2.72e-02  3.95e-02  3.00e+02  1.00e-05  9.78e-24
+292 IN  0.00e+00 -1.55e-05 -1.32e-05  1.20e+00  2.71e-04  1.98e-02  3.00e+02  1.00e-05  9.78e-24
+293 IN  0.00e+00 -1.71e-05 -1.99e-05  8.49e-01  2.81e-03  2.71e-02  3.00e+02  1.00e-05  9.78e-24
+294 IN  0.00e+00 -1.75e-05 -1.97e-05  7.57e-01  5.25e-03  2.74e-02  3.00e+02  1.00e-05  9.78e-24
+295 IN  0.00e+00  4.60e-06 -2.12e-05  2.40e+00  5.78e-03 -1.30e-02  3.00e+02  1.00e-05  9.78e-24
+296 IN  0.00e+00 -3.82e-06 -1.10e-05  2.82e+00 -8.22e-03  9.46e-03  3.00e+02  1.00e-05  9.78e-24
+297 IN  0.00e+00 -6.98e-06  3.91e-05  2.02e-01 -1.02e-02 -1.22e-03  3.00e+02  1.00e-05  9.78e-24
+298 IN  0.00e+00 -6.98e-06  3.91e-05  2.00e-01 -1.02e-02 -1.21e-03  3.00e+02  1.00e-05  9.78e-24
+299 IN  0.00e+00 -1.58e-06  1.00e-06  3.03e+00 -2.09e-02  1.71e-02  3.00e+02  1.00e-05  9.78e-24
+300 IN  0.00e+00 -1.54e-05 -8.50e-06  1.27e+00 -4.47e-03  3.14e-02  3.00e+02  1.00e-05  9.78e-24
+301 IN  0.00e+00 -1.51e-05 -8.30e-06  1.33e+00 -6.25e-03  3.16e-02  3.00e+02  1.00e-05  9.78e-24
+302 IN  0.00e+00 -1.54e-05 -8.79e-06  1.27e+00 -4.92e-03  3.03e-02  3.00e+02  1.00e-05  9.78e-24
+303 IN  0.00e+00 -1.18e-05 -3.49e-05  7.09e-01  4.62e-02 -1.67e-02  3.00e+02  1.00e-05  9.78e-24
+304 IN  0.00e+00  3.48e-06 -2.90e-05  1.87e+00  9.70e-03 -2.41e-02  3.00e+02  1.00e-05  9.78e-24
+305 IN  0.00e+00  3.85e-06 -2.82e-05  1.93e+00  9.43e-03 -2.33e-02  3.00e+02  1.00e-05  9.78e-24
+306 IN  0.00e+00 -1.53e-05 -6.56e-06  1.29e+00 -7.87e-03  3.63e-02  3.00e+02  1.00e-05  9.78e-24
+307 IN  0.00e+00  5.94e-06  1.30e-05  2.63e+00 -2.84e-02  2.41e-02  3.00e+02  1.00e-05  9.78e-24
+308 IN  0.00e+00 -1.05e-05  3.21e-05  1.27e+00 -4.80e-02  8.12e-03  3.00e+02  1.00e-05  9.78e-24
+309 IN  0.00e+00 -1.35e-05 -3.28e-05  7.61e-01  3.47e-02 -1.26e-02  3.00e+02  1.00e-05  9.78e-24
+310 IN  0.00e+00 -1.35e-05 -3.21e-05  8.11e-01  3.21e-02 -1.25e-02  3.00e+02  1.00e-05  9.78e-24
+311 IN  0.00e+00  2.26e-07 -3.20e-05  1.55e+00  1.94e-02 -2.66e-02  3.00e+02  1.00e-05  9.78e-24
+312 IN  0.00e+00 -1.55e-05 -1.20e-05  1.21e+00  1.94e-04  2.59e-02  3.00e+02  1.00e-05  9.78e-24
+313 IN  0.00e+00 -1.55e-05 -1.25e-05  1.20e+00  2.42e-04  2.29e-02  3.00e+02  1.00e-05  9.78e-24
+314 IN  0.00e+00 -1.76e-05 -2.04e-05  6.69e-01  6.04e-03  2.77e-02  3.00e+02  1.00e-05  9.78e-24
+315 IN  0.00e+00 -1.55e-05 -1.14e-05  1.21e+00 -1.64e-03  2.88e-02  3.00e+02  1.00e-05  9.78e-24
+316 IN  0.00e+00 -5.70e-06 -2.34e-05  2.17e+00  9.26e-03 -5.60e-03  3.00e+02  1.00e-05  9.78e-24
+317 IN  0.00e+00 -1.49e-05 -7.19e-06  1.37e+00 -7.79e-03  3.46e-02  3.00e+02  1.00e-05  9.78e-24
+318 IN  0.00e+00 -1.52e-05 -7.66e-06  1.32e+00 -6.59e-03  3.35e-02  3.00e+02  1.00e-05  9.78e-24
+319 IN  0.00e+00 -2.21e-06 -2.51e-05  2.21e+00  1.15e-02 -1.64e-02  3.00e+02  1.00e-05  9.78e-24
+320 IN  0.00e+00 -1.20e-05 -2.89e-05  1.23e+00  1.77e-02 -1.34e-02  3.00e+02  1.00e-05  9.78e-24
+321 IN  0.00e+00 -1.52e-05 -1.38e-05  1.24e+00 -9.65e-04  1.72e-02  3.00e+02  1.00e-05  9.78e-24
+322 IN  0.00e+00 -1.53e-05 -1.42e-05  1.22e+00 -7.59e-04  1.50e-02  3.00e+02  1.00e-05  9.78e-24
+323 IN  0.00e+00 -1.85e-05 -2.88e-05  2.67e-01  1.64e-03 -4.20e-03  3.00e+02  1.00e-05  9.78e-24
+324 IN  0.00e+00 -1.84e-05 -2.66e-05  3.24e-01  4.53e-03  4.35e-03  3.00e+02  1.00e-05  9.78e-24
+325 IN  0.00e+00 -1.83e-05 -2.74e-05  3.13e-01  3.84e-03  2.51e-03  3.00e+02  1.00e-05  9.78e-24
+326 IN  0.00e+00 -1.55e-05 -1.33e-05  1.20e+00  8.28e-05  1.91e-02  3.00e+02  1.00e-05  9.78e-24
+327 IN  0.00e+00 -1.78e-06 -2.51e-05  2.23e+00  1.12e-02 -1.68e-02  3.00e+02  1.00e-05  9.78e-24
+328 IN  0.00e+00 -1.83e-05 -2.53e-05  3.62e-01  4.57e-03  9.76e-03  3.00e+02  1.00e-05  9.78e-24
+329 IN  0.00e+00 -1.79e-05 -2.10e-05  5.50e-01  4.98e-03  2.74e-02  3.00e+02  1.00e-05  9.78e-24
+330 IN  0.00e+00 -1.55e-05 -9.54e-06  1.25e+00 -3.39e-03  3.04e-02  3.00e+02  1.00e-05  9.78e-24
+331 IN  0.00e+00 -1.54e-05 -9.20e-06  1.27e+00 -3.76e-03  3.07e-02  3.00e+02  1.00e-05  9.78e-24
+332 IN  0.00e+00 -1.33e-05  2.84e-06  1.77e+00 -1.86e-02  3.80e-02  3.00e+02  1.00e-05  9.78e-24
+333 IN  0.00e+00 -1.44e-05 -3.14e-05  7.74e-01  2.50e-02 -1.14e-02  3.00e+02  1.00e-05  9.78e-24
+334 IN  0.00e+00 -1.29e-05 -1.75e-05  1.61e+00 -1.22e-02  1.89e-02  3.00e+02  1.00e-05  9.78e-24
+335 IN  0.00e+00 -7.05e-06  2.69e-05  1.95e+00 -4.61e-02  1.82e-02  3.00e+02  1.00e-05  9.78e-24
+336 IN  0.00e+00 -1.33e-05  3.90e-06  1.77e+00 -1.93e-02  4.01e-02  3.00e+02  1.00e-05  9.78e-24
+337 IN  0.00e+00 -1.50e-05 -5.04e-07  1.42e+00 -9.71e-03  4.42e-02  3.00e+02  1.00e-05  9.78e-24
+338 IN  0.00e+00 -1.56e-05 -6.79e-07  1.30e+00 -7.72e-03  4.59e-02  3.00e+02  1.00e-05  9.78e-24
+339 IN  0.00e+00 -1.71e-05  2.44e-05  9.14e-01 -2.23e-02  2.34e-02  3.00e+02  1.00e-05  9.78e-24
+340 IN  0.00e+00 -1.08e-05  6.96e-06  2.21e+00 -2.57e-02  3.76e-02  3.00e+02  1.00e-05  9.78e-24
+341 IN  0.00e+00 -4.21e-06  2.69e-05  2.08e+00 -4.43e-02  1.98e-02  3.00e+02  1.00e-05  9.78e-24
+342 IN  0.00e+00 -5.81e-06 -2.61e-07  2.81e+00 -1.88e-02  2.18e-02  3.00e+02  1.00e-05  9.78e-24
+343 IN  0.00e+00 -1.29e-05  3.38e-05  9.07e-01 -5.03e-02  5.82e-04  3.00e+02  1.00e-05  9.78e-24
+344 IN  0.00e+00 -1.22e-05  2.64e-05  1.52e+00 -4.84e-02  1.32e-02  3.00e+02  1.00e-05  9.78e-24
+345 IN  0.00e+00 -4.07e-06  2.20e-05  2.43e+00 -3.77e-02  2.06e-02  3.00e+02  1.00e-05  9.78e-24
+346 IN  0.00e+00 -5.62e-06 -4.75e-06  2.80e+00 -1.49e-02  1.92e-02  3.00e+02  1.00e-05  9.78e-24
+347 IN  0.00e+00 -1.69e-05 -2.12e-05  8.25e-01  3.87e-03  2.84e-02  3.00e+02  1.00e-05  9.78e-24
+348 IN  0.00e+00 -9.98e-06 -4.56e-06  2.30e+00 -1.46e-02  3.11e-02  3.00e+02  1.00e-05  9.78e-24
+349 IN  0.00e+00 -6.14e-06  3.45e-05  1.14e+00 -5.13e-02  1.25e-02  3.00e+02  1.00e-05  9.78e-24
+350 IN  0.00e+00 -1.49e-05  1.68e-05  1.37e+00 -2.80e-02  2.61e-02  3.00e+02  1.00e-05  9.78e-24
+351 IN  0.00e+00  4.71e-06  1.09e-05  2.78e+00 -2.79e-02  2.22e-02  3.00e+02  1.00e-05  9.78e-24
+352 IN  0.00e+00 -8.93e-06  2.91e-05  1.66e+00 -4.76e-02  1.50e-02  3.00e+02  1.00e-05  9.78e-24
+353 IN  0.00e+00 -2.37e-06  1.77e-06  3.01e+00 -2.15e-02  1.88e-02  3.00e+02  1.00e-05  9.78e-24
+354 IN  0.00e+00 -6.04e-06  2.42e-05  2.21e+00 -4.16e-02  1.88e-02  3.00e+02  1.00e-05  9.78e-24
+355 IN  0.00e+00 -8.73e-06 -8.66e-06  2.42e+00 -9.91e-03  2.22e-02  3.00e+02  1.00e-05  9.78e-24
+356 IN  0.00e+00 -1.58e-05  2.68e-05  1.03e+00 -3.76e-02  1.34e-02  3.00e+02  1.00e-05  9.78e-24
+357 IN  0.00e+00 -1.29e-05 -2.81e-06  1.84e+00 -1.57e-02  4.36e-02  3.00e+02  1.00e-05  9.78e-24
+358 IN  0.00e+00  5.53e-06  1.48e-05  2.61e+00 -3.04e-02  2.60e-02  3.00e+02  1.00e-05  9.78e-24
+359 IN  0.00e+00  1.27e-06 -3.06e-05  1.72e+00  1.59e-02 -2.73e-02  3.00e+02  1.00e-05  9.78e-24
+360 IN  0.00e+00 -4.68e-07  1.80e-06  3.04e+00 -2.24e-02  1.65e-02  3.00e+02  1.00e-05  9.78e-24
+361 IN  0.00e+00 -1.54e-05  3.17e-05  8.64e-01 -4.28e-02 -1.05e-02  3.00e+02  1.00e-05  9.78e-24
+362 IN  0.00e+00 -8.72e-06  3.48e-05  1.02e+00 -4.75e-02  3.36e-03  3.00e+02  1.00e-05  9.78e-24
+363 IN  0.00e+00 -5.31e-06 -9.44e-06  2.75e+00 -9.93e-03  1.40e-02  3.00e+02  1.00e-05  9.78e-24
+364 IN  0.00e+00 -1.49e-05  1.39e-05  1.44e+00 -2.49e-02  2.35e-02  3.00e+02  1.00e-05  9.78e-24
+365 IN  0.00e+00 -1.47e-05  1.44e-05  1.46e+00 -2.69e-02  2.06e-02  3.00e+02  1.00e-05  9.78e-24
+366 IN  0.00e+00 -1.66e-05 -1.76e-05  9.76e-01 -2.32e-03  1.58e-02  3.00e+02  1.00e-05  9.78e-24
+367 IN  0.00e+00 -1.26e-05  3.03e-05  1.25e+00 -5.27e-02  4.50e-03  3.00e+02  1.00e-05  9.78e-24
+368 IN  0.00e+00 -1.18e-05  1.85e-05  1.87e+00 -3.34e-02  2.88e-02  3.00e+02  1.00e-05  9.78e-24
+369 IN  0.00e+00 -1.08e-05  3.66e-05  6.77e-01 -4.48e-02 -8.28e-03  3.00e+02  1.00e-05  9.78e-24
+370 IN  0.00e+00 -9.67e-06  3.72e-05  6.29e-01 -4.05e-02 -8.53e-03  3.00e+02  1.00e-05  9.78e-24
+371 IN  0.00e+00 -3.31e-06 -1.21e-05  2.81e+00 -7.02e-03  7.74e-03  3.00e+02  1.00e-05  9.78e-24
+372 IN  0.00e+00 -8.25e-06  3.62e-05  8.17e-01 -4.09e-02 -4.77e-03  3.00e+02  1.00e-05  9.78e-24
+373 IN  0.00e+00 -9.32e-06  3.65e-05  7.39e-01 -4.17e-02 -6.25e-03  3.00e+02  1.00e-05  9.78e-24
+374 IN  0.00e+00  1.27e-06  3.10e-05  1.70e+00 -5.04e-02  2.92e-02  3.00e+02  1.00e-05  9.78e-24
+375 IN  0.00e+00 -6.95e-06  3.91e-05  2.07e-01 -1.04e-02 -1.27e-03  3.00e+02  1.00e-05  9.78e-24
+376 IN  0.00e+00 -2.39e-06  2.57e-05  2.22e+00 -4.19e-02  2.07e-02  3.00e+02  1.00e-05  9.78e-24
+377 IN  0.00e+00 -1.71e-05  2.95e-05  7.70e-01 -2.41e-02 -7.42e-03  3.00e+02  1.00e-05  9.78e-24
+378 IN  0.00e+00 -1.68e-05  2.82e-05  8.58e-01 -2.80e-02  2.95e-03  3.00e+02  1.00e-05  9.78e-24
+379 IN  0.00e+00 -1.12e-05 -3.41e-05  8.24e-01  4.68e-02 -1.80e-02  3.00e+02  1.00e-05  9.78e-24
+380 IN  0.00e+00 -1.19e-05 -3.24e-05  9.58e-01  3.82e-02 -1.58e-02  3.00e+02  1.00e-05  9.78e-24
+381 IN  0.00e+00 -1.62e-05 -2.96e-05  6.54e-01  1.58e-02 -1.07e-02  3.00e+02  1.00e-05  9.78e-24
+382 IN  0.00e+00  1.89e-06  3.18e-05  1.58e+00 -5.14e-02  3.05e-02  3.00e+02  1.00e-05  9.78e-24
+383 IN  0.00e+00  4.98e-07  3.04e-05  1.78e+00 -4.95e-02  2.75e-02  3.00e+02  1.00e-05  9.78e-24
+384 IN  0.00e+00 -4.98e-06 -1.05e-05  2.76e+00 -8.74e-03  1.21e-02  3.00e+02  1.00e-05  9.78e-24
+385 IN  0.00e+00 -9.64e-06  2.00e-05  2.11e+00 -3.92e-02  2.44e-02  3.00e+02  1.00e-05  9.78e-24
+386 IN  0.00e+00  3.74e-06  1.78e-05  2.62e+00 -3.46e-02  2.69e-02  3.00e+02  1.00e-05  9.78e-24
+387 IN  0.00e+00  1.89e-06  2.82e-05  1.99e+00 -4.63e-02  2.54e-02  3.00e+02  1.00e-05  9.78e-24
+388 IN  0.00e+00 -1.80e-05 -2.24e-05  4.84e-01  3.18e-03  2.14e-02  3.00e+02  1.00e-05  9.78e-24
+389 IN  0.00e+00 -1.81e-05 -2.35e-05  4.27e-01  2.97e-03  1.53e-02  3.00e+02  1.00e-05  9.78e-24
+390 IN  0.00e+00 -1.50e-05 -4.24e-06  1.38e+00 -1.12e-02  4.72e-02  3.00e+02  1.00e-05  9.78e-24
+391 IN  0.00e+00 -1.57e-05  1.88e-05  1.20e+00 -2.84e-02  3.39e-02  3.00e+02  1.00e-05  9.78e-24
+392 IN  0.00e+00 -1.53e-05  1.95e-05  1.27e+00 -3.05e-02  3.53e-02  3.00e+02  1.00e-05  9.78e-24
+393 IN  0.00e+00 -1.70e-05 -2.97e-05  5.53e-01  1.46e-02 -1.05e-02  3.00e+02  1.00e-05  9.78e-24
+394 IN  0.00e+00 -1.21e-05  3.58e-05  7.47e-01 -4.63e-02 -7.03e-03  3.00e+02  1.00e-05  9.78e-24
+395 IN  0.00e+00 -1.13e-05  3.65e-05  6.86e-01 -4.55e-02 -8.39e-03  3.00e+02  1.00e-05  9.78e-24
+396 IN  0.00e+00 -2.34e-06 -3.06e-05  1.70e+00  2.32e-02 -2.54e-02  3.00e+02  1.00e-05  9.78e-24
+397 IN  0.00e+00 -2.45e-06 -3.22e-05  1.49e+00  2.77e-02 -2.64e-02  3.00e+02  1.00e-05  9.78e-24
+398 IN  0.00e+00 -2.03e-06 -3.14e-05  1.60e+00  2.42e-02 -2.59e-02  3.00e+02  1.00e-05  9.78e-24
+399 IN  0.00e+00 -6.00e-06 -3.04e-05  1.58e+00  2.84e-02 -2.42e-02  3.00e+02  1.00e-05  9.78e-24
+400 IN  0.00e+00 -1.31e-05 -3.38e-05  7.21e-01  4.00e-02 -1.29e-02  3.00e+02  1.00e-05  9.78e-24
+401 IN  0.00e+00 -1.32e-05 -3.29e-05  7.82e-01  3.61e-02 -1.33e-02  3.00e+02  1.00e-05  9.78e-24
+402 IN  0.00e+00 -1.27e-05 -3.43e-05  7.09e-01  4.22e-02 -1.54e-02  3.00e+02  1.00e-05  9.78e-24
+403 IN  0.00e+00 -6.72e-06  1.20e-05  2.64e+00 -3.30e-02  2.67e-02  3.00e+02  1.00e-05  9.78e-24
+404 IN  0.00e+00 -1.09e-05 -3.58e-05  6.69e-01  5.14e-02 -1.93e-02  3.00e+02  1.00e-05  9.78e-24
+405 IN  0.00e+00 -1.14e-05 -3.50e-05  7.25e-01  4.80e-02 -1.82e-02  3.00e+02  1.00e-05  9.78e-24
+406 IN  0.00e+00 -1.65e-05 -1.72e-05  1.00e+00 -2.27e-03  1.42e-02  3.00e+02  1.00e-05  9.78e-24
+407 IN  0.00e+00 -1.62e-05 -1.68e-05  1.04e+00 -2.59e-03  1.32e-02  3.00e+02  1.00e-05  9.78e-24
+408 IN  0.00e+00 -1.66e-05 -2.89e-05  6.44e-01  1.41e-02 -7.90e-03  3.00e+02  1.00e-05  9.78e-24
+409 IN  0.00e+00 -1.64e-05 -2.95e-05  6.34e-01  1.52e-02 -1.03e-02  3.00e+02  1.00e-05  9.78e-24
+410 IN  0.00e+00 -1.68e-05 -1.89e-05  9.29e-01 -1.31e-03  2.19e-02  3.00e+02  1.00e-05  9.78e-24
+411 IN  0.00e+00 -1.63e-05 -1.84e-05  1.01e+00 -3.31e-03  1.93e-02  3.00e+02  1.00e-05  9.78e-24
+412 IN  0.00e+00 -1.69e-05 -2.98e-05  5.68e-01  1.48e-02 -1.08e-02  3.00e+02  1.00e-05  9.78e-24
+413 IN  0.00e+00 -1.27e-05 -3.24e-05  8.75e-01  3.54e-02 -1.42e-02  3.00e+02  1.00e-05  9.78e-24
+414 IN  0.00e+00 -6.08e-06 -2.60e-05  1.97e+00  1.52e-02 -1.29e-02  3.00e+02  1.00e-05  9.78e-24
+415 IN  0.00e+00 -1.33e-05 -2.43e-05  1.30e+00 -1.67e-03  7.59e-03  3.00e+02  1.00e-05  9.78e-24
+416 IN  0.00e+00 -1.82e-05 -2.79e-05  3.27e-01  4.39e-03 -2.10e-04  3.00e+02  1.00e-05  9.78e-24
+417 IN  0.00e+00 -8.89e-06 -3.04e-05  1.40e+00  2.98e-02 -2.17e-02  3.00e+02  1.00e-05  9.78e-24
+418 IN  0.00e+00 -4.33e-06 -2.36e-05  2.24e+00  9.44e-03 -9.22e-03  3.00e+02  1.00e-05  9.78e-24
+419 IN  0.00e+00 -9.28e-06  2.72e-05  1.78e+00 -4.66e-02  1.52e-02  3.00e+02  1.00e-05  9.78e-24
+420 IN  0.00e+00 -8.82e-06  2.37e-05  2.03e+00 -4.37e-02  1.88e-02  3.00e+02  1.00e-05  9.78e-24
+421 IN  0.00e+00 -6.54e-06  2.74e-05  1.94e+00 -4.67e-02  1.95e-02  3.00e+02  1.00e-05  9.78e-24
+422 IN  0.00e+00 -1.09e-05  2.95e-05  1.47e+00 -4.97e-02  1.34e-02  3.00e+02  1.00e-05  9.78e-24
+423 IN  0.00e+00 -1.40e-05  2.41e-05  1.39e+00 -4.13e-02  2.05e-02  3.00e+02  1.00e-05  9.78e-24
+424 IN  0.00e+00 -1.01e-05  1.87e-06  2.33e+00 -2.34e-02  3.08e-02  3.00e+02  1.00e-05  9.78e-24
+425 IN  0.00e+00  5.87e-06  3.83e-06  2.78e+00 -2.20e-02  1.44e-02  3.00e+02  1.00e-05  9.78e-24
+426 IN  0.00e+00  1.12e-06 -1.46e-05  2.80e+00 -2.28e-03  2.60e-05  3.00e+02  1.00e-05  9.78e-24
+427 IN  0.00e+00 -6.66e-06 -2.34e-05  2.11e+00  8.20e-03 -2.73e-03  3.00e+02  1.00e-05  9.78e-24
+428 IN  0.00e+00  1.21e-06 -1.26e-05  2.87e+00 -4.77e-03  1.14e-03  3.00e+02  1.00e-05  9.78e-24
+429 IN  0.00e+00 -1.41e-05 -2.63e-05  1.10e+00  4.24e-03  2.88e-04  3.00e+02  1.00e-05  9.78e-24
+430 IN  0.00e+00 -9.63e-06  3.55e-05  8.71e-01 -4.47e-02 -2.83e-03  3.00e+02  1.00e-05  9.78e-24
+431 IN  0.00e+00 -9.33e-06  3.63e-05  7.71e-01 -4.25e-02 -5.23e-03  3.00e+02  1.00e-05  9.78e-24
+432 IN  0.00e+00 -2.97e-06 -1.91e-05  2.56e+00  1.38e-03  9.71e-04  3.00e+02  1.00e-05  9.78e-24
+433 IN  0.00e+00 -4.98e-06  2.35e-05  2.30e+00 -4.03e-02  1.94e-02  3.00e+02  1.00e-05  9.78e-24
+434 IN  0.00e+00 -3.81e-06 -1.85e-05  2.55e+00  2.61e-04  3.28e-03  3.00e+02  1.00e-05  9.78e-24
+435 IN  0.00e+00 -1.56e-05  2.78e-05  1.03e+00 -4.10e-02  8.57e-03  3.00e+02  1.00e-05  9.78e-24
+436 IN  0.00e+00 -7.89e-06 -1.62e-05  2.34e+00 -4.90e-03  1.32e-02  3.00e+02  1.00e-05  9.78e-24
+437 IN  0.00e+00 -1.44e-05 -1.25e-05  1.42e+00 -1.41e-03  2.58e-02  3.00e+02  1.00e-05  9.78e-24
+438 IN  0.00e+00 -6.49e-06  1.85e-06  2.75e+00 -2.15e-02  2.49e-02  3.00e+02  1.00e-05  9.78e-24
+439 IN  0.00e+00 -1.38e-05 -2.74e-05  1.10e+00  8.33e-03 -5.09e-03  3.00e+02  1.00e-05  9.78e-24
+440 IN  0.00e+00 -2.81e-06 -1.38e-05  2.78e+00 -5.36e-03  6.21e-03  3.00e+02  1.00e-05  9.78e-24
+441 IN  0.00e+00 -1.06e-05 -2.11e-05  1.82e+00 -5.18e-03  9.42e-03  3.00e+02  1.00e-05  9.78e-24
+442 IN  0.00e+00 -1.33e-05 -2.35e-05  1.33e+00 -3.29e-03  1.11e-02  3.00e+02  1.00e-05  9.78e-24
+443 IN  0.00e+00 -4.78e-06 -3.93e-05  1.98e-01  2.31e-02  1.58e-03  3.00e+02  1.00e-05  9.78e-24
+444 IN  0.00e+00 -1.37e-05  2.84e-05  1.25e+00 -5.38e-02  7.19e-03  3.00e+02  1.00e-05  9.78e-24
+445 IN  0.00e+00  3.72e-06  1.53e-06  2.94e+00 -2.30e-02  1.23e-02  3.00e+02  1.00e-05  9.78e-24
+446 IN  0.00e+00 -9.28e-06 -2.72e-05  1.63e+00  1.37e-02 -1.37e-02  3.00e+02  1.00e-05  9.78e-24
+447 IN  0.00e+00 -1.16e-05 -7.53e-07  2.08e+00 -1.98e-02  3.67e-02  3.00e+02  1.00e-05  9.78e-24
+448 IN  0.00e+00 -1.49e-05  2.84e-05  1.10e+00 -4.68e-02  5.54e-03  3.00e+02  1.00e-05  9.78e-24
+449 IN  0.00e+00 -1.88e-06 -3.30e-05  1.40e+00  2.78e-02 -2.60e-02  3.00e+02  1.00e-05  9.78e-24
+450 IN  0.00e+00 -1.06e-05 -2.73e-05  1.49e+00  1.15e-02 -1.11e-02  3.00e+02  1.00e-05  9.78e-24
+451 IN  0.00e+00 -9.59e-06 -2.68e-05  1.62e+00  1.12e-02 -1.21e-02  3.00e+02  1.00e-05  9.78e-24
+452 IN  0.00e+00 -8.41e-06 -2.25e-05  2.00e+00  2.10e-03  2.94e-03  3.00e+02  1.00e-05  9.78e-24
+453 IN  0.00e+00 -6.11e-06 -3.28e-06  2.77e+00 -1.60e-02  2.12e-02  3.00e+02  1.00e-05  9.78e-24
+454 IN  0.00e+00 -1.20e-05 -1.83e-05  1.73e+00 -1.22e-02  1.73e-02  3.00e+02  1.00e-05  9.78e-24
+455 IN  0.00e+00 -5.51e-06  3.73e-06  2.82e+00 -2.31e-02  2.48e-02  3.00e+02  1.00e-05  9.78e-24
+456 IN  0.00e+00 -6.24e-06  2.59e-05  2.07e+00 -4.43e-02  1.80e-02  3.00e+02  1.00e-05  9.78e-24
+457 IN  0.00e+00  4.48e-07 -2.50e-05  2.26e+00  1.10e-02 -1.85e-02  3.00e+02  1.00e-05  9.78e-24
+458 IN  0.00e+00 -3.63e-06  2.09e-05  2.51e+00 -3.65e-02  2.19e-02  3.00e+02  1.00e-05  9.78e-24
+459 IN  0.00e+00 -1.11e-05 -1.51e-05  1.97e+00 -9.82e-03  1.94e-02  3.00e+02  1.00e-05  9.78e-24
+460 IN  0.00e+00 -1.30e-05  2.32e-05  1.58e+00 -4.05e-02  2.06e-02  3.00e+02  1.00e-05  9.78e-24
+461 IN  0.00e+00 -8.02e-06 -2.68e-05  1.77e+00  1.51e-02 -1.45e-02  3.00e+02  1.00e-05  9.78e-24
+462 IN  0.00e+00 -1.20e-06 -1.46e-05  2.80e+00 -3.62e-03  3.44e-03  3.00e+02  1.00e-05  9.78e-24
+463 IN  0.00e+00  5.95e-06 -1.80e-06  2.77e+00 -1.72e-02  4.87e-03  3.00e+02  1.00e-05  9.78e-24
+464 IN  0.00e+00 -1.54e-05 -2.58e-05  9.26e-01  6.14e-03  4.50e-03  3.00e+02  1.00e-05  9.78e-24
+465 IN  0.00e+00 -4.94e-06  3.42e-05  1.21e+00 -4.88e-02  1.36e-02  3.00e+02  1.00e-05  9.78e-24
+466 IN  0.00e+00 -2.78e-06  3.32e-05  1.41e+00 -4.53e-02  1.85e-02  3.00e+02  1.00e-05  9.78e-24
+467 IN  0.00e+00 -1.25e-05 -2.74e-05  1.26e+00  9.55e-03 -7.77e-03  3.00e+02  1.00e-05  9.78e-24
+468 IN  0.00e+00 -1.61e-06 -1.04e-05  2.92e+00 -8.88e-03  6.59e-03  3.00e+02  1.00e-05  9.78e-24
+469 IN  0.00e+00 -9.21e-06 -1.97e-05  2.05e+00 -4.70e-03  9.16e-03  3.00e+02  1.00e-05  9.78e-24
+470 IN  0.00e+00  1.68e-06 -2.04e-05  2.54e+00  5.05e-03 -7.76e-03  3.00e+02  1.00e-05  9.78e-24
+471 IN  0.00e+00 -5.02e-06 -7.40e-06  2.82e+00 -1.21e-02  1.57e-02  3.00e+02  1.00e-05  9.78e-24
+472 IN  0.00e+00  5.51e-06 -9.77e-06  2.73e+00 -6.87e-03 -4.66e-03  3.00e+02  1.00e-05  9.78e-24
+473 IN  0.00e+00 -7.46e-06  1.47e-05  2.51e+00 -3.65e-02  2.54e-02  3.00e+02  1.00e-05  9.78e-24
+474 IN  0.00e+00  2.66e-06 -1.32e-05  2.82e+00 -3.26e-03 -1.26e-03  3.00e+02  1.00e-05  9.78e-24
+475 IN  0.00e+00  1.23e-06 -1.14e-05  2.90e+00 -6.47e-03  1.75e-03  3.00e+02  1.00e-05  9.78e-24
+476 IN  0.00e+00 -1.62e-05  3.04e-05  8.55e-01 -3.54e-02 -1.02e-02  3.00e+02  1.00e-05  9.78e-24
+477 IN  0.00e+00 -1.60e-05  2.95e-05  9.24e-01 -3.92e-02 -4.25e-03  3.00e+02  1.00e-05  9.78e-24
+478 IN  0.00e+00 -8.66e-06  1.92e-05  2.24e+00 -3.83e-02  2.37e-02  3.00e+02  1.00e-05  9.78e-24
+479 IN  0.00e+00 -1.34e-05 -8.73e-06  1.67e+00 -1.07e-02  2.85e-02  3.00e+02  1.00e-05  9.78e-24
+480 IN  0.00e+00 -8.01e-06 -1.91e-05  2.21e+00 -2.32e-03  8.76e-03  3.00e+02  1.00e-05  9.78e-24
+481 IN  0.00e+00 -2.47e-06  1.89e-05  2.65e+00 -3.54e-02  2.44e-02  3.00e+02  1.00e-05  9.78e-24
+482 IN  0.00e+00 -1.15e-05 -7.40e-06  2.04e+00 -1.15e-02  2.93e-02  3.00e+02  1.00e-05  9.78e-24
+483 IN  0.00e+00  2.49e-06  5.90e-06  2.97e+00 -2.63e-02  1.72e-02  3.00e+02  1.00e-05  9.78e-24
+484 IN  0.00e+00 -1.44e-05  2.51e-05  1.30e+00 -4.30e-02  1.79e-02  3.00e+02  1.00e-05  9.78e-24
+485 IN  0.00e+00 -1.18e-05 -2.93e-06  2.03e+00 -1.73e-02  3.97e-02  3.00e+02  1.00e-05  9.78e-24
+486 IN  0.00e+00 -4.02e-06 -1.28e-05  2.76e+00 -6.25e-03  8.41e-03  3.00e+02  1.00e-05  9.78e-24
+487 IN  0.00e+00  4.40e-06  2.72e-05  2.00e+00 -4.23e-02  2.57e-02  3.00e+02  1.00e-05  9.78e-24
+488 IN  0.00e+00  3.73e-06  2.87e-05  1.89e+00 -4.64e-02  2.79e-02  3.00e+02  1.00e-05  9.78e-24
+489 IN  0.00e+00 -6.65e-06  6.10e-06  2.71e+00 -2.50e-02  2.71e-02  3.00e+02  1.00e-05  9.78e-24
+490 IN  0.00e+00 -2.98e-06  7.23e-06  2.95e+00 -2.73e-02  2.20e-02  3.00e+02  1.00e-05  9.78e-24
+491 IN  0.00e+00 -7.42e-06 -2.05e-05  2.20e+00  5.22e-04  5.19e-03  3.00e+02  1.00e-05  9.78e-24
+492 IN  0.00e+00  4.46e-06 -8.12e-06  2.84e+00 -9.69e-03 -1.97e-03  3.00e+02  1.00e-05  9.78e-24
+493 IN  0.00e+00 -3.84e-06 -2.16e-05  2.39e+00  5.61e-03 -3.49e-03  3.00e+02  1.00e-05  9.78e-24
+494 IN  0.00e+00 -1.56e-05  6.27e-06  1.30e+00 -1.23e-02  4.98e-02  3.00e+02  1.00e-05  9.78e-24
+495 IN  0.00e+00 -1.15e-05  1.26e-05  2.05e+00 -3.31e-02  3.34e-02  3.00e+02  1.00e-05  9.78e-24
+496 IN  0.00e+00 -1.37e-05 -1.04e-06  1.68e+00 -1.26e-02  4.31e-02  3.00e+02  1.00e-05  9.78e-24
+497 IN  0.00e+00 -8.67e-06 -1.78e-05  2.19e+00 -5.16e-03  1.22e-02  3.00e+02  1.00e-05  9.78e-24
+498 IN  0.00e+00 -1.05e-05 -3.42e-05  8.73e-01  4.90e-02 -1.88e-02  3.00e+02  1.00e-05  9.78e-24
+499 IN  0.00e+00 -6.86e-06 -7.65e-06  2.65e+00 -1.06e-02  1.98e-02  3.00e+02  1.00e-05  9.78e-24
+500 IN  0.00e+00 -2.86e-06 -4.17e-06  2.97e+00 -1.50e-02  1.44e-02  3.00e+02  1.00e-05  9.78e-24
+501 IN  0.00e+00 -1.13e-05  9.68e-06  2.10e+00 -2.96e-02  4.00e-02  3.00e+02  1.00e-05  9.78e-24
+502 IN  0.00e+00 -1.02e-05  1.71e-05  2.13e+00 -3.51e-02  2.51e-02  3.00e+02  1.00e-05  9.78e-24
+503 IN  0.00e+00 -1.37e-05 -2.03e-06  1.68e+00 -1.36e-02  4.53e-02  3.00e+02  1.00e-05  9.78e-24
+504 IN  0.00e+00 -1.83e-06 -2.93e-05  1.85e+00  1.93e-02 -2.39e-02  3.00e+02  1.00e-05  9.78e-24
+505 IN  0.00e+00 -5.17e-06 -2.21e-05  2.29e+00  6.24e-03 -2.77e-03  3.00e+02  1.00e-05  9.78e-24
+506 IN  0.00e+00 -2.81e-06 -1.03e-05  2.88e+00 -8.94e-03  8.55e-03  3.00e+02  1.00e-05  9.78e-24
+507 IN  0.00e+00 -7.49e-06  3.83e-06  2.65e+00 -2.31e-02  2.79e-02  3.00e+02  1.00e-05  9.78e-24
+508 IN  0.00e+00 -2.15e-06  1.66e-05  2.75e+00 -3.47e-02  2.40e-02  3.00e+02  1.00e-05  9.78e-24
+509 IN  0.00e+00 -5.21e-06 -2.36e-06  2.85e+00 -1.66e-02  1.98e-02  3.00e+02  1.00e-05  9.78e-24
+510 IN  0.00e+00  1.62e-06  6.13e-06  3.00e+00 -2.69e-02  1.77e-02  3.00e+02  1.00e-05  9.78e-24
+511 IN  0.00e+00 -5.83e-06  1.99e-05  2.45e+00 -3.73e-02  2.20e-02  3.00e+02  1.00e-05  9.78e-24
+512 IN  0.00e+00 -9.99e-06  3.02e-05  1.48e+00 -5.01e-02  1.39e-02  3.00e+02  1.00e-05  9.78e-24
+513 IN  0.00e+00 -2.21e-06  2.96e-05  1.87e+00 -4.70e-02  2.42e-02  3.00e+02  1.00e-05  9.78e-24
+514 IN  0.00e+00 -2.33e-07  3.33e-05  1.42e+00 -5.05e-02  2.33e-02  3.00e+02  1.00e-05  9.78e-24
+515 IN  0.00e+00 -2.24e-06  3.16e-05  1.63e+00 -4.72e-02  2.27e-02  3.00e+02  1.00e-05  9.78e-24
+516 IN  0.00e+00 -2.90e-06 -2.69e-05  2.05e+00  1.63e-02 -2.04e-02  3.00e+02  1.00e-05  9.78e-24
+517 IN  0.00e+00  5.65e-06  1.31e-05  2.64e+00 -2.88e-02  2.43e-02  3.00e+02  1.00e-05  9.78e-24
+518 IN  0.00e+00  3.53e-06 -2.70e-05  2.05e+00  9.82e-03 -2.20e-02  3.00e+02  1.00e-05  9.78e-24
+519 IN  0.00e+00 -9.76e-07  4.25e-06  3.03e+00 -2.51e-02  1.87e-02  3.00e+02  1.00e-05  9.78e-24
+520 IN  0.00e+00 -1.33e-05 -2.83e-05  1.12e+00  1.29e-02 -9.17e-03  3.00e+02  1.00e-05  9.78e-24
+521 IN  0.00e+00 -7.92e-06 -1.51e-05  2.37e+00 -5.94e-03  1.42e-02  3.00e+02  1.00e-05  9.78e-24
+522 IN  0.00e+00 -7.03e-06 -1.47e-05  2.47e+00 -5.84e-03  1.32e-02  3.00e+02  1.00e-05  9.78e-24
+523 IN  0.00e+00 -1.10e-06 -2.01e-05  2.56e+00  4.15e-03 -3.98e-03  3.00e+02  1.00e-05  9.78e-24
+524 IN  0.00e+00 -1.52e-06 -6.93e-06  2.98e+00 -1.24e-02  9.13e-03  3.00e+02  1.00e-05  9.78e-24
+525 IN  0.00e+00 -3.10e-06 -2.85e-05  1.90e+00  2.02e-02 -2.38e-02  3.00e+02  1.00e-05  9.78e-24
+526 IN  0.00e+00 -1.33e-05 -3.80e-06  1.75e+00 -1.32e-02  4.36e-02  3.00e+02  1.00e-05  9.78e-24
+527 IN  0.00e+00 -1.34e-06  1.48e-05  2.83e+00 -3.33e-02  2.32e-02  3.00e+02  1.00e-05  9.78e-24
+528 IN  0.00e+00 -1.75e-06 -4.24e-08  3.02e+00 -1.96e-02  1.65e-02  3.00e+02  1.00e-05  9.78e-24
+529 IN  0.00e+00 -1.75e-05 -2.49e-05  6.10e-01  7.70e-03  9.72e-03  3.00e+02  1.00e-05  9.78e-24
+530 IN  0.00e+00  7.39e-08  1.76e-05  2.73e+00 -3.43e-02  2.56e-02  3.00e+02  1.00e-05  9.78e-24
+531 IN  0.00e+00 -1.33e-05 -1.38e-05  1.63e+00 -7.10e-03  2.11e-02  3.00e+02  1.00e-05  9.78e-24
+532 IN  0.00e+00  5.82e-06  1.80e-05  2.48e+00 -3.38e-02  2.84e-02  3.00e+02  1.00e-05  9.78e-24
+533 IN  0.00e+00  6.07e-06  1.60e-05  2.53e+00 -3.13e-02  2.74e-02  3.00e+02  1.00e-05  9.78e-24
+534 IN  0.00e+00 -6.51e-06 -2.55e-05  1.98e+00  1.40e-02 -1.06e-02  3.00e+02  1.00e-05  9.78e-24
+535 IN  0.00e+00  5.75e-06  2.11e-05  2.34e+00 -3.53e-02  2.81e-02  3.00e+02  1.00e-05  9.78e-24
+536 IN  0.00e+00  5.71e-06  1.78e-05  2.49e+00 -3.38e-02  2.81e-02  3.00e+02  1.00e-05  9.78e-24
+537 IN  0.00e+00 -1.68e-05  2.92e-05  8.26e-01 -2.90e-02 -4.67e-03  3.00e+02  1.00e-05  9.78e-24
+538 IN  0.00e+00 -1.65e-05  2.87e-05  8.88e-01 -3.27e-02  8.35e-04  3.00e+02  1.00e-05  9.78e-24
+539 IN  0.00e+00 -8.33e-06  1.76e-05  2.33e+00 -3.65e-02  2.38e-02  3.00e+02  1.00e-05  9.78e-24
+540 IN  0.00e+00 -1.07e-05  1.98e-05  1.99e+00 -3.79e-02  2.60e-02  3.00e+02  1.00e-05  9.78e-24
+541 IN  0.00e+00  1.91e-06  1.19e-05  2.88e+00 -3.05e-02  2.25e-02  3.00e+02  1.00e-05  9.78e-24
+542 IN  0.00e+00 -4.58e-06  9.40e-06  2.84e+00 -2.92e-02  2.39e-02  3.00e+02  1.00e-05  9.78e-24
+543 IN  0.00e+00 -1.22e-05 -2.54e-05  1.41e+00  1.26e-03  9.70e-04  3.00e+02  1.00e-05  9.78e-24
+544 IN  0.00e+00 -1.40e-05 -1.02e-05  1.53e+00 -7.61e-03  2.81e-02  3.00e+02  1.00e-05  9.78e-24
+545 IN  0.00e+00 -1.10e-05  2.56e-05  1.71e+00 -4.52e-02  1.40e-02  3.00e+02  1.00e-05  9.78e-24
+546 IN  0.00e+00 -1.03e-06 -1.34e-05  2.84e+00 -5.00e-03  3.91e-03  3.00e+02  1.00e-05  9.78e-24
+547 IN  0.00e+00 -5.27e-06  2.93e-05  1.82e+00 -4.77e-02  2.05e-02  3.00e+02  1.00e-05  9.78e-24
+548 IN  0.00e+00 -3.15e-06  1.60e-05  2.74e+00 -3.53e-02  2.36e-02  3.00e+02  1.00e-05  9.78e-24
+549 IN  0.00e+00 -9.12e-06 -2.20e-05  1.96e+00 -5.31e-04  5.12e-03  3.00e+02  1.00e-05  9.78e-24
+550 IN  0.00e+00 -1.05e-05  1.34e-05  2.19e+00 -3.43e-02  3.01e-02  3.00e+02  1.00e-05  9.78e-24
+551 IN  0.00e+00 -1.49e-05  2.29e-05  1.27e+00 -3.57e-02  2.70e-02  3.00e+02  1.00e-05  9.78e-24
+552 IN  0.00e+00 -1.47e-05 -1.08e-05  1.39e+00 -4.67e-03  2.91e-02  3.00e+02  1.00e-05  9.78e-24
+553 IN  0.00e+00 -2.71e-06 -5.60e-06  2.96e+00 -1.39e-02  1.28e-02  3.00e+02  1.00e-05  9.78e-24
+554 IN  0.00e+00 -3.03e-06 -7.95e-06  2.92e+00 -1.16e-02  1.10e-02  3.00e+02  1.00e-05  9.78e-24
+555 IN  0.00e+00 -1.77e-06  2.33e-05  2.41e+00 -3.84e-02  2.04e-02  3.00e+02  1.00e-05  9.78e-24
+556 IN  0.00e+00 -6.35e-06 -2.47e-05  2.04e+00  1.23e-02 -7.63e-03  3.00e+02  1.00e-05  9.78e-24
+557 IN  0.00e+00 -8.87e-06  5.10e-07  2.49e+00 -2.25e-02  2.89e-02  3.00e+02  1.00e-05  9.78e-24
+558 IN  0.00e+00 -1.56e-06 -5.78e-07  3.03e+00 -1.90e-02  1.58e-02  3.00e+02  1.00e-05  9.78e-24
+559 IN  0.00e+00 -1.20e-05 -2.76e-05  1.31e+00  1.07e-02 -9.52e-03  3.00e+02  1.00e-05  9.78e-24
+560 IN  0.00e+00 -2.92e-06 -2.15e-05  2.44e+00  5.80e-03 -4.65e-03  3.00e+02  1.00e-05  9.78e-24
+561 IN  0.00e+00 -3.75e-06  2.29e-05  2.39e+00 -3.87e-02  1.99e-02  3.00e+02  1.00e-05  9.78e-24
+562 IN  0.00e+00 -7.27e-06  1.77e-05  2.43e+00 -3.67e-02  2.34e-02  3.00e+02  1.00e-05  9.78e-24
+563 IN  0.00e+00 -5.38e-06  6.01e-06  2.83e+00 -2.51e-02  2.50e-02  3.00e+02  1.00e-05  9.78e-24
+564 IN  0.00e+00 -1.16e-05 -1.60e-05  1.88e+00 -1.08e-02  1.90e-02  3.00e+02  1.00e-05  9.78e-24
+565 IN  0.00e+00 -1.07e-05 -1.68e-05  1.98e+00 -8.41e-03  1.71e-02  3.00e+02  1.00e-05  9.78e-24
+566 IN  0.00e+00 -5.12e-06  8.25e-06  2.82e+00 -2.80e-02  2.45e-02  3.00e+02  1.00e-05  9.78e-24
+567 IN  0.00e+00 -3.05e-06 -2.39e-05  2.28e+00  9.48e-03 -1.14e-02  3.00e+02  1.00e-05  9.78e-24
+568 IN  0.00e+00  4.68e-07 -1.35e-05  2.85e+00 -3.99e-03  1.72e-03  3.00e+02  1.00e-05  9.78e-24
+569 IN  0.00e+00 -1.12e-05 -3.01e-05  1.22e+00  2.68e-02 -1.68e-02  3.00e+02  1.00e-05  9.78e-24
+570 IN  0.00e+00 -1.30e-05  3.46e-05  8.22e-01 -4.93e-02 -1.32e-03  3.00e+02  1.00e-05  9.78e-24
+571 IN  0.00e+00 -1.32e-05  3.45e-05  8.22e-01 -5.06e-02  4.60e-04  3.00e+02  1.00e-05  9.78e-24
+572 IN  0.00e+00 -1.54e-05  2.66e-05  1.11e+00 -4.18e-02  1.45e-02  3.00e+02  1.00e-05  9.78e-24
+573 IN  0.00e+00 -1.23e-05 -2.84e-05  1.23e+00  1.43e-02 -1.12e-02  3.00e+02  1.00e-05  9.78e-24
+574 IN  0.00e+00 -7.36e-06 -2.48e-05  1.96e+00  1.11e-02 -5.82e-03  3.00e+02  1.00e-05  9.78e-24
+575 IN  0.00e+00 -4.44e-06  2.01e-05  2.52e+00 -3.64e-02  2.22e-02  3.00e+02  1.00e-05  9.78e-24
+576 IN  0.00e+00 -1.89e-06 -1.91e-06  3.02e+00 -1.76e-02  1.52e-02  3.00e+02  1.00e-05  9.78e-24
+577 IN  0.00e+00 -1.06e-05 -2.25e-05  1.77e+00 -1.91e-03  7.49e-03  3.00e+02  1.00e-05  9.78e-24
+578 IN  0.00e+00 -9.45e-06 -2.53e-05  1.74e+00  7.20e-03 -5.39e-03  3.00e+02  1.00e-05  9.78e-24
+579 IN  0.00e+00 -3.21e-06  9.82e-06  2.91e+00 -3.00e-02  2.26e-02  3.00e+02  1.00e-05  9.78e-24
+580 IN  0.00e+00 -1.39e-05 -3.26e-05  7.35e-01  3.23e-02 -1.19e-02  3.00e+02  1.00e-05  9.78e-24
+581 IN  0.00e+00 -4.36e-06  1.88e-05  2.58e+00 -3.60e-02  2.31e-02  3.00e+02  1.00e-05  9.78e-24
+582 IN  0.00e+00 -4.56e-06  3.03e-06  2.89e+00 -2.21e-02  2.30e-02  3.00e+02  1.00e-05  9.78e-24
+583 IN  0.00e+00 -5.14e-06 -1.03e-06  2.86e+00 -1.80e-02  2.02e-02  3.00e+02  1.00e-05  9.78e-24
+584 IN  0.00e+00 -7.06e-06 -5.40e-07  2.69e+00 -1.90e-02  2.44e-02  3.00e+02  1.00e-05  9.78e-24
+585 IN  0.00e+00 -5.70e-06 -1.13e-05  2.68e+00 -8.21e-03  1.24e-02  3.00e+02  1.00e-05  9.78e-24
+586 IN  0.00e+00 -1.30e-05  2.45e-05  1.53e+00 -4.38e-02  1.73e-02  3.00e+02  1.00e-05  9.78e-24
+587 IN  0.00e+00 -1.71e-05  2.60e-05  8.57e-01 -2.44e-02  1.57e-02  3.00e+02  1.00e-05  9.78e-24
+588 IN  0.00e+00 -8.06e-06 -4.00e-06  2.56e+00 -1.51e-02  2.51e-02  3.00e+02  1.00e-05  9.78e-24
+589 IN  0.00e+00 -1.06e-05 -3.07e-05  1.23e+00  3.04e-02 -1.83e-02  3.00e+02  1.00e-05  9.78e-24
+590 IN  0.00e+00 -2.33e-06 -1.09e-05  2.88e+00 -8.30e-03  7.34e-03  3.00e+02  1.00e-05  9.78e-24
+591 IN  0.00e+00 -1.29e-05 -2.52e-05  1.32e+00  4.26e-04  3.55e-03  3.00e+02  1.00e-05  9.78e-24
+592 IN  0.00e+00 -1.74e-06  2.10e-05  2.55e+00 -3.66e-02  2.20e-02  3.00e+02  1.00e-05  9.78e-24
+593 IN  0.00e+00 -1.27e-06 -3.24e-05  1.49e+00  2.42e-02 -2.64e-02  3.00e+02  1.00e-05  9.78e-24
+594 IN  0.00e+00 -7.62e-06 -2.60e-05  1.86e+00  1.43e-02 -1.17e-02  3.00e+02  1.00e-05  9.78e-24
+595 IN  0.00e+00 -1.53e-05  1.51e-05  1.34e+00 -2.59e-02  1.89e-02  3.00e+02  1.00e-05  9.78e-24
+596 IN  0.00e+00 -1.53e-05  1.48e-05  1.35e+00 -2.65e-02  1.86e-02  3.00e+02  1.00e-05  9.78e-24
+597 IN  0.00e+00  5.52e-06  1.81e-05  2.49e+00 -3.42e-02  2.81e-02  3.00e+02  1.00e-05  9.78e-24
+598 IN  0.00e+00 -1.55e-05 -1.78e-06  1.31e+00 -8.36e-03  4.77e-02  3.00e+02  1.00e-05  9.78e-24
+599 IN  0.00e+00 -9.75e-06  4.78e-06  2.37e+00 -2.35e-02  3.27e-02  3.00e+02  1.00e-05  9.78e-24
+600 IN  0.00e+00  2.01e-06 -3.13e-05  1.63e+00  1.45e-02 -2.68e-02  3.00e+02  1.00e-05  9.78e-24
+601 IN  0.00e+00  1.28e-06 -3.12e-05  1.65e+00  1.63e-02 -2.71e-02  3.00e+02  1.00e-05  9.78e-24
+602 IN  0.00e+00  2.31e-06  8.76e-06  2.94e+00 -2.84e-02  1.99e-02  3.00e+02  1.00e-05  9.78e-24
+603 IN  0.00e+00 -1.55e-05 -9.90e-06  1.24e+00 -2.98e-03  3.02e-02  3.00e+02  1.00e-05  9.78e-24
+604 IN  0.00e+00 -1.54e-05  1.05e-05  1.37e+00 -1.73e-02  4.94e-02  3.00e+02  1.00e-05  9.78e-24
+605 IN  0.00e+00 -7.26e-06 -3.14e-05  1.41e+00  3.41e-02 -2.37e-02  3.00e+02  1.00e-05  9.78e-24
+606 IN  0.00e+00  5.30e-06 -1.81e-05  2.51e+00  1.88e-03 -8.66e-03  3.00e+02  1.00e-05  9.78e-24
+607 IN  0.00e+00 -1.49e-05 -3.07e-05  7.53e-01  2.14e-02 -1.07e-02  3.00e+02  1.00e-05  9.78e-24
+608 IN  0.00e+00 -1.28e-05  2.76e-05  1.40e+00 -5.11e-02  1.20e-02  3.00e+02  1.00e-05  9.78e-24
+609 IN  0.00e+00 -1.27e-05 -4.87e-06  1.84e+00 -1.33e-02  4.00e-02  3.00e+02  1.00e-05  9.78e-24
+610 IN  0.00e+00 -1.23e-05 -1.95e-05  1.66e+00 -1.15e-02  1.53e-02  3.00e+02  1.00e-05  9.78e-24
+611 IN  0.00e+00 -1.06e-05 -2.55e-05  1.61e+00  5.15e-03 -4.00e-03  3.00e+02  1.00e-05  9.78e-24
+612 IN  0.00e+00 -4.57e-06  2.50e-05  2.21e+00 -4.18e-02  1.87e-02  3.00e+02  1.00e-05  9.78e-24
+613 IN  0.00e+00 -4.59e-06  2.40e-05  2.29e+00 -4.08e-02  1.93e-02  3.00e+02  1.00e-05  9.78e-24
+614 IN  0.00e+00 -9.16e-07  1.12e-05  2.93e+00 -3.12e-02  2.19e-02  3.00e+02  1.00e-05  9.78e-24
+615 IN  0.00e+00 -8.39e-06 -3.69e-05  6.64e-01  6.79e-02 -1.70e-02  3.00e+02  1.00e-05  9.78e-24
+616 IN  0.00e+00  5.56e-06 -2.18e-05  2.31e+00  4.78e-03 -1.50e-02  3.00e+02  1.00e-05  9.78e-24
+617 IN  0.00e+00  5.11e-06 -2.35e-05  2.24e+00  6.95e-03 -1.78e-02  3.00e+02  1.00e-05  9.78e-24
+618 IN  0.00e+00 -2.03e-06 -8.08e-06  2.95e+00 -1.14e-02  8.88e-03  3.00e+02  1.00e-05  9.78e-24
+619 IN  0.00e+00 -1.18e-05  1.15e-05  2.02e+00 -3.19e-02  3.86e-02  3.00e+02  1.00e-05  9.78e-24
+620 IN  0.00e+00 -1.18e-05 -1.41e-05  1.90e+00 -9.45e-03  2.03e-02  3.00e+02  1.00e-05  9.78e-24
+621 IN  0.00e+00 -3.27e-06 -2.06e-05  2.47e+00  3.92e-03 -1.70e-03  3.00e+02  1.00e-05  9.78e-24
+622 IN  0.00e+00 -1.33e-05  2.11e-05  1.58e+00 -3.56e-02  2.93e-02  3.00e+02  1.00e-05  9.78e-24
+623 IN  0.00e+00  4.11e-07  1.49e-07  3.05e+00 -2.07e-02  1.42e-02  3.00e+02  1.00e-05  9.78e-24
+624 IN  0.00e+00 -1.45e-05  1.22e-05  1.54e+00 -2.50e-02  3.54e-02  3.00e+02  1.00e-05  9.78e-24
+625 IN  0.00e+00 -1.39e-05  1.27e-05  1.63e+00 -2.86e-02  3.13e-02  3.00e+02  1.00e-05  9.78e-24
+626 IN  0.00e+00 -1.08e-05  1.08e-05  2.18e+00 -3.17e-02  3.72e-02  3.00e+02  1.00e-05  9.78e-24
+627 IN  0.00e+00  5.22e-06  2.33e-05  2.25e+00 -3.61e-02  2.65e-02  3.00e+02  1.00e-05  9.78e-24
+628 IN  0.00e+00  4.83e-06  2.68e-05  2.02e+00 -4.10e-02  2.54e-02  3.00e+02  1.00e-05  9.78e-24
+629 IN  0.00e+00 -5.49e-06  1.47e-05  2.66e+00 -3.57e-02  2.40e-02  3.00e+02  1.00e-05  9.78e-24
+630 IN  0.00e+00 -5.61e-06 -2.57e-05  2.02e+00  1.46e-02 -1.22e-02  3.00e+02  1.00e-05  9.78e-24
+631 IN  0.00e+00 -4.86e-06 -2.57e-05  2.07e+00  1.43e-02 -1.29e-02  3.00e+02  1.00e-05  9.78e-24
+632 IN  0.00e+00 -8.93e-06  3.12e-05  1.45e+00 -5.13e-02  1.44e-02  3.00e+02  1.00e-05  9.78e-24
+633 IN  0.00e+00 -1.52e-05 -2.67e-05  8.99e-01  8.37e-03  1.16e-03  3.00e+02  1.00e-05  9.78e-24
+634 IN  0.00e+00 -1.05e-05  2.32e-05  1.89e+00 -4.39e-02  1.93e-02  3.00e+02  1.00e-05  9.78e-24
+635 IN  0.00e+00 -3.85e-06 -1.72e-05  2.61e+00 -1.64e-03  5.13e-03  3.00e+02  1.00e-05  9.78e-24
+636 IN  0.00e+00  3.51e-07  2.14e-05  2.55e+00 -3.72e-02  2.26e-02  3.00e+02  1.00e-05  9.78e-24
+637 IN  0.00e+00  5.04e-06  2.04e-05  2.42e+00 -3.59e-02  2.68e-02  3.00e+02  1.00e-05  9.78e-24
+638 IN  0.00e+00 -1.82e-05  2.93e-05  4.86e-01  9.01e-04 -1.06e-02  3.00e+02  1.00e-05  9.78e-24
+639 IN  0.00e+00 -1.81e-05  2.94e-05  5.32e-01 -1.97e-03 -1.07e-02  3.00e+02  1.00e-05  9.78e-24
+640 IN  0.00e+00  2.03e-06 -2.32e-05  2.36e+00  9.03e-03 -1.51e-02  3.00e+02  1.00e-05  9.78e-24
+641 IN  0.00e+00 -3.53e-06 -1.38e-05  2.75e+00 -5.42e-03  7.28e-03  3.00e+02  1.00e-05  9.78e-24
+642 IN  0.00e+00 -5.22e-06  2.05e-05  2.46e+00 -3.69e-02  2.15e-02  3.00e+02  1.00e-05  9.78e-24
+643 IN  0.00e+00 -1.48e-05 -2.29e-06  1.44e+00 -1.01e-02  4.80e-02  3.00e+02  1.00e-05  9.78e-24
+644 IN  0.00e+00 -1.50e-05 -2.81e-06  1.40e+00 -9.65e-03  4.88e-02  3.00e+02  1.00e-05  9.78e-24
+645 IN  0.00e+00 -1.65e-05 -2.48e-05  8.09e-01  6.53e-03  8.70e-03  3.00e+02  1.00e-05  9.78e-24
+646 IN  0.00e+00 -4.27e-06  2.55e-05  2.19e+00 -4.24e-02  1.91e-02  3.00e+02  1.00e-05  9.78e-24
+647 IN  0.00e+00 -1.92e-06 -5.81e-06  2.99e+00 -1.35e-02  1.11e-02  3.00e+02  1.00e-05  9.78e-24
+648 IN  0.00e+00 -3.35e-06  3.73e-06  2.96e+00 -2.31e-02  2.14e-02  3.00e+02  1.00e-05  9.78e-24
+649 IN  0.00e+00 -2.34e-06 -1.59e-05  2.72e+00 -2.82e-03  4.04e-03  3.00e+02  1.00e-05  9.78e-24
+650 IN  0.00e+00 -3.49e-06 -1.60e-05  2.67e+00 -3.01e-03  5.73e-03  3.00e+02  1.00e-05  9.78e-24
+651 IN  0.00e+00 -1.51e-05  1.00e-06  1.38e+00 -1.12e-02  4.15e-02  3.00e+02  1.00e-05  9.78e-24
+652 IN  0.00e+00 -1.42e-05  1.11e-06  1.59e+00 -1.42e-02  3.91e-02  3.00e+02  1.00e-05  9.78e-24
+653 IN  0.00e+00 -3.28e-06  1.21e-05  2.85e+00 -3.25e-02  2.29e-02  3.00e+02  1.00e-05  9.78e-24
+654 IN  0.00e+00 -1.82e-05  2.70e-05  5.30e-01 -2.04e-03  5.14e-03  3.00e+02  1.00e-05  9.78e-24
+655 IN  0.00e+00 -1.82e-05  2.61e-05  5.55e-01 -3.51e-03  1.02e-02  3.00e+02  1.00e-05  9.78e-24
+656 IN  0.00e+00 -4.01e-06 -2.61e-05  2.07e+00  1.49e-02 -1.55e-02  3.00e+02  1.00e-05  9.78e-24
+657 IN  0.00e+00 -1.29e-05 -1.03e-05  1.75e+00 -1.04e-02  2.67e-02  3.00e+02  1.00e-05  9.78e-24
+658 IN  0.00e+00 -9.86e-06 -6.60e-06  2.31e+00 -1.12e-02  2.76e-02  3.00e+02  1.00e-05  9.78e-24
+659 IN  0.00e+00 -7.73e-06 -1.82e-05  2.28e+00 -3.15e-03  1.01e-02  3.00e+02  1.00e-05  9.78e-24
+660 IN  0.00e+00 -1.27e-05 -2.64e-05  1.30e+00  4.44e-03 -2.36e-03  3.00e+02  1.00e-05  9.78e-24
+661 IN  0.00e+00  1.21e-07  2.70e-05  2.13e+00 -4.47e-02  2.28e-02  3.00e+02  1.00e-05  9.78e-24
+662 IN  0.00e+00 -1.84e-05  2.88e-05  4.24e-01  3.35e-03 -8.17e-03  3.00e+02  1.00e-05  9.78e-24
+663 IN  0.00e+00 -1.84e-05  2.80e-05  4.49e-01  2.14e-03 -2.08e-03  3.00e+02  1.00e-05  9.78e-24
+664 IN  0.00e+00 -1.85e-05  2.91e-05  4.03e-01  3.28e-03 -9.66e-03  3.00e+02  1.00e-05  9.78e-24
+665 IN  0.00e+00 -1.45e-05 -3.01e-05  8.47e-01  2.04e-02 -1.10e-02  3.00e+02  1.00e-05  9.78e-24
+666 IN  0.00e+00 -1.45e-05 -3.11e-05  7.74e-01  2.37e-02 -1.10e-02  3.00e+02  1.00e-05  9.78e-24
+667 IN  0.00e+00 -2.03e-06  7.14e-06  2.98e+00 -2.77e-02  2.11e-02  3.00e+02  1.00e-05  9.78e-24
+668 IN  0.00e+00 -1.20e-05 -1.20e-05  1.88e+00 -9.47e-03  2.33e-02  3.00e+02  1.00e-05  9.78e-24
+669 IN  0.00e+00 -2.33e-06 -1.56e-06  3.00e+00 -1.78e-02  1.60e-02  3.00e+02  1.00e-05  9.78e-24
+670 IN  0.00e+00  4.87e-06  2.21e-05  2.35e+00 -3.62e-02  2.62e-02  3.00e+02  1.00e-05  9.78e-24
+671 IN  0.00e+00  2.29e-06  2.59e-05  2.19e+00 -4.21e-02  2.28e-02  3.00e+02  1.00e-05  9.78e-24
+672 IN  0.00e+00  2.86e-07  2.30e-05  2.45e+00 -3.86e-02  2.17e-02  3.00e+02  1.00e-05  9.78e-24
+673 IN  0.00e+00 -1.56e-05 -1.12e-06  1.30e+00 -7.56e-03  4.69e-02  3.00e+02  1.00e-05  9.78e-24
+674 IN  0.00e+00 -1.51e-05  3.21e-05  8.66e-01 -4.69e-02 -8.39e-03  3.00e+02  1.00e-05  9.78e-24
+675 IN  0.00e+00 -1.48e-05  3.11e-05  9.72e-01 -4.90e-02 -7.32e-03  3.00e+02  1.00e-05  9.78e-24
+676 IN  0.00e+00 -1.46e-05  2.96e-05  1.08e+00 -5.31e-02 -9.97e-04  3.00e+02  1.00e-05  9.78e-24
+677 IN  0.00e+00 -9.30e-06  6.83e-06  2.42e+00 -2.56e-02  3.28e-02  3.00e+02  1.00e-05  9.78e-24
+678 IN  0.00e+00 -1.23e-06  3.59e-06  3.03e+00 -2.42e-02  1.87e-02  3.00e+02  1.00e-05  9.78e-24
+679 IN  0.00e+00 -4.43e-07 -7.66e-06  2.98e+00 -1.17e-02  6.59e-03  3.00e+02  1.00e-05  9.78e-24
+680 IN  0.00e+00  5.36e-06 -3.74e-06  2.81e+00 -1.48e-02  2.36e-03  3.00e+02  1.00e-05  9.78e-24
+681 IN  0.00e+00 -1.84e-05  2.91e-05  4.29e-01  3.31e-03 -9.68e-03  3.00e+02  1.00e-05  9.78e-24
+682 IN  0.00e+00 -8.94e-06 -1.26e-05  2.32e+00 -8.29e-03  1.70e-02  3.00e+02  1.00e-05  9.78e-24
+683 IN  0.00e+00 -1.34e-05  1.91e-05  1.60e+00 -3.26e-02  3.20e-02  3.00e+02  1.00e-05  9.78e-24
+684 IN  0.00e+00 -1.10e-05  3.05e-05  1.38e+00 -5.05e-02  1.07e-02  3.00e+02  1.00e-05  9.78e-24
+685 IN  0.00e+00 -1.31e-07  1.45e-05  2.85e+00 -3.26e-02  2.36e-02  3.00e+02  1.00e-05  9.78e-24
+686 IN  0.00e+00 -8.52e-06  3.36e-05  1.20e+00 -5.09e-02  9.61e-03  3.00e+02  1.00e-05  9.78e-24
+687 IN  0.00e+00 -1.28e-05  9.22e-06  1.86e+00 -2.85e-02  4.57e-02  3.00e+02  1.00e-05  9.78e-24
+688 IN  0.00e+00 -1.19e-05  3.39e-05  9.76e-01 -4.69e-02  5.45e-04  3.00e+02  1.00e-05  9.78e-24
+689 IN  0.00e+00 -1.58e-05 -2.86e-05  7.57e-01  1.33e-02 -7.30e-03  3.00e+02  1.00e-05  9.78e-24
+690 IN  0.00e+00 -1.58e-05 -2.96e-05  7.03e-01  1.68e-02 -1.06e-02  3.00e+02  1.00e-05  9.78e-24
+691 IN  0.00e+00 -1.32e-05 -3.07e-05  9.62e-01  2.66e-02 -1.28e-02  3.00e+02  1.00e-05  9.78e-24
+692 IN  0.00e+00 -2.15e-06 -1.82e-05  2.63e+00  5.91e-04  7.98e-04  3.00e+02  1.00e-05  9.78e-24
+693 IN  0.00e+00 -1.24e-05 -3.10e-05  1.03e+00  2.98e-02 -1.47e-02  3.00e+02  1.00e-05  9.78e-24
+694 IN  0.00e+00 -1.15e-05  3.25e-05  1.15e+00 -4.81e-02  3.79e-03  3.00e+02  1.00e-05  9.78e-24
+695 IN  0.00e+00 -3.22e-06 -2.08e-06  2.97e+00 -1.72e-02  1.68e-02  3.00e+02  1.00e-05  9.78e-24
+696 IN  0.00e+00 -1.63e-06  1.19e-05  2.91e+00 -3.18e-02  2.21e-02  3.00e+02  1.00e-05  9.78e-24
+697 IN  0.00e+00 -1.40e-05 -1.44e-05  1.48e+00 -5.68e-03  1.85e-02  3.00e+02  1.00e-05  9.78e-24
+698 IN  0.00e+00  2.95e-08 -2.75e-06  3.04e+00 -1.74e-02  1.19e-02  3.00e+02  1.00e-05  9.78e-24
+699 IN  0.00e+00 -3.95e-06 -3.87e-06  2.92e+00 -1.56e-02  1.67e-02  3.00e+02  1.00e-05  9.78e-24
+700 IN  0.00e+00 -1.14e-05  4.24e-06  2.10e+00 -2.24e-02  3.64e-02  3.00e+02  1.00e-05  9.78e-24
+701 IN  0.00e+00 -1.13e-05  3.26e-06  2.12e+00 -2.23e-02  3.44e-02  3.00e+02  1.00e-05  9.78e-24
+702 IN  0.00e+00 -7.37e-06  1.28e-05  2.56e+00 -3.46e-02  2.75e-02  3.00e+02  1.00e-05  9.78e-24
+703 IN  0.00e+00 -8.04e-06 -7.10e-06  2.53e+00 -1.07e-02  2.30e-02  3.00e+02  1.00e-05  9.78e-24
+704 IN  0.00e+00 -8.77e-06  2.54e-05  1.94e+00 -4.53e-02  1.66e-02  3.00e+02  1.00e-05  9.78e-24
+705 IN  0.00e+00 -1.27e-05 -3.99e-07  1.89e+00 -1.68e-02  3.84e-02  3.00e+02  1.00e-05  9.78e-24
+706 IN  0.00e+00 -4.71e-06 -2.69e-05  1.98e+00  1.72e-02 -1.69e-02  3.00e+02  1.00e-05  9.78e-24
+707 IN  0.00e+00 -6.34e-06 -1.56e-05  2.51e+00 -4.51e-03  1.12e-02  3.00e+02  1.00e-05  9.78e-24
+708 IN  0.00e+00 -3.87e-06  2.54e-05  2.21e+00 -4.20e-02  1.92e-02  3.00e+02  1.00e-05  9.78e-24
+709 IN  0.00e+00 -4.96e-06  1.61e-05  2.65e+00 -3.58e-02  2.34e-02  3.00e+02  1.00e-05  9.78e-24
+710 IN  0.00e+00 -2.74e-06  1.12e-05  2.90e+00 -3.13e-02  2.24e-02  3.00e+02  1.00e-05  9.78e-24
+711 IN  0.00e+00 -9.07e-06  1.68e-05  2.28e+00 -3.56e-02  2.46e-02  3.00e+02  1.00e-05  9.78e-24
+712 IN  0.00e+00  8.16e-08  2.86e-05  1.98e+00 -4.74e-02  2.49e-02  3.00e+02  1.00e-05  9.78e-24
+713 IN  0.00e+00 -5.56e-06  2.72e-05  2.00e+00 -4.55e-02  1.92e-02  3.00e+02  1.00e-05  9.78e-24
+714 IN  0.00e+00 -1.24e-05  2.80e-05  1.42e+00 -5.20e-02  1.22e-02  3.00e+02  1.00e-05  9.78e-24
+715 IN  0.00e+00 -8.68e-06  1.03e-05  2.46e+00 -3.12e-02  3.10e-02  3.00e+02  1.00e-05  9.78e-24
+716 IN  0.00e+00  5.05e-06 -1.30e-05  2.69e+00 -2.21e-03 -4.84e-03  3.00e+02  1.00e-05  9.78e-24
+717 IN  0.00e+00 -1.91e-07  1.60e-05  2.79e+00 -3.33e-02  2.45e-02  3.00e+02  1.00e-05  9.78e-24
+718 IN  0.00e+00 -2.61e-06 -1.67e-05  2.69e+00 -1.66e-03  3.84e-03  3.00e+02  1.00e-05  9.78e-24
+719 IN  0.00e+00 -1.76e-05  2.39e-05  8.34e-01 -1.58e-02  2.66e-02  3.00e+02  1.00e-05  9.78e-24
+720 IN  0.00e+00 -1.77e-05  2.29e-05  8.27e-01 -1.58e-02  3.26e-02  3.00e+02  1.00e-05  9.78e-24
+721 IN  0.00e+00 -1.35e-05  2.21e-05  1.53e+00 -3.75e-02  2.60e-02  3.00e+02  1.00e-05  9.78e-24
+722 IN  0.00e+00 -1.52e-05 -1.57e-05  1.22e+00 -4.24e-03  1.36e-02  3.00e+02  1.00e-05  9.78e-24
+723 IN  0.00e+00 -1.48e-05 -1.55e-05  1.31e+00 -4.68e-03  1.51e-02  3.00e+02  1.00e-05  9.78e-24
+724 IN  0.00e+00 -8.13e-07 -3.69e-06  3.02e+00 -1.60e-02  1.20e-02  3.00e+02  1.00e-05  9.78e-24
+725 IN  0.00e+00 -7.07e-06 -2.21e-05  2.14e+00  4.28e-03  1.47e-03  3.00e+02  1.00e-05  9.78e-24
+726 IN  0.00e+00 -6.81e-06  2.17e-05  2.30e+00 -3.99e-02  2.08e-02  3.00e+02  1.00e-05  9.78e-24
+727 IN  0.00e+00 -1.48e-05  1.65e-06  1.45e+00 -1.35e-02  4.02e-02  3.00e+02  1.00e-05  9.78e-24
+728 IN  0.00e+00 -1.43e-05  2.20e-06  1.55e+00 -1.59e-02  3.91e-02  3.00e+02  1.00e-05  9.78e-24
+729 IN  0.00e+00 -5.09e-06 -1.69e-05  2.54e+00 -1.93e-03  7.36e-03  3.00e+02  1.00e-05  9.78e-24
+730 IN  0.00e+00 -5.23e-06 -1.58e-05  2.58e+00 -3.73e-03  8.76e-03  3.00e+02  1.00e-05  9.78e-24
+731 IN  0.00e+00 -9.71e-06 -1.13e-05  2.24e+00 -9.32e-03  1.91e-02  3.00e+02  1.00e-05  9.78e-24
+732 IN  0.00e+00 -1.32e-05 -2.90e-05  1.09e+00  1.64e-02 -1.09e-02  3.00e+02  1.00e-05  9.78e-24
+733 IN  0.00e+00 -4.45e-06  7.29e-06  2.87e+00 -2.69e-02  2.37e-02  3.00e+02  1.00e-05  9.78e-24
+734 IN  0.00e+00 -9.44e-06  3.34e-05  1.17e+00 -4.88e-02  7.93e-03  3.00e+02  1.00e-05  9.78e-24
+735 IN  0.00e+00 -1.45e-05 -2.29e-05  1.16e+00 -2.18e-03  1.58e-02  3.00e+02  1.00e-05  9.78e-24
+736 IN  0.00e+00 -1.77e-05  2.76e-05  7.49e-01 -1.75e-02  5.91e-03  3.00e+02  1.00e-05  9.78e-24
+737 IN  0.00e+00 -1.80e-05  2.80e-05  5.95e-01 -8.12e-03  1.85e-03  3.00e+02  1.00e-05  9.78e-24
+738 IN  0.00e+00 -3.75e-06 -2.43e-05  2.22e+00  1.06e-02 -1.12e-02  3.00e+02  1.00e-05  9.78e-24
+739 IN  0.00e+00 -4.71e-06 -8.65e-06  2.82e+00 -1.07e-02  1.38e-02  3.00e+02  1.00e-05  9.78e-24
+740 IN  0.00e+00 -1.34e-05  1.58e-05  1.67e+00 -2.96e-02  2.35e-02  3.00e+02  1.00e-05  9.78e-24
+741 IN  0.00e+00  3.53e-06 -1.95e-05  2.53e+00  4.23e-03 -8.60e-03  3.00e+02  1.00e-05  9.78e-24
+742 IN  0.00e+00 -1.33e-05  3.02e-05  1.18e+00 -5.33e-02  1.41e-03  3.00e+02  1.00e-05  9.78e-24
+743 IN  0.00e+00 -1.09e-05  1.18e-06  2.21e+00 -2.26e-02  3.21e-02  3.00e+02  1.00e-05  9.78e-24
+744 IN  0.00e+00 -1.19e-05  1.46e-06  2.03e+00 -2.07e-02  3.40e-02  3.00e+02  1.00e-05  9.78e-24
+745 IN  0.00e+00 -1.51e-05  4.79e-07  1.39e+00 -9.69e-03  4.23e-02  3.00e+02  1.00e-05  9.78e-24
+746 IN  0.00e+00 -4.70e-06 -5.03e-06  2.87e+00 -1.46e-02  1.71e-02  3.00e+02  1.00e-05  9.78e-24
+747 IN  0.00e+00  7.17e-07  2.46e-05  2.33e+00 -4.05e-02  2.16e-02  3.00e+02  1.00e-05  9.78e-24
+748 IN  0.00e+00 -1.39e-05  2.52e-05  1.36e+00 -4.44e-02  1.71e-02  3.00e+02  1.00e-05  9.78e-24
+749 IN  0.00e+00 -1.39e-05  2.62e-05  1.32e+00 -4.95e-02  1.50e-02  3.00e+02  1.00e-05  9.78e-24
+750 IN  0.00e+00 -1.18e-05 -3.10e-05  1.09e+00  3.09e-02 -1.58e-02  3.00e+02  1.00e-05  9.78e-24
+751 IN  0.00e+00  1.95e-07 -1.85e-05  2.65e+00  2.20e-03 -3.33e-03  3.00e+02  1.00e-05  9.78e-24
+752 IN  0.00e+00 -3.59e-06  9.95e-07  2.95e+00 -1.99e-02  1.97e-02  3.00e+02  1.00e-05  9.78e-24
+753 IN  0.00e+00 -8.99e-06  1.83e-05  2.24e+00 -3.68e-02  2.43e-02  3.00e+02  1.00e-05  9.78e-24
+754 IN  0.00e+00 -3.10e-06  2.25e-05  2.43e+00 -3.81e-02  2.03e-02  3.00e+02  1.00e-05  9.78e-24
+755 IN  0.00e+00 -9.07e-07  2.30e-05  2.45e+00 -3.82e-02  2.08e-02  3.00e+02  1.00e-05  9.78e-24
+756 IN  0.00e+00 -1.54e-05  2.53e-05  1.13e+00 -3.79e-02  1.94e-02  3.00e+02  1.00e-05  9.78e-24
+757 IN  0.00e+00 -5.17e-06  1.03e-05  2.78e+00 -3.07e-02  2.46e-02  3.00e+02  1.00e-05  9.78e-24
+758 IN  0.00e+00 -1.59e-05  2.52e-05  1.07e+00 -3.39e-02  1.97e-02  3.00e+02  1.00e-05  9.78e-24
+759 IN  0.00e+00 -1.66e-05  2.64e-05  9.23e-01 -2.94e-02  1.44e-02  3.00e+02  1.00e-05  9.78e-24
+760 IN  0.00e+00 -1.12e-05 -1.99e-06  2.14e+00 -1.96e-02  3.78e-02  3.00e+02  1.00e-05  9.78e-24
+761 IN  0.00e+00 -9.88e-06 -2.34e-06  2.34e+00 -1.90e-02  3.31e-02  3.00e+02  1.00e-05  9.78e-24
+762 IN  0.00e+00 -1.22e-05  2.53e-06  1.98e+00 -2.16e-02  3.52e-02  3.00e+02  1.00e-05  9.78e-24
+763 IN  0.00e+00  3.95e-06 -2.56e-05  2.15e+00  1.03e-02 -2.06e-02  3.00e+02  1.00e-05  9.78e-24
+764 IN  0.00e+00  6.91e-07 -1.78e-05  2.69e+00  1.23e-03 -2.78e-03  3.00e+02  1.00e-05  9.78e-24
+765 IN  0.00e+00  1.05e-07 -1.53e-05  2.79e+00 -2.08e-03  1.07e-03  3.00e+02  1.00e-05  9.78e-24
+766 IN  0.00e+00  1.49e-06 -2.96e-05  1.83e+00  1.33e-02 -2.37e-02  3.00e+02  1.00e-05  9.78e-24
+767 IN  0.00e+00 -2.35e-06  2.03e-05  2.58e+00 -3.59e-02  2.27e-02  3.00e+02  1.00e-05  9.78e-24
+768 IN  0.00e+00 -1.12e-05 -2.63e-05  1.48e+00  6.77e-03 -6.16e-03  3.00e+02  1.00e-05  9.78e-24
+769 IN  0.00e+00 -1.29e-05 -3.40e-05  7.17e-01  4.14e-02 -1.41e-02  3.00e+02  1.00e-05  9.78e-24
+770 IN  0.00e+00 -1.37e-05  6.02e-06  1.69e+00 -1.95e-02  4.61e-02  3.00e+02  1.00e-05  9.78e-24
+771 IN  0.00e+00 -1.39e-05  7.22e-06  1.64e+00 -2.03e-02  4.98e-02  3.00e+02  1.00e-05  9.78e-24
+772 IN  0.00e+00 -7.56e-06 -2.78e-05  1.73e+00  1.83e-02 -1.84e-02  3.00e+02  1.00e-05  9.78e-24
+773 IN  0.00e+00 -1.50e-05 -1.87e-05  1.21e+00 -9.00e-03  2.04e-02  3.00e+02  1.00e-05  9.78e-24
+774 IN  0.00e+00 -1.09e-05 -6.41e-06  2.14e+00 -1.19e-02  3.07e-02  3.00e+02  1.00e-05  9.78e-24
+775 IN  0.00e+00 -8.93e-06  5.61e-06  2.47e+00 -2.39e-02  3.15e-02  3.00e+02  1.00e-05  9.78e-24
+776 IN  0.00e+00 -1.51e-05 -3.04e-05  7.40e-01  1.98e-02 -1.07e-02  3.00e+02  1.00e-05  9.78e-24
+777 IN  0.00e+00 -1.52e-05 -2.91e-05  8.08e-01  1.55e-02 -8.88e-03  3.00e+02  1.00e-05  9.78e-24
+778 IN  0.00e+00 -2.53e-06 -8.09e-06  2.93e+00 -1.14e-02  9.84e-03  3.00e+02  1.00e-05  9.78e-24
+779 IN  0.00e+00 -4.26e-06 -6.41e-06  2.88e+00 -1.36e-02  1.49e-02  3.00e+02  1.00e-05  9.78e-24
+780 IN  0.00e+00 -1.44e-06  2.45e-05  2.33e+00 -4.01e-02  2.06e-02  3.00e+02  1.00e-05  9.78e-24
+781 IN  0.00e+00 -1.64e-06 -1.62e-05  2.73e+00 -1.86e-03  2.72e-03  3.00e+02  1.00e-05  9.78e-24
+782 IN  0.00e+00  3.32e-06 -2.93e-05  1.84e+00  1.01e-02 -2.44e-02  3.00e+02  1.00e-05  9.78e-24
+783 IN  0.00e+00  1.80e-06  1.73e-06  3.02e+00 -2.30e-02  1.42e-02  3.00e+02  1.00e-05  9.78e-24
+784 IN  0.00e+00 -1.24e-05  3.44e-05  8.81e-01 -4.78e-02 -1.48e-03  3.00e+02  1.00e-05  9.78e-24
+785 IN  0.00e+00 -1.12e-05  3.47e-05  9.18e-01 -4.65e-02 -9.63e-04  3.00e+02  1.00e-05  9.78e-24
+786 IN  0.00e+00  1.91e-06 -1.50e-06  3.02e+00 -1.93e-02  1.09e-02  3.00e+02  1.00e-05  9.78e-24
+787 IN  0.00e+00 -1.59e-05  3.04e-05  8.88e-01 -3.97e-02 -9.04e-03  3.00e+02  1.00e-05  9.78e-24
+788 IN  0.00e+00 -1.57e-05  2.99e-05  9.38e-01 -4.06e-02 -6.33e-03  3.00e+02  1.00e-05  9.78e-24
+789 IN  0.00e+00 -8.59e-06 -3.45e-05  9.54e-01  5.49e-02 -2.11e-02  3.00e+02  1.00e-05  9.78e-24
+790 IN  0.00e+00 -7.76e-06 -3.54e-05  8.79e-01  6.27e-02 -2.19e-02  3.00e+02  1.00e-05  9.78e-24
+791 IN  0.00e+00 -1.04e-05  3.45e-05  9.88e-01 -4.60e-02  8.94e-04  3.00e+02  1.00e-05  9.78e-24
+792 IN  0.00e+00 -8.33e-07  2.03e-05  2.61e+00 -3.64e-02  2.35e-02  3.00e+02  1.00e-05  9.78e-24
+793 IN  0.00e+00 -8.64e-06  1.60e-05  2.35e+00 -3.56e-02  2.47e-02  3.00e+02  1.00e-05  9.78e-24
+794 IN  0.00e+00  4.18e-06  1.67e-05  2.64e+00 -3.34e-02  2.72e-02  3.00e+02  1.00e-05  9.78e-24
+795 IN  0.00e+00 -1.35e-05  1.81e-05  1.61e+00 -2.97e-02  3.06e-02  3.00e+02  1.00e-05  9.78e-24
+796 IN  0.00e+00 -1.06e-05 -3.20e-05  1.11e+00  3.78e-02 -1.90e-02  3.00e+02  1.00e-05  9.78e-24
+797 IN  0.00e+00 -1.36e-05 -2.16e-05  1.37e+00 -7.92e-03  1.63e-02  3.00e+02  1.00e-05  9.78e-24
+798 IN  0.00e+00 -5.90e-06  2.16e-05  2.36e+00 -3.84e-02  2.04e-02  3.00e+02  1.00e-05  9.78e-24
+799 IN  0.00e+00  1.18e-06  1.51e-05  2.81e+00 -3.27e-02  2.47e-02  3.00e+02  1.00e-05  9.78e-24
+800 IN  0.00e+00 -3.87e-06  6.00e-06  2.92e+00 -2.56e-02  2.29e-02  3.00e+02  1.00e-05  9.78e-24
+801 IN  0.00e+00  1.26e-06 -1.98e-05  2.58e+00  4.33e-03 -6.44e-03  3.00e+02  1.00e-05  9.78e-24
+802 IN  0.00e+00 -1.95e-07  2.29e-05  2.45e+00 -3.84e-02  2.13e-02  3.00e+02  1.00e-05  9.78e-24
+803 IN  0.00e+00 -2.56e-06  2.48e-05  2.30e+00 -4.03e-02  1.99e-02  3.00e+02  1.00e-05  9.78e-24
+804 IN  0.00e+00 -9.48e-06 -2.06e-05  1.99e+00 -3.90e-03  7.63e-03  3.00e+02  1.00e-05  9.78e-24
+805 IN  0.00e+00 -1.30e-05 -7.03e-06  1.77e+00 -1.08e-02  3.28e-02  3.00e+02  1.00e-05  9.78e-24
+806 IN  0.00e+00 -5.58e-06  2.24e-05  2.34e+00 -3.95e-02  2.00e-02  3.00e+02  1.00e-05  9.78e-24
+807 IN  0.00e+00 -6.43e-06  2.35e-05  2.22e+00 -4.17e-02  1.92e-02  3.00e+02  1.00e-05  9.78e-24
+808 IN  0.00e+00 -9.18e-06 -2.59e-05  1.73e+00  1.02e-02 -8.62e-03  3.00e+02  1.00e-05  9.78e-24
+809 IN  0.00e+00 -1.28e-06  2.76e-05  2.07e+00 -4.52e-02  2.32e-02  3.00e+02  1.00e-05  9.78e-24
+810 IN  0.00e+00 -5.54e-06  1.14e-06  2.83e+00 -1.98e-02  2.24e-02  3.00e+02  1.00e-05  9.78e-24
+811 IN  0.00e+00 -1.40e-05  3.19e-05  9.91e-01 -5.43e-02 -3.77e-03  3.00e+02  1.00e-05  9.78e-24
+812 IN  0.00e+00 -1.43e-05  3.25e-05  9.14e-01 -5.16e-02 -4.47e-03  3.00e+02  1.00e-05  9.78e-24
+813 IN  0.00e+00 -2.42e-06  3.43e-06  3.00e+00 -2.35e-02  2.02e-02  3.00e+02  1.00e-05  9.78e-24
+814 IN  0.00e+00 -1.12e-05 -2.34e-05  1.65e+00 -2.06e-03  6.82e-03  3.00e+02  1.00e-05  9.78e-24
+815 IN  0.00e+00 -3.85e-06  1.68e-05  2.69e+00 -3.58e-02  2.36e-02  3.00e+02  1.00e-05  9.78e-24
+816 IN  0.00e+00 -6.67e-06  2.06e-05  2.35e+00 -3.85e-02  2.17e-02  3.00e+02  1.00e-05  9.78e-24
+817 IN  0.00e+00 -7.30e-06  1.58e-05  2.49e+00 -3.68e-02  2.41e-02  3.00e+02  1.00e-05  9.78e-24
+818 IN  0.00e+00 -6.42e-06 -2.26e-05  2.17e+00  6.58e-03 -1.43e-03  3.00e+02  1.00e-05  9.78e-24
+819 IN  0.00e+00 -2.35e-06  1.18e-06  3.01e+00 -2.06e-02  1.82e-02  3.00e+02  1.00e-05  9.78e-24
+820 IN  0.00e+00 -5.34e-06  1.25e-05  2.73e+00 -3.34e-02  2.48e-02  3.00e+02  1.00e-05  9.78e-24
+821 IN  0.00e+00 -8.75e-06 -1.68e-05  2.22e+00 -5.66e-03  1.36e-02  3.00e+02  1.00e-05  9.78e-24
+822 IN  0.00e+00 -8.09e-06  2.25e-05  2.16e+00 -4.21e-02  2.04e-02  3.00e+02  1.00e-05  9.78e-24
+823 IN  0.00e+00  2.20e-06 -5.81e-06  2.97e+00 -1.37e-02  4.44e-03  3.00e+02  1.00e-05  9.78e-24
+824 IN  0.00e+00  5.05e-08 -2.87e-05  1.93e+00  1.51e-02 -2.32e-02  3.00e+02  1.00e-05  9.78e-24
+825 IN  0.00e+00 -7.39e-06 -2.93e-06  2.64e+00 -1.59e-02  2.41e-02  3.00e+02  1.00e-05  9.78e-24
+826 IN  0.00e+00 -1.36e-05 -1.18e-05  1.59e+00 -6.75e-03  2.68e-02  3.00e+02  1.00e-05  9.78e-24
+827 IN  0.00e+00  4.43e-06 -1.53e-05  2.67e+00 -1.67e-04 -4.56e-03  3.00e+02  1.00e-05  9.78e-24
+828 IN  0.00e+00  5.18e-06 -1.70e-05  2.56e+00  9.95e-04 -7.02e-03  3.00e+02  1.00e-05  9.78e-24
+829 IN  0.00e+00 -1.49e-05 -9.40e-06  1.38e+00 -6.50e-03  2.93e-02  3.00e+02  1.00e-05  9.78e-24
+830 IN  0.00e+00 -9.94e-06  3.08e-05  1.43e+00 -5.13e-02  1.32e-02  3.00e+02  1.00e-05  9.78e-24
+831 IN  0.00e+00 -1.50e-06  6.92e-06  3.00e+00 -2.76e-02  2.05e-02  3.00e+02  1.00e-05  9.78e-24
+832 IN  0.00e+00 -1.40e-05 -3.13e-05  8.22e-01  2.63e-02 -1.19e-02  3.00e+02  1.00e-05  9.78e-24
+833 IN  0.00e+00 -1.41e-05 -3.23e-05  7.37e-01  3.00e-02 -1.16e-02  3.00e+02  1.00e-05  9.78e-24
+834 IN  0.00e+00 -2.71e-07 -5.92e-06  3.00e+00 -1.35e-02  8.37e-03  3.00e+02  1.00e-05  9.78e-24
+835 IN  0.00e+00 -6.26e-07 -1.18e-06  3.04e+00 -1.87e-02  1.42e-02  3.00e+02  1.00e-05  9.78e-24
+836 IN  0.00e+00 -1.11e-05 -2.20e-05  1.72e+00 -3.70e-03  9.36e-03  3.00e+02  1.00e-05  9.78e-24
+837 IN  0.00e+00 -8.86e-06 -3.21e-05  1.24e+00  3.94e-02 -2.15e-02  3.00e+02  1.00e-05  9.78e-24
+838 IN  0.00e+00 -8.28e-06  2.60e-05  1.94e+00 -4.57e-02  1.65e-02  3.00e+02  1.00e-05  9.78e-24
+839 IN  0.00e+00 -1.33e-06  8.19e-06  2.98e+00 -2.86e-02  2.09e-02  3.00e+02  1.00e-05  9.78e-24
+840 IN  0.00e+00 -1.24e-05  2.03e-05  1.74e+00 -3.52e-02  2.88e-02  3.00e+02  1.00e-05  9.78e-24
+841 IN  0.00e+00 -5.86e-06  1.89e-05  2.49e+00 -3.64e-02  2.25e-02  3.00e+02  1.00e-05  9.78e-24
+842 IN  0.00e+00 -1.51e-05  2.74e-05  1.11e+00 -4.42e-02  1.16e-02  3.00e+02  1.00e-05  9.78e-24
+843 IN  0.00e+00 -7.72e-07 -3.65e-06  3.03e+00 -1.61e-02  1.20e-02  3.00e+02  1.00e-05  9.78e-24
+844 IN  0.00e+00 -1.57e-05  2.39e-05  1.13e+00 -3.22e-02  2.51e-02  3.00e+02  1.00e-05  9.78e-24
+845 IN  0.00e+00 -1.52e-05  3.19e-05  8.64e-01 -4.43e-02 -9.56e-03  3.00e+02  1.00e-05  9.78e-24
+846 IN  0.00e+00 -3.40e-06 -6.66e-06  2.92e+00 -1.31e-02  1.30e-02  3.00e+02  1.00e-05  9.78e-24
+847 IN  0.00e+00 -9.00e-06  2.23e-05  2.09e+00 -4.24e-02  2.11e-02  3.00e+02  1.00e-05  9.78e-24
+848 IN  0.00e+00 -2.96e-06  2.99e-05  1.83e+00 -4.70e-02  2.34e-02  3.00e+02  1.00e-05  9.78e-24
+849 IN  0.00e+00 -2.65e-07 -1.80e-05  2.68e+00  1.22e-03 -2.03e-03  3.00e+02  1.00e-05  9.78e-24
+850 IN  0.00e+00 -1.45e-05 -2.40e-05  1.13e+00 -4.36e-04  9.85e-03  3.00e+02  1.00e-05  9.78e-24
+851 IN  0.00e+00 -1.77e-05 -2.30e-05  5.76e-01  3.85e-03  1.94e-02  3.00e+02  1.00e-05  9.78e-24
+852 IN  0.00e+00 -1.79e-05 -2.72e-05  4.29e-01  6.84e-03  3.89e-03  3.00e+02  1.00e-05  9.78e-24
+853 IN  0.00e+00 -1.78e-05 -2.86e-05  4.17e-01  5.48e-03 -5.40e-03  3.00e+02  1.00e-05  9.78e-24
+854 IN  0.00e+00  2.76e-06 -5.34e-06  2.96e+00 -1.42e-02  4.21e-03  3.00e+02  1.00e-05  9.78e-24
+855 IN  0.00e+00 -1.18e-05  2.15e-05  1.81e+00 -3.91e-02  2.48e-02  3.00e+02  1.00e-05  9.78e-24
+856 IN  0.00e+00  5.39e-06  1.51e-05  2.61e+00 -3.09e-02  2.64e-02  3.00e+02  1.00e-05  9.78e-24
+857 IN  0.00e+00  2.81e-06  1.55e-05  2.75e+00 -3.31e-02  2.58e-02  3.00e+02  1.00e-05  9.78e-24
+858 IN  0.00e+00  4.96e-06 -1.82e-05  2.52e+00  2.29e-03 -8.38e-03  3.00e+02  1.00e-05  9.78e-24
+859 IN  0.00e+00 -1.36e-05 -1.55e-05  1.54e+00 -8.06e-03  1.81e-02  3.00e+02  1.00e-05  9.78e-24
+860 IN  0.00e+00 -7.99e-07  5.26e-06  3.02e+00 -2.62e-02  1.91e-02  3.00e+02  1.00e-05  9.78e-24
+861 IN  0.00e+00 -3.60e-06 -1.01e-05  2.85e+00 -9.09e-03  1.01e-02  3.00e+02  1.00e-05  9.78e-24
+862 IN  0.00e+00 -3.01e-06 -1.97e-05  2.53e+00  2.30e-03  1.47e-04  3.00e+02  1.00e-05  9.78e-24
+863 IN  0.00e+00 -1.03e-06 -4.97e-06  3.01e+00 -1.46e-02  1.08e-02  3.00e+02  1.00e-05  9.78e-24
+864 IN  0.00e+00 -6.81e-06 -1.75e-05  2.39e+00 -2.82e-03  9.58e-03  3.00e+02  1.00e-05  9.78e-24
+865 IN  0.00e+00 -5.97e-07 -1.13e-05  2.91e+00 -7.41e-03  4.55e-03  3.00e+02  1.00e-05  9.78e-24
+866 IN  0.00e+00 -3.69e-06 -2.87e-05  1.85e+00  2.16e-02 -2.37e-02  3.00e+02  1.00e-05  9.78e-24
+867 IN  0.00e+00 -1.07e-05  5.04e-06  2.22e+00 -2.37e-02  3.61e-02  3.00e+02  1.00e-05  9.78e-24
+868 IN  0.00e+00  1.06e-06 -2.92e-06  3.03e+00 -1.75e-02  1.04e-02  3.00e+02  1.00e-05  9.78e-24
+869 IN  0.00e+00  2.50e-06 -4.07e-06  2.98e+00 -1.60e-02  6.69e-03  3.00e+02  1.00e-05  9.78e-24
+870 IN  0.00e+00 -7.23e-06 -9.50e-06  2.58e+00 -9.37e-03  1.77e-02  3.00e+02  1.00e-05  9.78e-24
+871 IN  0.00e+00  4.73e-06  2.37e-05  2.26e+00 -3.69e-02  2.54e-02  3.00e+02  1.00e-05  9.78e-24
+872 IN  0.00e+00 -1.21e-05  3.60e-05  7.21e-01 -4.61e-02 -7.72e-03  3.00e+02  1.00e-05  9.78e-24
+873 IN  0.00e+00 -1.11e-05 -4.18e-06  2.13e+00 -1.52e-02  3.56e-02  3.00e+02  1.00e-05  9.78e-24
+874 IN  0.00e+00  1.78e-06 -1.29e-05  2.85e+00 -4.04e-03  8.41e-05  3.00e+02  1.00e-05  9.78e-24
+875 IN  0.00e+00 -5.32e-06 -2.06e-05  2.36e+00  3.08e-03  1.69e-03  3.00e+02  1.00e-05  9.78e-24
+876 IN  0.00e+00 -6.60e-06 -2.11e-05  2.24e+00  2.95e-03  2.86e-03  3.00e+02  1.00e-05  9.78e-24
+877 IN  0.00e+00 -6.89e-06 -1.65e-05  2.43e+00 -3.81e-03  1.10e-02  3.00e+02  1.00e-05  9.78e-24
+878 IN  0.00e+00  5.31e-06 -1.14e-06  2.83e+00 -1.86e-02  6.85e-03  3.00e+02  1.00e-05  9.78e-24
+879 IN  0.00e+00 -9.39e-06  1.53e-05  2.29e+00 -3.57e-02  2.59e-02  3.00e+02  1.00e-05  9.78e-24
+880 IN  0.00e+00 -1.63e-05  2.34e-05  1.05e+00 -2.70e-02  2.80e-02  3.00e+02  1.00e-05  9.78e-24
+881 IN  0.00e+00 -8.72e-06  1.44e-05  2.39e+00 -3.56e-02  2.66e-02  3.00e+02  1.00e-05  9.78e-24
+882 IN  0.00e+00 -8.99e-06 -2.86e-05  1.55e+00  2.03e-02 -1.85e-02  3.00e+02  1.00e-05  9.78e-24
+883 IN  0.00e+00  3.03e-06  4.95e-06  2.96e+00 -2.56e-02  1.62e-02  3.00e+02  1.00e-05  9.78e-24
+884 IN  0.00e+00 -9.83e-06 -3.54e-05  7.65e-01  5.47e-02 -2.24e-02  3.00e+02  1.00e-05  9.78e-24
+885 IN  0.00e+00 -9.06e-06 -3.59e-05  7.43e-01  6.20e-02 -2.01e-02  3.00e+02  1.00e-05  9.78e-24
+886 IN  0.00e+00 -3.76e-07 -1.29e-05  2.87e+00 -5.22e-03  3.31e-03  3.00e+02  1.00e-05  9.78e-24
+887 IN  0.00e+00  5.77e-06  2.01e-05  2.39e+00 -3.53e-02  2.82e-02  3.00e+02  1.00e-05  9.78e-24
+888 IN  0.00e+00 -1.22e-05  1.66e-05  1.86e+00 -3.17e-02  2.63e-02  3.00e+02  1.00e-05  9.78e-24
+889 IN  0.00e+00 -1.10e-05  1.63e-05  2.04e+00 -3.33e-02  2.56e-02  3.00e+02  1.00e-05  9.78e-24
+890 IN  0.00e+00 -1.53e-05  2.86e-05  1.05e+00 -4.52e-02  4.30e-03  3.00e+02  1.00e-05  9.78e-24
+891 IN  0.00e+00 -2.70e-06 -1.27e-05  2.82e+00 -6.32e-03  6.57e-03  3.00e+02  1.00e-05  9.78e-24
+892 IN  0.00e+00  1.67e-06 -1.52e-05  2.78e+00 -1.36e-03 -1.08e-03  3.00e+02  1.00e-05  9.78e-24
+893 IN  0.00e+00 -1.63e-06 -8.90e-06  2.95e+00 -1.05e-02  7.61e-03  3.00e+02  1.00e-05  9.78e-24
+894 IN  0.00e+00 -1.20e-06 -1.09e-05  2.91e+00 -8.20e-03  5.67e-03  3.00e+02  1.00e-05  9.78e-24
+895 IN  0.00e+00 -2.75e-06  6.42e-06  2.97e+00 -2.66e-02  2.16e-02  3.00e+02  1.00e-05  9.78e-24
+896 IN  0.00e+00 -1.38e-05 -7.70e-06  1.60e+00 -9.53e-03  3.17e-02  3.00e+02  1.00e-05  9.78e-24
+897 IN  0.00e+00 -1.42e-05  1.99e-05  1.45e+00 -3.21e-02  3.39e-02  3.00e+02  1.00e-05  9.78e-24
+898 IN  0.00e+00  5.71e-06 -1.35e-07  2.80e+00 -1.92e-02  8.32e-03  3.00e+02  1.00e-05  9.78e-24
+899 IN  0.00e+00 -1.36e-05 -5.77e-06  1.66e+00 -1.06e-02  3.79e-02  3.00e+02  1.00e-05  9.78e-24
+900 IN  0.00e+00 -1.53e-05 -5.60e-06  1.31e+00 -9.65e-03  4.15e-02  3.00e+02  1.00e-05  9.78e-24
+901 IN  0.00e+00 -1.48e-05 -5.25e-06  1.42e+00 -1.10e-02  4.24e-02  3.00e+02  1.00e-05  9.78e-24
+902 IN  0.00e+00 -1.45e-06 -1.68e-05  2.71e+00 -1.10e-03  1.44e-03  3.00e+02  1.00e-05  9.78e-24
+903 IN  0.00e+00 -1.13e-05 -2.83e-05  1.35e+00  1.62e-02 -1.32e-02  3.00e+02  1.00e-05  9.78e-24
+904 IN  0.00e+00 -1.10e-05  2.42e-05  1.78e+00 -4.44e-02  1.64e-02  3.00e+02  1.00e-05  9.78e-24
+905 IN  0.00e+00 -6.48e-06 -8.89e-06  2.67e+00 -9.80e-03  1.74e-02  3.00e+02  1.00e-05  9.78e-24
+906 IN  0.00e+00 -1.22e-05  2.51e-05  1.59e+00 -4.54e-02  1.53e-02  3.00e+02  1.00e-05  9.78e-24
+907 IN  0.00e+00 -1.14e-05  2.92e-05  1.44e+00 -5.05e-02  1.21e-02  3.00e+02  1.00e-05  9.78e-24
+908 IN  0.00e+00 -1.30e-05  2.52e-05  1.50e+00 -4.52e-02  1.59e-02  3.00e+02  1.00e-05  9.78e-24
+909 IN  0.00e+00  2.28e-06 -2.34e-05  2.35e+00  9.11e-03 -1.56e-02  3.00e+02  1.00e-05  9.78e-24
+910 IN  0.00e+00 -6.99e-06  7.23e-06  2.68e+00 -2.66e-02  2.76e-02  3.00e+02  1.00e-05  9.78e-24
+911 IN  0.00e+00 -9.64e-06  3.24e-05  1.28e+00 -4.93e-02  1.04e-02  3.00e+02  1.00e-05  9.78e-24
+912 IN  0.00e+00  8.30e-07  6.84e-06  3.01e+00 -2.74e-02  1.86e-02  3.00e+02  1.00e-05  9.78e-24
+913 IN  0.00e+00 -2.51e-06  8.95e-06  2.94e+00 -2.93e-02  2.20e-02  3.00e+02  1.00e-05  9.78e-24
+914 IN  0.00e+00  5.55e-06  3.99e-07  2.82e+00 -2.00e-02  9.41e-03  3.00e+02  1.00e-05  9.78e-24
+915 IN  0.00e+00  5.83e-06 -5.72e-07  2.79e+00 -1.86e-02  7.30e-03  3.00e+02  1.00e-05  9.78e-24
+916 IN  0.00e+00 -2.93e-06  1.14e-05  2.89e+00 -3.14e-02  2.25e-02  3.00e+02  1.00e-05  9.78e-24
+917 IN  0.00e+00 -1.79e-06  1.41e-05  2.84e+00 -3.33e-02  2.28e-02  3.00e+02  1.00e-05  9.78e-24
+918 IN  0.00e+00 -1.13e-05  2.29e-05  1.82e+00 -4.23e-02  2.04e-02  3.00e+02  1.00e-05  9.78e-24
+919 IN  0.00e+00 -1.56e-06 -9.05e-06  2.95e+00 -1.03e-02  7.39e-03  3.00e+02  1.00e-05  9.78e-24
+920 IN  0.00e+00 -8.63e-06  2.12e-05  2.18e+00 -4.16e-02  2.23e-02  3.00e+02  1.00e-05  9.78e-24
+921 IN  0.00e+00 -9.46e-06  2.86e-05  1.65e+00 -4.76e-02  1.49e-02  3.00e+02  1.00e-05  9.78e-24
+922 IN  0.00e+00 -9.84e-06 -2.82e-05  1.50e+00  1.75e-02 -1.64e-02  3.00e+02  1.00e-05  9.78e-24
+923 IN  0.00e+00  2.66e-06 -9.50e-06  2.91e+00 -8.29e-03  5.14e-04  3.00e+02  1.00e-05  9.78e-24
+924 IN  0.00e+00 -1.30e-06  1.34e-05  2.87e+00 -3.27e-02  2.25e-02  3.00e+02  1.00e-05  9.78e-24
+925 IN  0.00e+00  2.21e-06  2.09e-05  2.53e+00 -3.68e-02  2.39e-02  3.00e+02  1.00e-05  9.78e-24
+926 IN  0.00e+00 -2.42e-06  2.25e-05  2.46e+00 -3.76e-02  2.05e-02  3.00e+02  1.00e-05  9.78e-24
+927 IN  0.00e+00 -1.25e-05 -3.39e-05  7.56e-01  4.16e-02 -1.56e-02  3.00e+02  1.00e-05  9.78e-24
+928 IN  0.00e+00 -1.23e-05 -3.44e-05  7.27e-01  4.36e-02 -1.63e-02  3.00e+02  1.00e-05  9.78e-24
+929 IN  0.00e+00 -7.04e-06 -1.96e-05  2.28e+00 -3.23e-05  6.59e-03  3.00e+02  1.00e-05  9.78e-24
+930 IN  0.00e+00 -1.67e-05 -2.66e-05  7.06e-01  1.03e-02  3.98e-03  3.00e+02  1.00e-05  9.78e-24
+931 IN  0.00e+00 -3.66e-06  1.81e-05  2.64e+00 -3.58e-02  2.39e-02  3.00e+02  1.00e-05  9.78e-24
+932 IN  0.00e+00 -1.09e-05 -1.78e-05  1.92e+00 -9.14e-03  1.61e-02  3.00e+02  1.00e-05  9.78e-24
+933 IN  0.00e+00 -9.84e-06 -1.84e-05  2.03e+00 -6.98e-03  1.33e-02  3.00e+02  1.00e-05  9.78e-24
+934 IN  0.00e+00  1.22e-06 -8.42e-06  2.96e+00 -1.02e-02  3.37e-03  3.00e+02  1.00e-05  9.78e-24
+935 IN  0.00e+00 -3.59e-06 -9.03e-06  2.87e+00 -1.04e-02  1.12e-02  3.00e+02  1.00e-05  9.78e-24
+936 IN  0.00e+00 -1.04e-05 -2.39e-05  1.73e+00  1.50e-04  3.89e-03  3.00e+02  1.00e-05  9.78e-24
+937 IN  0.00e+00 -9.05e-06 -2.35e-05  1.89e+00  3.24e-03  2.03e-03  3.00e+02  1.00e-05  9.78e-24
+938 IN  0.00e+00 -6.45e-06  3.18e-06  2.75e+00 -2.22e-02  2.57e-02  3.00e+02  1.00e-05  9.78e-24
+939 IN  0.00e+00 -8.19e-06 -3.27e-05  1.20e+00  4.34e-02 -2.27e-02  3.00e+02  1.00e-05  9.78e-24
+940 IN  0.00e+00 -2.22e-06  2.10e-05  2.55e+00 -3.65e-02  2.20e-02  3.00e+02  1.00e-05  9.78e-24
+941 IN  0.00e+00 -1.02e-05 -1.93e-05  1.95e+00 -6.01e-03  1.16e-02  3.00e+02  1.00e-05  9.78e-24
+942 IN  0.00e+00 -1.30e-05  3.19e-05  1.09e+00 -5.33e-02 -5.01e-04  3.00e+02  1.00e-05  9.78e-24
+943 IN  0.00e+00 -4.52e-06  1.16e-05  2.80e+00 -3.23e-02  2.39e-02  3.00e+02  1.00e-05  9.78e-24
+944 IN  0.00e+00 -7.52e-06 -2.41e-05  2.00e+00  8.62e-03 -2.77e-03  3.00e+02  1.00e-05  9.78e-24
+945 IN  0.00e+00 -7.59e-06 -1.14e-05  2.51e+00 -8.69e-03  1.54e-02  3.00e+02  1.00e-05  9.78e-24
+946 IN  0.00e+00 -8.90e-06 -1.07e-05  2.36e+00 -9.54e-03  1.84e-02  3.00e+02  1.00e-05  9.78e-24
+947 IN  0.00e+00 -1.80e-05  2.50e-05  6.49e-01 -5.30e-03  1.57e-02  3.00e+02  1.00e-05  9.78e-24
+948 IN  0.00e+00 -3.59e-06  5.08e-06  2.95e+00 -2.46e-02  2.24e-02  3.00e+02  1.00e-05  9.78e-24
+949 IN  0.00e+00 -6.23e-06  8.12e-06  2.74e+00 -2.77e-02  2.60e-02  3.00e+02  1.00e-05  9.78e-24
+950 IN  0.00e+00 -5.59e-06  1.69e-05  2.58e+00 -3.63e-02  2.32e-02  3.00e+02  1.00e-05  9.78e-24
+951 IN  0.00e+00 -6.52e-06  9.97e-06  2.69e+00 -3.07e-02  2.64e-02  3.00e+02  1.00e-05  9.78e-24
+952 IN  0.00e+00 -8.71e-06  2.76e-05  1.79e+00 -4.64e-02  1.58e-02  3.00e+02  1.00e-05  9.78e-24
+953 IN  0.00e+00 -8.27e-06  2.05e-06  2.57e+00 -2.34e-02  2.82e-02  3.00e+02  1.00e-05  9.78e-24
+954 IN  0.00e+00 -3.65e-06 -3.53e-06  2.94e+00 -1.59e-02  1.65e-02  3.00e+02  1.00e-05  9.78e-24
+955 IN  0.00e+00 -3.71e-07  7.76e-06  3.00e+00 -2.83e-02  2.00e-02  3.00e+02  1.00e-05  9.78e-24
+956 IN  0.00e+00 -1.42e-05  2.09e-05  1.44e+00 -3.43e-02  3.20e-02  3.00e+02  1.00e-05  9.78e-24
+957 IN  0.00e+00 -6.03e-07 -2.23e-05  2.44e+00  7.04e-03 -9.37e-03  3.00e+02  1.00e-05  9.78e-24
+958 IN  0.00e+00 -1.44e-06 -1.37e-05  2.83e+00 -4.82e-03  4.29e-03  3.00e+02  1.00e-05  9.78e-24
+959 IN  0.00e+00 -1.22e-05 -2.66e-05  1.34e+00  6.62e-03 -5.00e-03  3.00e+02  1.00e-05  9.78e-24
+960 IN  0.00e+00 -1.25e-05  1.94e-05  1.74e+00 -3.31e-02  2.94e-02  3.00e+02  1.00e-05  9.78e-24
+961 IN  0.00e+00 -2.10e-06  1.54e-05  2.79e+00 -3.42e-02  2.36e-02  3.00e+02  1.00e-05  9.78e-24
+962 IN  0.00e+00 -2.06e-06 -1.23e-05  2.86e+00 -6.67e-03  5.88e-03  3.00e+02  1.00e-05  9.78e-24
+963 IN  0.00e+00 -8.58e-06 -2.42e-05  1.89e+00  6.25e-03 -1.42e-03  3.00e+02  1.00e-05  9.78e-24
+964 IN  0.00e+00 -7.58e-06  1.94e-05  2.34e+00 -3.77e-02  2.28e-02  3.00e+02  1.00e-05  9.78e-24
+965 IN  0.00e+00 -1.04e-05  2.60e-05  1.75e+00 -4.61e-02  1.44e-02  3.00e+02  1.00e-05  9.78e-24
+966 IN  0.00e+00 -7.89e-06  2.41e-05  2.08e+00 -4.43e-02  1.85e-02  3.00e+02  1.00e-05  9.78e-24
+967 IN  0.00e+00 -3.49e-07  3.40e-06  3.04e+00 -2.41e-02  1.75e-02  3.00e+02  1.00e-05  9.78e-24
+968 IN  0.00e+00 -1.62e-06 -1.92e-05  2.60e+00  2.45e-03 -1.34e-03  3.00e+02  1.00e-05  9.78e-24
+969 IN  0.00e+00 -1.59e-06  1.26e-05  2.89e+00 -3.24e-02  2.22e-02  3.00e+02  1.00e-05  9.78e-24
+970 IN  0.00e+00 -1.17e-05 -5.10e-06  2.02e+00 -1.30e-02  3.56e-02  3.00e+02  1.00e-05  9.78e-24
+971 IN  0.00e+00 -9.39e-06 -3.64e-06  2.40e+00 -1.61e-02  3.00e-02  3.00e+02  1.00e-05  9.78e-24
+972 IN  0.00e+00 -3.41e-06  7.54e-06  2.93e+00 -2.75e-02  2.25e-02  3.00e+02  1.00e-05  9.78e-24
+973 IN  0.00e+00 -9.67e-06  2.10e-05  2.07e+00 -4.06e-02  2.34e-02  3.00e+02  1.00e-05  9.78e-24
+974 IN  0.00e+00 -9.35e-06  1.34e-05  2.34e+00 -3.47e-02  2.88e-02  3.00e+02  1.00e-05  9.78e-24
+975 IN  0.00e+00 -5.24e-06  1.82e-05  2.56e+00 -3.62e-02  2.29e-02  3.00e+02  1.00e-05  9.78e-24
+976 IN  0.00e+00 -3.17e-06  3.92e-06  2.97e+00 -2.34e-02  2.13e-02  3.00e+02  1.00e-05  9.78e-24
+977 IN  0.00e+00 -6.81e-06 -1.36e-05  2.53e+00 -6.65e-03  1.31e-02  3.00e+02  1.00e-05  9.78e-24
+978 IN  0.00e+00  3.81e-06  7.92e-06  2.88e+00 -2.68e-02  1.91e-02  3.00e+02  1.00e-05  9.78e-24
+979 IN  0.00e+00 -1.25e-05 -2.42e-05  1.44e+00 -2.17e-03  6.84e-03  3.00e+02  1.00e-05  9.78e-24
+980 IN  0.00e+00 -7.55e-06  2.04e-05  2.30e+00 -3.83e-02  2.22e-02  3.00e+02  1.00e-05  9.78e-24
+981 IN  0.00e+00 -1.60e-05 -1.63e-05  1.08e+00 -2.27e-03  1.23e-02  3.00e+02  1.00e-05  9.78e-24
+982 IN  0.00e+00 -1.53e-05 -1.64e-05  1.20e+00 -4.91e-03  1.47e-02  3.00e+02  1.00e-05  9.78e-24
+983 IN  0.00e+00 -9.37e-06  1.11e-05  2.37e+00 -3.25e-02  3.22e-02  3.00e+02  1.00e-05  9.78e-24
+984 IN  0.00e+00 -9.45e-06 -9.28e-06  2.31e+00 -1.03e-02  2.21e-02  3.00e+02  1.00e-05  9.78e-24
+985 IN  0.00e+00 -1.10e-05 -8.70e-06  2.10e+00 -1.15e-02  2.58e-02  3.00e+02  1.00e-05  9.78e-24
+986 IN  0.00e+00 -3.25e-06 -1.42e-06  2.97e+00 -1.76e-02  1.73e-02  3.00e+02  1.00e-05  9.78e-24
+987 IN  0.00e+00 -3.86e-06 -4.15e-07  2.94e+00 -1.84e-02  1.87e-02  3.00e+02  1.00e-05  9.78e-24
+988 IN  0.00e+00 -2.51e-06  5.94e-06  2.98e+00 -2.63e-02  2.12e-02  3.00e+02  1.00e-05  9.78e-24
+989 IN  0.00e+00  1.01e-06 -6.53e-06  2.99e+00 -1.28e-02  5.51e-03  3.00e+02  1.00e-05  9.78e-24
+990 IN  0.00e+00 -7.72e-06 -1.27e-05  2.46e+00 -7.68e-03  1.49e-02  3.00e+02  1.00e-05  9.78e-24
+991 IN  0.00e+00 -1.46e-05 -2.01e-05  1.25e+00 -9.27e-03  2.20e-02  3.00e+02  1.00e-05  9.78e-24
+992 IN  0.00e+00 -1.35e-05 -2.03e-05  1.43e+00 -1.09e-02  1.79e-02  3.00e+02  1.00e-05  9.78e-24
+993 IN  0.00e+00  6.59e-07  9.57e-06  2.96e+00 -2.99e-02  2.10e-02  3.00e+02  1.00e-05  9.78e-24
+994 IN  0.00e+00 -6.38e-06 -3.50e-05  1.01e+00  5.46e-02 -2.46e-02  3.00e+02  1.00e-05  9.78e-24
+995 IN  0.00e+00 -6.58e-06 -3.40e-05  1.12e+00  4.87e-02 -2.44e-02  3.00e+02  1.00e-05  9.78e-24
+996 IN  0.00e+00 -2.31e-06  3.36e-05  1.35e+00 -4.52e-02  1.88e-02  3.00e+02  1.00e-05  9.78e-24
+997 IN  0.00e+00 -1.36e-05  3.31e-05  9.22e-01 -5.29e-02 -7.60e-04  3.00e+02  1.00e-05  9.78e-24
+998 IN  0.00e+00 -1.39e-05  3.33e-05  8.86e-01 -5.24e-02 -1.48e-03  3.00e+02  1.00e-05  9.78e-24
+999 IN  0.00e+00 -8.96e-06 -7.53e-06  2.41e+00 -1.03e-02  2.45e-02  3.00e+02  1.00e-05  9.78e-24
+1000 IN  0.00e+00  4.06e-06 -1.40e-05  2.73e+00 -1.72e-03 -3.38e-03  3.00e+02  1.00e-05  9.78e-24
+1001 IN  0.00e+00 -7.46e-06  1.44e-06  2.65e+00 -2.28e-02  2.66e-02  3.00e+02  1.00e-05  9.78e-24
+1002 IN  0.00e+00 -1.13e-05 -1.99e-05  1.77e+00 -7.95e-03  1.20e-02  3.00e+02  1.00e-05  9.78e-24
+1003 IN  0.00e+00  4.83e-06  3.22e-06  2.86e+00 -2.32e-02  1.38e-02  3.00e+02  1.00e-05  9.78e-24
+1004 IN  0.00e+00 -7.18e-06 -2.94e-05  1.62e+00  2.49e-02 -2.16e-02  3.00e+02  1.00e-05  9.78e-24
+1005 IN  0.00e+00  1.66e-06  8.78e-06  2.96e+00 -2.86e-02  2.00e-02  3.00e+02  1.00e-05  9.78e-24
+1006 IN  0.00e+00  4.62e-06  5.46e-06  2.86e+00 -2.46e-02  1.65e-02  3.00e+02  1.00e-05  9.78e-24
+1007 IN  0.00e+00  6.14e-06  1.01e-05  2.68e+00 -2.53e-02  2.16e-02  3.00e+02  1.00e-05  9.78e-24
+1008 IN  0.00e+00  5.54e-06  7.72e-06  2.77e+00 -2.45e-02  1.92e-02  3.00e+02  1.00e-05  9.78e-24
+1009 IN  0.00e+00 -5.90e-06 -1.89e-05  2.40e+00 -2.99e-04  5.95e-03  3.00e+02  1.00e-05  9.78e-24
+1010 IN  0.00e+00 -5.85e-06 -1.78e-05  2.45e+00 -2.00e-03  7.47e-03  3.00e+02  1.00e-05  9.78e-24
+1011 IN  0.00e+00 -1.08e-05  2.18e-05  1.92e+00 -4.09e-02  2.31e-02  3.00e+02  1.00e-05  9.78e-24
+1012 IN  0.00e+00 -8.87e-06  1.23e-05  2.42e+00 -3.44e-02  3.01e-02  3.00e+02  1.00e-05  9.78e-24
+1013 IN  0.00e+00 -1.65e-06  2.09e-05  2.56e+00 -3.66e-02  2.21e-02  3.00e+02  1.00e-05  9.78e-24
+1014 IN  0.00e+00 -2.06e-06  1.74e-05  2.72e+00 -3.49e-02  2.45e-02  3.00e+02  1.00e-05  9.78e-24
+1015 IN  0.00e+00 -2.93e-06 -1.11e-05  2.85e+00 -8.06e-03  8.10e-03  3.00e+02  1.00e-05  9.78e-24
+1016 IN  0.00e+00 -1.13e-05  2.73e-05  1.57e+00 -4.82e-02  1.30e-02  3.00e+02  1.00e-05  9.78e-24
+1017 IN  0.00e+00 -8.33e-06  8.54e-06  2.53e+00 -2.80e-02  3.01e-02  3.00e+02  1.00e-05  9.78e-24
+1018 IN  0.00e+00 -7.07e-06  8.92e-06  2.66e+00 -2.88e-02  2.72e-02  3.00e+02  1.00e-05  9.78e-24
+1019 IN  0.00e+00  6.35e-06  1.06e-05  2.65e+00 -2.55e-02  2.20e-02  3.00e+02  1.00e-05  9.78e-24
+1020 IN  0.00e+00  3.53e-06 -9.26e-06  2.87e+00 -8.08e-03 -1.07e-03  3.00e+02  1.00e-05  9.78e-24
+1021 IN  0.00e+00 -4.10e-06 -2.25e-05  2.32e+00  7.29e-03 -5.96e-03  3.00e+02  1.00e-05  9.78e-24
+1022 IN  0.00e+00  1.19e-06  1.14e-05  2.92e+00 -3.05e-02  2.21e-02  3.00e+02  1.00e-05  9.78e-24
+\n\n--------------------\nIteration 2 of 2\n--------------------\n\n/report/dpm-sample file-injection () outlet () () no
+DPM Iteration ....
+number tracked = 1023, escaped = 1023
+Done.
+#f
+
+
