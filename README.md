@@ -6,6 +6,9 @@ Inertial microfluidic devices often have several repeated segments to modify flu
 
 To simulate particle flow in an inertial microfluidic device with a finite number of repeated segments, we first release particles at the inlet from an initial DPM (Discrete Phase Model) injection definition. Particles are then sampled at the outlet plane and repeatededly reinjected in subsequent segments.
 
+### Calculating Inertial Lift Forces
+Calculation of the inertial lift forces is performed using a DEFINE_DPM_BODY_FORCE UDF (User Defined Function). The lift forces are calculated based on the position and diameter of the particle, the cross sectional area and Reynold's number of the channel. The function that relates these parameters to the lift force was calculated using the data and MATLAB neural network trainer from Su et al. (2021) [1]. The neural network was trained in MATLAB as described in the paper and the resulting shallow network was deployed and ported to C for use in the UDF.
+
 ### Currently running with:
 - Windows 10 Enterprise (64 bit, OS Build 19041.1415)
 - ANSYS Academic Student 2021 R2
@@ -28,3 +31,7 @@ To simulate particle flow in an inertial microfluidic device with a finite numbe
 - System for generative design of channel cross sections
 - System for description of channel cross sections with functions
 - System for optimization of channel geometry given a desired particle distribution
+
+
+## References
+1. `Su, J., Chen, X., Zhu, Y. & Hu, G. Machine learning assisted fast prediction of inertial lift in microchannels. Lab Chip 21, 2544–2556 (2021).`
