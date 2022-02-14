@@ -4,10 +4,10 @@
 ### General Strategy for Inertial Microfluidic Simulation
 Inertial microfluidic devices often have several repeated segments to modify fluid flow and particle positions within a channel. Meshing and simulating the entire device would be computationally expensive and applying periodic boundary conditions assumes the device is infinitely long.
 
-To simulate particle flow in an inertial microfluidic device with a finite number of repeated segments, we first release particles at the inlet from an initial injection DPM definition. Particles are then sampled at the outlet plane and re-injected in subsequent segments.
+To simulate particle flow in an inertial microfluidic device with a finite number of repeated segments, we first release particles at the inlet from an initial DPM (Discrete Phase Model) injection definition. Particles are then sampled at the outlet plane and repeatededly reinjected in subsequent segments.
 
 ### Currently running with:
-- Windows 10 Enterprise (OS Build 19041.1415)
+- Windows 10 Enterprise (64 bit, OS Build 19041.1415)
 - ANSYS Academic Student 2021 R2
 - Microsoft Visual Studio 2017
 
