@@ -34,4 +34,4 @@ Calculation of the inertial lift forces is performed using a DEFINE_DPM_BODY_FOR
 
 
 ## References
-> 1. Su, J., Chen, X., Zhu, Y. & Hu, G. Machine learning assisted fast prediction of inertial lift in microchannels. Lab Chip 21, 2544–2556 (2021).
+> 1. Su, J., Chen, X., Zhu, Y. & Hu, G. Machine learning assisted fast prediction of inertial lift in microchannels. Lab Chip 21, 2544–2556 (2021). [doi:10.1039/D1LC00225B](https://doi.org/10.1039/D1LC00225B)
