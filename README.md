@@ -1,10 +1,10 @@
 # microfluidics-inertial-lift
  Tools for simulating particle migration, focusing, and separation in inertial microfluidic devices with ANSYS Fluent
 
-### Currently running on:
-Windows 10 Enterprise (OS Build 19041.1415)
-ANSYS Academic Student 2021 R2
-Visual Studio 2017
+### Currently running with:
+- Windows 10 Enterprise (OS Build 19041.1415)
+- ANSYS Academic Student 2021 R2
+- Visual Studio 2017
 
 ### Current workflow:
 1. Generate geometry of one repeated segment of a periodically repeating inertial microfluidic device
