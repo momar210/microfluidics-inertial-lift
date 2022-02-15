@@ -21,17 +21,10 @@ Calculation of the inertial lift forces is performed using a DEFINE_DPM_BODY_FOR
 4. Open Fluent with case `".\microfluidic-simulation_files\user_files\microfluidic-simulation.cas.h5"`
 5. Import mesh
 6. Set flow rates and channel parameters
-7. Initialize and Calculate
-8. Simulate particle release and flow through repeated segments by Reading Scheme (File > Read > Scheme), `".\microfluidic-simulation_files\user_files\particle-tracking-repeated-steps-with-bootstrap.scm"`
-9. Display results
-
-### Future updates:
-- Include DPM Body Force UDF for calculation of inertial lift
-- Include UDF for precomputing inertial lift at each cell centroid for inspection of inertial force field
-- System for generative design of channel cross sections
-- System for description of channel cross sections with functions
-- System for optimization of channel geometry given a desired particle distribution
-
+7. Initialize and Calculate (Solve fluid flow through channel)
+8. Precalculate and Inspect DPM Body Force Field with On Demand Function (User-Defined > Execute on Demand > Select `precalculate_inertial_lift_coefficients_and_umax` > Execute)
+9. Simulate particle release and flow through repeated segments by Reading Scheme (File > Read > Scheme), `".\microfluidic-simulation_files\user_files\particle-tracking-repeated-steps-with-bootstrap.scm"`
+10. Display results
 
 ## References
 > 1. Su, J., Chen, X., Zhu, Y. & Hu, G. Machine learning assisted fast prediction of inertial lift in microchannels. Lab Chip 21, 2544–2556 (2021). [doi:10.1039/D1LC00225B](https://doi.org/10.1039/D1LC00225B)
