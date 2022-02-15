@@ -360,7 +360,7 @@ DEFINE_PROFILE(inlet_x_velocity, thread, position)
 
 
 // TODO: not sure why this happens more than once
-DEFINE_ON_DEMAND(on_demand_max_velocity_calculation)
+DEFINE_ON_DEMAND(precalculate_inertial_lift_coefficients_and_umax)
 {
 	// DECLARATION OF VARIABLES
 	double cell_centroid_position[ND_ND]; /* this will hold the position vector */
