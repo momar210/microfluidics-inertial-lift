@@ -4,3 +4,5 @@ cleanup-fluent-*.bat
 .lock
 .project_cache
 _read_fluent_case.jou
+*.pdb
+/libudf
