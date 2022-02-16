@@ -299,7 +299,7 @@ void CALCULATE_CHANNEL_PARAMETERS(double particle_diameter, double mu, double rh
 DEFINE_DPM_BODY_FORCE(inertial_lift, p, i)
 {
   if (i == 0) {
-    return 0; // do not calculate lift force in the X direction
+    return 0.0; // do not calculate lift force in the X direction
   }
 
 	// DECLARATION OF VARIABLES
@@ -307,7 +307,10 @@ DEFINE_DPM_BODY_FORCE(inertial_lift, p, i)
 	cell_t c = P_CELL(p); // the cell in which the particle is present
 	Thread *t = P_CELL_THREAD(p); // thread initialization
 
-	double *particle_position = P_POS(p);
+	double particle_position[3];
+  particle_position[0] = P_POS(p)[0];
+  particle_position[1] = P_POS(p)[1];
+  particle_position[2] = P_POS(p)[2];
 
 	particle_diameter = P_DIAM(p); 		// Particle diameter
 	mu = C_MU_L(c,t); 	// Cell dynamic viscosity
@@ -316,11 +319,15 @@ DEFINE_DPM_BODY_FORCE(inertial_lift, p, i)
 	CALCULATE_CHANNEL_PARAMETERS(particle_diameter, mu, rho, &H, &W, &Re, &kappa, particle_position);
 
 	CALCULATE_LIFT_COEFFICIENTS(W/H, Re, kappa, particle_position, &CL, i);
+  /* Potential time savings using precomputed lift coefficient values stored in cells
+   * In a quick test, this did not save a significant amount of time
+   */
+  //CL = C_UDMI(c, t, i-1);
 
 	// Maximum velocity for each cell should be precalculated prior to starting DPM calculation
 	Umax = C_UDMI(c, t, 2);
 
-	// Calculate the lift force based on Su et al 2021 Equation 7
+	// Calculate the lift force based on Su et al 2021 
 	FL = CL * rho * pow(Umax, 2) * pow(particle_diameter, 4) / pow(H, 2);
 
 	// An acceleration should be returned
