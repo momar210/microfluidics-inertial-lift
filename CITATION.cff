@@ -4,6 +4,6 @@ authors:
   - family-names: Stoy
     given-names: William
     orcid: https://orcid.org/0000-0001-9425-0809
-title: "Inertial Lift in Microfluidics for ANSYS Fluent"
+title: "Calculation of inertial lift in microfluidic channels for ANSYS Fluent"
 version: 0.1.0
-date-released: 2022-08-11
+date-released: 2022-02-14
